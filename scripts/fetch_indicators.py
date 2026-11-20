@@ -70,6 +70,19 @@ INDICATORS = [
     # 디지털 전환 - 디지털 금융 (Global Findex)
     {"code": "FX.OWN.TOTL.ZS", "table": "digitalx", "category": "디지털 금융",
      "name": "금융계좌 보유율", "unit": "% of age 15+", "source": "WB_FINDEX"},
+    # Global Findex 세부 집단별 (금융 포용의 격차를 보기 위함)
+    {"code": "FX.OWN.TOTL.FE.ZS", "table": "digitalx", "category": "디지털 금융",
+     "name": "금융계좌 보유율 (여성)", "unit": "% of age 15+", "source": "WB_FINDEX"},
+    {"code": "FX.OWN.TOTL.MA.ZS", "table": "digitalx", "category": "디지털 금융",
+     "name": "금융계좌 보유율 (남성)", "unit": "% of age 15+", "source": "WB_FINDEX"},
+    {"code": "FX.OWN.TOTL.40.ZS", "table": "digitalx", "category": "디지털 금융",
+     "name": "금융계좌 보유율 (소득 하위 40%)", "unit": "% of age 15+", "source": "WB_FINDEX"},
+    {"code": "FX.OWN.TOTL.60.ZS", "table": "digitalx", "category": "디지털 금융",
+     "name": "금융계좌 보유율 (소득 상위 60%)", "unit": "% of age 15+", "source": "WB_FINDEX"},
+    {"code": "FX.OWN.TOTL.PL.ZS", "table": "digitalx", "category": "디지털 금융",
+     "name": "금융계좌 보유율 (초등교육 이하)", "unit": "% of age 15+", "source": "WB_FINDEX"},
+    {"code": "FX.OWN.TOTL.SO.ZS", "table": "digitalx", "category": "디지털 금융",
+     "name": "금융계좌 보유율 (중등교육 이상)", "unit": "% of age 15+", "source": "WB_FINDEX"},
     # AI 격차 - 인적 자본·연구·산업 기반
     {"code": "SE.TER.ENRR", "table": "aidivide", "category": "인적 자본",
      "name": "고등교육 총취학률", "unit": "% gross", "source": "WB_WDI"},
@@ -203,6 +216,40 @@ def save(name, rows, extra=None):
     print(f"✔ {name}: {len(rows)} rows")
 
 
+# 두 지표의 차이로 만드는 격차 지표 (연구원 계산)
+GAPS = [
+    {"code": "IAS.FINDEX.GAP.GENDER", "name": "금융계좌 보유율 성별 격차 (남성−여성)",
+     "high": "FX.OWN.TOTL.MA.ZS", "low": "FX.OWN.TOTL.FE.ZS"},
+    {"code": "IAS.FINDEX.GAP.INCOME", "name": "금융계좌 보유율 소득 격차 (상위 60%−하위 40%)",
+     "high": "FX.OWN.TOTL.60.ZS", "low": "FX.OWN.TOTL.40.ZS"},
+    {"code": "IAS.FINDEX.GAP.EDU", "name": "금융계좌 보유율 교육 격차 (중등 이상−초등 이하)",
+     "high": "FX.OWN.TOTL.SO.ZS", "low": "FX.OWN.TOTL.PL.ZS"},
+]
+
+
+def add_gaps(rows):
+    """같은 국가·연도의 두 지표 차이(%p)를 격차 지표로 추가. 값이 클수록 격차가 큼"""
+    idx = {(r["Indicator_Code"], r["Country_ID"], r["Year"]): r["Value"] for r in rows}
+    shown = []
+    for g in GAPS:
+        added = 0
+        for (code, iso, year), hi in list(idx.items()):
+            if code != g["high"]:
+                continue
+            lo = idx.get((g["low"], iso, year))
+            if lo is None:
+                continue
+            rows.append({"Country_ID": iso, "Year": year, "Indicator_Category": "디지털 금융 격차",
+                         "Indicator_Code": g["code"], "Indicator_Name": g["name"],
+                         "Value": round(hi - lo, 3), "Unit": "%p (연구원 계산)", "Source_ID": "WB_FINDEX"})
+            added += 1
+        if added:
+            shown.append({"code": g["code"], "table": "digitalx", "category": "디지털 금융 격차",
+                          "name": g["name"], "unit": "%p (연구원 계산)", "source": "WB_FINDEX"})
+        print(f"✔ 격차 지표 {g['code']}: {added}건")
+    return shown
+
+
 def load_manual():
     """data/manual/*.csv 를 읽어 (표별 행 목록, 화면 표시용 지표 목록) 반환"""
     rows = {"digitalx": [], "aidivide": []}
@@ -251,6 +298,8 @@ def main():
         status[ind["code"]] = "정상"
         print(f"  ✔ {len(rows)}건")
 
+    derived_shown = add_gaps(tables["digitalx"])
+
     manual_rows, manual_shown = load_manual()
     for t in tables:
         tables[t].extend(manual_rows[t])
@@ -276,8 +325,10 @@ def main():
         "Reliability_Level": "High",
     } for sid, s in SOURCES.items()]
 
+    # 실제 자료가 있는 지표만 화면 목록에 올린다 (수집 실패·자료 없는 지표는 숨김)
+    have = {r["Indicator_Code"] for t in tables.values() for r in t}
     indicator_meta = manual_shown + [{k: i[k] for k in ("code", "table", "category", "name", "unit", "source")}
-                                     for i in INDICATORS]
+                                     for i in INDICATORS if i["code"] in have] + derived_shown
 
     save("country", countries)
     save("digitalx", tables["digitalx"])

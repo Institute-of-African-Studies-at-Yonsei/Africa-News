@@ -61,6 +61,8 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 ### digitalx_table (디지털 전환 지표) — `data/digitalx.json`
 `Country_ID`, `Year`, `Indicator_Category`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
 
+`Indicator_Code`가 `IAS.`로 시작하는 지표는 연구원이 계산한 파생 지표다 (예: `IAS.FINDEX.GAP.GENDER` = 남성−여성 금융계좌 보유율, %p). 계산식은 `scripts/fetch_indicators.py`의 `GAPS`에 있다.
+
 ### aidivide_table (AI 격차 지표) — `data/aidivide.json`
 `Country_ID`, `Year`, `AI_Dimension`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
 
