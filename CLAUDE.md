@@ -26,6 +26,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data/manual/` | (예정) 직접 내려받은 지표 CSV (AI 준비도 지수 등, 라이선스가 허용하는 것만) | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
+| `.github/workflows/deploy.yml` | 사이트 배포. 파일이 올라오거나 자동 수집이 끝날 때마다 실행 (Settings → Pages → Source는 **GitHub Actions**) | 공유 · 수정 시 팀에 알림 |
 
 새 기능은 **기존 파일을 크게 고치기보다 새 파일로 추가**하는 것을 원칙으로 한다.
 

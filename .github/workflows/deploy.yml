@@ -1,0 +1,45 @@
+name: Deploy site
+
+# 사이트(GitHub Pages)를 배포하는 작업.
+# 사람이 파일을 올릴 때, 그리고 자동 수집 작업이 끝날 때마다 실행된다.
+# (자동 수집이 올린 변경은 기본 배포를 일으키지 못하기 때문에 따로 둔다)
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Update resource database", "Monthly Africa Indicators Update"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
