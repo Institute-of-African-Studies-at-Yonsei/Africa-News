@@ -56,7 +56,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 `Country_ID`, `Year`, `AI_Dimension`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
 
 ### source_table (자료 출처) — `data/source.json`
-`Source_ID`, `Source_Name`, `Source_Type`, `Collection_Date`, `Update_Date`, `Verification_Status`, `Reliability_Level`, `Source_URL`
+`Source_ID`, `Source_Name`, `Source_Type`, `Collection_Date`, `Update_Date`, `Verification_Status`, `Reliability_Level`, `Source_URL`, `License`, `License_URL`
 
 ### text_table (비정형 자료: 뉴스·보고서·정책문서) — 보고서 담당이 우선 구현
 | 필드 | 내용 |
@@ -95,6 +95,10 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 - 기사·보고서의 이미지는 게시하지 않는다.
 - AI가 만든 요약에는 "AI 생성 요약" 표시를 붙이고 `Validation_Status`로 검수 여부를 관리한다.
 - 대용량 원문 PDF는 저장소에 올리지 않고 연구원 Dropbox에 보관한 뒤 링크만 기록한다.
+- **새 데이터 출처를 추가할 때는 이용 조건(라이선스)을 먼저 확인**하고 `source_table`의 `License`, `License_URL`에 기록한다.
+  재배포가 허용되지 않거나 조건을 확인할 수 없는 자료는 수치를 게시하지 않고 링크만 건다.
+  - World Bank: CC BY 4.0 (World Bank가 보증하는 것처럼 표현 금지)
+  - Oxford Insights Government AI Readiness Index: CC BY-SA 4.0 (가공 데이터도 같은 조건으로 공개)
 
 ## 7. 사이트 디자인 규칙
 

@@ -71,6 +71,8 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .dl{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}
 .dl a{font-size:12px;padding:4px 10px;border:1px solid var(--border-md);border-radius:6px;text-decoration:none;color:var(--text);background:var(--surface)}
 .dl a:hover{background:var(--bg)}
+.lic ul{margin:0 0 6px 18px}.lic li{margin:2px 0}
+.lic-note{font-size:11px;color:var(--t3);margin-top:6px;line-height:1.6}
 .loading{padding:2rem;text-align:center;color:var(--t3)}
 </style>
 </head>
@@ -103,7 +105,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
   <div id="app" class="loading">데이터를 불러오는 중…</div>
 
   <div class="foot">
-    <div class="lbl">데이터 내려받기 (CSV)</div>
+    <div class="lbl">데이터 내려받기 (CSV · 출처 표시 시 자유롭게 이용 가능)</div>
     <div class="dl">
       <a href="data/csv/digitalx.csv" download>디지털 전환 지표</a>
       <a href="data/csv/aidivide.csv" download>AI 격차 지표</a>
@@ -157,10 +159,19 @@ function initControls(){
   fillIndicators();
 
   const st = D.source;
+  // 출처별 라이선스 (source.json에 License가 아직 없으면 기본값 사용)
+  const LIC_DEFAULT = {License:'CC BY 4.0', License_URL:'https://data.worldbank.org/summary-terms-of-use'};
   document.getElementById('sourceNote').innerHTML =
-    `최종 갱신: ${esc(st.updated)} · 출처: ` +
-    st.rows.map(s => `<a href="${esc(s.Source_URL)}" target="_blank" rel="noopener">${esc(s.Source_Name)}</a>`).join(', ') +
-    `<br>※ 국가별로 최신 자료 연도가 다르며, 막대 옆 작은 숫자가 해당 값의 연도입니다. 자료가 없는 국가는 순위에서 제외됩니다.`;
+    `최종 갱신: ${esc(st.updated)}<br>` +
+    `<div class="lic"><div class="lbl" style="margin:8px 0 4px">출처 및 라이선스</div><ul>` +
+    st.rows.map(s => {
+      const lic = s.License ? s : LIC_DEFAULT;
+      return `<li><a href="${esc(s.Source_URL)}" target="_blank" rel="noopener">${esc(s.Source_Name)}</a> — ` +
+        `<a href="${esc(lic.License_URL)}" target="_blank" rel="noopener">${esc(lic.License)}</a></li>`;
+    }).join('') + `</ul></div>` +
+    `<p class="lic-note">이 페이지의 수치는 위 출처의 공개 데이터를 연세대학교 아프리카연구원이 아프리카 54개국 기준으로 추출·정리(국가명 한글화, 지표 분류)한 것입니다. ` +
+    `원 데이터 제공 기관은 이 사이트나 그 이용 방식을 보증하지 않습니다. 각 데이터의 이용 조건은 해당 라이선스를 따릅니다.</p>` +
+    `<p class="lic-note">※ 국가별로 최신 자료 연도가 다르며, 막대 옆 작은 숫자가 해당 값의 연도입니다. 자료가 없는 국가는 순위에서 제외됩니다.</p>`;
 }
 
 function fillIndicators(){

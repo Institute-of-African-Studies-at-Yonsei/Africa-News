@@ -84,13 +84,19 @@ INDICATORS = [
 SOURCES = {
     "WB_WDI": {"Source_Name": "World Bank World Development Indicators",
                "Source_Type": "국제기구 통계",
-               "Source_URL": "https://databank.worldbank.org/source/world-development-indicators"},
+               "Source_URL": "https://databank.worldbank.org/source/world-development-indicators",
+               "License": "CC BY 4.0",
+               "License_URL": "https://data.worldbank.org/summary-terms-of-use"},
     "ITU": {"Source_Name": "ITU World Telecommunication/ICT Indicators (via World Bank WDI)",
             "Source_Type": "국제기구 통계",
-            "Source_URL": "https://datahub.itu.int/"},
+            "Source_URL": "https://datahub.itu.int/",
+            "License": "CC BY 4.0 (World Bank WDI 제공 조건, 원 출처 ITU)",
+            "License_URL": "https://data.worldbank.org/summary-terms-of-use"},
     "WB_FINDEX": {"Source_Name": "World Bank Global Findex (via World Bank WDI)",
                   "Source_Type": "국제기구 설문 통계",
-                  "Source_URL": "https://www.worldbank.org/en/publication/globalfindex"},
+                  "Source_URL": "https://www.worldbank.org/en/publication/globalfindex",
+                  "License": "CC BY 4.0",
+                  "License_URL": "https://data.worldbank.org/summary-terms-of-use"},
 }
 
 
