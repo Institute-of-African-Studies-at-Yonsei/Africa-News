@@ -137,9 +137,8 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
   <div class="hinner">
     <div class="logo">Africa <em>News Brief</em></div>
     <div class="hnav">
-      <a class="hlink" href="https://www.k-af.or.kr/load.asp?subPage=731" target="_blank" rel="noopener">📋 KAF Africa Weekly</a>
-      <a class="hlink" href="https://www.k-af.or.kr/load.asp?subPage=721" target="_blank" rel="noopener">🌍 KAF 통신원 리포트</a>
-      <a class="hlink" href="https://data.k-af.or.kr" target="_blank" rel="noopener">📊 KAF 지식정보</a>
+      <a class="hlink" href="data.html" style="background:var(--accent);color:#fff;border-color:var(--accent)">📊 지표 DB</a>
+      <a class="hlink" href="https://www.k-af.or.kr" target="_blank" rel="noopener">🌍 한·아프리카재단</a>
     </div>
   </div>
 </header>
@@ -149,8 +148,6 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
     <span class="snlabel">Source</span>
     <div id="srcPills" style="display:flex;gap:4px">
       <button class="pill on" data-src="all">All</button>
-      <button class="pill" data-src="Reuters">Reuters</button>
-      <button class="pill" data-src="NYT">NYT</button>
       <button class="pill" data-src="BBC">BBC</button>
       <button class="pill" data-src="CNN">CNN</button>
       <button class="pill" data-src="Africanews">Africanews</button>
@@ -197,7 +194,7 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
       <div class="stat"><div class="stat-n" id="sTotal">—</div><div class="stat-l">Articles</div></div>
       <div class="stat"><div class="stat-n" id="sCountries">—</div><div class="stat-l">Countries</div></div>
       <div class="stat"><div class="stat-n" id="sTopics">—</div><div class="stat-l">Topics</div></div>
-      <div class="stat"><div class="stat-n">7</div><div class="stat-l">Sources</div></div>
+      <div class="stat"><div class="stat-n">5</div><div class="stat-l">Sources</div></div>
       <div class="upd" id="upd">—</div>
     </div>
 
@@ -221,64 +218,17 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
       <div class="stats-grid">
         <div class="stat"><div class="stat-n" id="sb-total">—</div><div class="stat-l">Articles</div></div>
         <div class="stat"><div class="stat-n" id="sb-countries">—</div><div class="stat-l">Countries</div></div>
-        <div class="stat"><div class="stat-n">7</div><div class="stat-l">Sources</div></div>
+        <div class="stat"><div class="stat-n">5</div><div class="stat-l">Sources</div></div>
         <div class="stat"><div class="stat-n" id="sb-week">—</div><div class="stat-l">This week</div></div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-label">한·아프리카재단 (KAF)</div>
-      <div class="kaf-list">
-        <a class="kaf-item" href="https://www.k-af.or.kr/load.asp?subPage=731" target="_blank" rel="noopener">
-          <div class="kaf-item-label">Weekly Report</div>
-          <div class="kaf-item-title">Africa Weekly (아프리카 위클리)</div>
-          <div class="kaf-item-url">k-af.or.kr →</div>
-        </a>
-        <a class="kaf-item" href="https://www.k-af.or.kr/load.asp?subPage=721" target="_blank" rel="noopener">
-          <div class="kaf-item-label">Field Reports</div>
-          <div class="kaf-item-title">아프리카대륙 통신원 리포트</div>
-          <div class="kaf-item-url">k-af.or.kr →</div>
-        </a>
-        <a class="kaf-item" href="https://data.k-af.or.kr/org/nation" target="_blank" rel="noopener">
-          <div class="kaf-item-label">Country Profiles</div>
-          <div class="kaf-item-title">아프리카 국가 정보 (54개국)</div>
-          <div class="kaf-item-url">data.k-af.or.kr →</div>
-        </a>
-        <a class="kaf-item" href="https://data.k-af.or.kr/map/explore" target="_blank" rel="noopener">
-          <div class="kaf-item-label">Data & Map</div>
-          <div class="kaf-item-title">아프리카 지도 탐색</div>
-          <div class="kaf-item-url">data.k-af.or.kr →</div>
-        </a>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="card-label">YouTube — Africa</div>
-      <div class="yt-list">
-        <a class="yt-item" href="https://www.youtube.com/results?search_query=africa+news+today+2026" target="_blank">
-          <div class="yt-thumb" style="background:#1a1a1a;border-radius:6px"><div class="yt-play"><svg width="8" height="10" viewBox="0 0 8 10" fill="white"><path d="M1 1l6 4-6 4V1z"/></svg></div></div>
-          <div class="yt-info"><div class="yt-t">Africa News Today</div><div class="yt-c">YouTube Search</div></div>
-        </a>
-        <a class="yt-item" href="https://www.youtube.com/@AJEnglish" target="_blank">
-          <div class="yt-thumb" style="background:#1a3020;border-radius:6px"><div class="yt-play"><svg width="8" height="10" viewBox="0 0 8 10" fill="white"><path d="M1 1l6 4-6 4V1z"/></svg></div></div>
-          <div class="yt-info"><div class="yt-t">Al Jazeera Africa</div><div class="yt-c">Al Jazeera English</div></div>
-        </a>
-        <a class="yt-item" href="https://www.youtube.com/@BBCNewsAfrica" target="_blank">
-          <div class="yt-thumb" style="background:#1a3a8a;border-radius:6px"><div class="yt-play"><svg width="8" height="10" viewBox="0 0 8 10" fill="white"><path d="M1 1l6 4-6 4V1z"/></svg></div></div>
-          <div class="yt-info"><div class="yt-t">BBC News Africa</div><div class="yt-c">BBC News Africa</div></div>
-        </a>
-        <a class="yt-item" href="https://www.youtube.com/results?search_query=iran+war+africa+2026" target="_blank">
-          <div class="yt-thumb" style="background:#7c1a1a;border-radius:6px"><div class="yt-play"><svg width="8" height="10" viewBox="0 0 8 10" fill="white"><path d="M1 1l6 4-6 4V1z"/></svg></div></div>
-          <div class="yt-info"><div class="yt-t">Iran War — Africa Impact</div><div class="yt-c">YouTube Search</div></div>
-        </a>
-      </div>
-      <div class="note">Clicking opens the latest videos directly on YouTube.</div>
-    </div>
 
     <div class="card">
       <div class="card-label">About</div>
       <div style="font-size:12px;color:var(--t2);line-height:1.7">
-        Articles are fetched automatically every day at 15:00 KST via GitHub Actions from 7 sources: Reuters, NYT, BBC, CNN, Africanews, Al Jazeera, AllAfrica.
+        Articles are fetched automatically every day at 09:00 KST via GitHub Actions from 5 sources: BBC, CNN, Africanews, Al Jazeera, AllAfrica.
         <br><br>
         Filtered to Africa-related articles from the past 2 weeks.
       </div>

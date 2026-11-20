@@ -12,22 +12,6 @@ CUTOFF = NOW - TWO_WEEKS
 
 SOURCES = [
     {
-        "name": "Reuters",
-        "badge": "b-r",
-        "urls": [
-            "https://feeds.reuters.com/reuters/worldNews",
-            "https://www.reutersagency.com/feed/?best-topics=africa&post_type=best",
-        ],
-    },
-    {
-        "name": "NYT",
-        "badge": "b-nyt",
-        "urls": [
-            "https://rss.nytimes.com/services/xml/rss/nyt/Africa.xml",
-            "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-        ],
-    },
-    {
         "name": "BBC",
         "badge": "b-bbc",
         "urls": ["https://feeds.bbci.co.uk/news/world/africa/rss.xml"],

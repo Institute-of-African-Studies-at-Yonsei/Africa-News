@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아프리카 디지털·AI 격차 지표 DB</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+<style>
+:root{
+  --bg:#f5f4f0;--surface:#fff;--border:rgba(0,0,0,.07);--border-md:rgba(0,0,0,.13);
+  --text:#181816;--t2:#58574f;--t3:#9c9b93;--accent:#bf3d18;--accent-bg:#fdf0ed;--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem;position:sticky;top:0;z-index:200}
+.hinner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px;gap:12px;flex-wrap:wrap}
+.logo{font-family:'DM Serif Display',serif;font-size:18px;white-space:nowrap}
+.logo em{color:var(--accent);font-style:normal}
+.hnav{display:flex;gap:6px;flex-wrap:wrap}
+.hlink{font-size:12px;font-weight:500;padding:4px 12px;border-radius:999px;border:1px solid rgba(191,61,24,.3);color:var(--accent);text-decoration:none}
+.hlink.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hlink:hover:not(.on){background:var(--accent-bg)}
+
+.wrap{max-width:1400px;margin:0 auto;padding:1.25rem 1.5rem 3rem}
+.intro{margin-bottom:1rem}
+.intro h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:26px;line-height:1.2}
+.intro p{color:var(--t2);font-size:13px;margin-top:4px}
+
+.controls{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-bottom:14px}
+.ctl{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.lbl{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em}
+select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--border-md);border-radius:6px;background:var(--surface);color:var(--text);max-width:280px}
+.pill{font:inherit;font-size:12px;font-weight:500;padding:3px 11px;border-radius:999px;border:1px solid var(--border-md);background:transparent;color:var(--t2);cursor:pointer}
+.pill.on{background:var(--text);color:#fff;border-color:var(--text)}
+
+.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.bar{grid-template-columns:20px 84px 1fr 58px;gap:6px}.wrap{padding:1rem}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px}
+.card h2{font-size:14px;font-weight:500;margin-bottom:2px}
+.card .sub{font-size:12px;color:var(--t3);margin-bottom:10px}
+
+.bars{display:flex;flex-direction:column;gap:3px;max-height:820px;overflow-y:auto;padding-right:4px}
+.bar{display:grid;grid-template-columns:22px 118px 1fr 74px;gap:8px;align-items:center;font-size:12px;cursor:pointer;padding:2px 4px;border-radius:4px}
+.bar:hover{background:var(--bg)}
+.bar.sel{background:var(--accent-bg)}
+.rank{color:var(--t3);text-align:right;font-variant-numeric:tabular-nums}
+.cname{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{display:block;height:12px;background:var(--bg);border-radius:3px;overflow:hidden}
+.fill{display:block;height:100%;background:#2a5b8c;border-radius:3px}
+.bar.sel .fill{background:var(--accent)}
+.val{text-align:right;font-variant-numeric:tabular-nums;color:var(--t2)}
+.val small{color:var(--t3);font-size:10px;margin-left:2px}
+.nodata{font-size:12px;color:var(--t3);margin-top:8px}
+
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.chip{font-size:12px;padding:2px 4px 2px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--border-md);display:inline-flex;align-items:center;gap:4px}
+.chip button{border:none;background:none;cursor:pointer;color:var(--t3);font-size:14px;line-height:1;padding:0 4px}
+.chartbox{position:relative;height:300px}
+
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
+th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--border)}
+th{font-weight:500;color:var(--t3);font-size:11px}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.tag{font-size:10px;padding:1px 6px;border-radius:4px;background:#f0f7ff;color:#1a4a7a;white-space:nowrap}
+.tag.ai{background:#f0edf8;color:#4a2080}
+
+.foot{margin-top:14px;font-size:12px;color:var(--t2)}
+.foot a{color:var(--accent)}
+.dl{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}
+.dl a{font-size:12px;padding:4px 10px;border:1px solid var(--border-md);border-radius:6px;text-decoration:none;color:var(--text);background:var(--surface)}
+.dl a:hover{background:var(--bg)}
+.loading{padding:2rem;text-align:center;color:var(--t3)}
+</style>
+</head>
+<body>
+<header>
+  <div class="hinner">
+    <div class="logo">Africa <em>Data</em> Brief</div>
+    <nav class="hnav">
+      <a class="hlink" href="index.html">📰 뉴스</a>
+      <a class="hlink on" href="data.html">📊 지표 DB</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>아프리카 디지털·AI 격차 지표</h1>
+    <p>아프리카 54개국의 디지털 전환 및 AI 격차 관련 국제 통계를 국가·연도 단위로 정리한 데이터베이스입니다. 매월 자동 갱신됩니다.</p>
+  </div>
+
+  <div class="controls">
+    <div class="ctl"><span class="lbl">구분</span>
+      <button class="pill on" data-table="digitalx">디지털 전환</button>
+      <button class="pill" data-table="aidivide">AI 격차</button>
+    </div>
+    <div class="ctl"><span class="lbl">지표</span><select id="indSel"></select></div>
+    <div class="ctl"><span class="lbl">지역</span><span id="regionPills"></span></div>
+  </div>
+
+  <div id="app" class="loading">데이터를 불러오는 중…</div>
+
+  <div class="foot">
+    <div class="lbl">데이터 내려받기 (CSV)</div>
+    <div class="dl">
+      <a href="data/csv/digitalx.csv" download>디지털 전환 지표</a>
+      <a href="data/csv/aidivide.csv" download>AI 격차 지표</a>
+      <a href="data/csv/country.csv" download>국가 기본정보</a>
+      <a href="data/csv/source.csv" download>자료 출처</a>
+    </div>
+    <div id="sourceNote"></div>
+  </div>
+</div>
+
+<script>
+const REGION_KO = {North:'북부', West:'서부', Central:'중부', East:'동부', Southern:'남부'};
+const INCOME_KO = {'Low income':'저소득국','Lower middle income':'중저소득국','Upper middle income':'중고소득국','High income':'고소득국'};
+const COLORS = ['#bf3d18','#2a5b8c','#1a7a4a','#7a4a9c','#b8860b'];
+const S = {table:'digitalx', ind:null, region:'All', countries:['KEN','NGA','ZAF']};
+let D = {}, chart = null;
+
+const fmt = v => v >= 1000 ? Math.round(v).toLocaleString() : (v >= 100 ? v.toFixed(0) : v.toFixed(1));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function load(){
+  try{
+    const get = n => fetch(`data/${n}.json?t=${Date.now()}`).then(r => { if(!r.ok) throw n; return r.json(); });
+    const [country, digitalx, aidivide, source] = await Promise.all(['country','digitalx','aidivide','source'].map(get));
+    D = {country, digitalx, aidivide, source};
+    D.cmap = Object.fromEntries(country.rows.map(c => [c.Country_ID, c]));
+    initControls();
+    render();
+  }catch(e){
+    document.getElementById('app').innerHTML = '데이터 파일을 찾을 수 없습니다. Actions 탭에서 “Monthly Africa Indicators Update”를 한 번 실행해 주세요.';
+  }
+}
+
+function indicatorsFor(table){ return D.source.indicators.filter(i => i.table === table); }
+
+function initControls(){
+  document.querySelectorAll('[data-table]').forEach(b => b.onclick = () => {
+    S.table = b.dataset.table; S.ind = null;
+    document.querySelectorAll('[data-table]').forEach(x => x.classList.toggle('on', x === b));
+    fillIndicators(); render();
+  });
+  const rp = document.getElementById('regionPills');
+  rp.innerHTML = ['All', ...Object.keys(REGION_KO)].map(r =>
+    `<button class="pill${r==='All'?' on':''}" data-region="${r}">${r==='All'?'전체':REGION_KO[r]}</button>`).join(' ');
+  rp.querySelectorAll('button').forEach(b => b.onclick = () => {
+    S.region = b.dataset.region;
+    rp.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+    render();
+  });
+  document.getElementById('indSel').onchange = e => { S.ind = e.target.value; render(); };
+  fillIndicators();
+
+  const st = D.source;
+  document.getElementById('sourceNote').innerHTML =
+    `최종 갱신: ${esc(st.updated)} · 출처: ` +
+    st.rows.map(s => `<a href="${esc(s.Source_URL)}" target="_blank" rel="noopener">${esc(s.Source_Name)}</a>`).join(', ') +
+    `<br>※ 국가별로 최신 자료 연도가 다르며, 막대 옆 작은 숫자가 해당 값의 연도입니다. 자료가 없는 국가는 순위에서 제외됩니다.`;
+}
+
+function fillIndicators(){
+  const list = indicatorsFor(S.table);
+  if(!S.ind || !list.find(i => i.code === S.ind)) S.ind = list[0]?.code;
+  document.getElementById('indSel').innerHTML = list.map(i =>
+    `<option value="${i.code}"${i.code===S.ind?' selected':''}>[${esc(i.category)}] ${esc(i.name)}</option>`).join('');
+}
+
+function rowsFor(code){ return D[S.table].rows.filter(r => r.Indicator_Code === code); }
+
+function latestByCountry(code){
+  const out = {};
+  for(const r of rowsFor(code)){
+    if(!out[r.Country_ID] || r.Year > out[r.Country_ID].Year) out[r.Country_ID] = r;
+  }
+  return out;
+}
+
+function render(){
+  const meta = D.source.indicators.find(i => i.code === S.ind);
+  if(!meta){ document.getElementById('app').innerHTML = '선택한 구분에 지표가 없습니다.'; return; }
+  const latest = latestByCountry(S.ind);
+  let list = Object.values(latest)
+    .filter(r => S.region === 'All' || D.cmap[r.Country_ID]?.Region === S.region)
+    .sort((a,b) => b.Value - a.Value);
+  const max = Math.max(...list.map(r => r.Value), 0) || 1;
+  const missing = D.country.rows.filter(c => (S.region === 'All' || c.Region === S.region) && !latest[c.Country_ID]);
+
+  const bars = list.map((r,i) => {
+    const c = D.cmap[r.Country_ID];
+    const sel = S.countries.includes(r.Country_ID) ? ' sel' : '';
+    return `<div class="bar${sel}" data-c="${r.Country_ID}" title="${esc(c.Country_Name_EN||'')}">
+      <span class="rank">${i+1}</span><span class="cname">${esc(c.Country_Name)}</span>
+      <span class="track"><span class="fill" style="width:${(r.Value/max*100).toFixed(1)}%"></span></span>
+      <span class="val">${fmt(r.Value)}<small>'${String(r.Year).slice(2)}</small></span></div>`;
+  }).join('');
+
+  document.getElementById('app').className = '';
+  document.getElementById('app').innerHTML = `
+  <div class="grid">
+    <div class="card">
+      <h2>${esc(meta.name)} — 국가별 최신값</h2>
+      <div class="sub">단위: ${esc(meta.unit)} · 국가를 누르면 오른쪽 추이 그래프에 추가됩니다</div>
+      <div class="bars">${bars || '<div class="nodata">자료가 없습니다.</div>'}</div>
+      ${missing.length ? `<div class="nodata">자료 없음: ${missing.map(c => esc(c.Country_Name)).join(', ')}</div>` : ''}
+    </div>
+    <div>
+      <div class="card">
+        <h2>연도별 추이 비교</h2>
+        <div class="sub">최대 5개국 · ${esc(meta.name)} (${esc(meta.unit)})</div>
+        <div class="chips">${S.countries.map((c,i) =>
+          `<span class="chip" style="border-color:${COLORS[i]}">${esc(D.cmap[c]?.Country_Name||c)}<button data-rm="${c}" aria-label="제거">×</button></span>`).join('')}
+          <select id="addC"><option value="">+ 국가 추가</option>${D.country.rows
+            .filter(c => !S.countries.includes(c.Country_ID))
+            .sort((a,b) => a.Country_Name.localeCompare(b.Country_Name,'ko'))
+            .map(c => `<option value="${c.Country_ID}">${esc(c.Country_Name)}</option>`).join('')}</select>
+        </div>
+        <div class="chartbox"><canvas id="chart"></canvas></div>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <h2>국가 프로파일 — ${esc(D.cmap[S.countries[0]]?.Country_Name || '')}</h2>
+        <div class="sub">${S.countries[0] ? esc((REGION_KO[D.cmap[S.countries[0]].Region]||'') + '아프리카 · ' + (INCOME_KO[D.cmap[S.countries[0]].Income_Group]||D.cmap[S.countries[0]].Income_Group||'')) : '국가를 선택하세요'}</div>
+        ${profileTable(S.countries[0])}
+      </div>
+    </div>
+  </div>`;
+
+  document.querySelectorAll('.bar').forEach(b => b.onclick = () => toggleCountry(b.dataset.c));
+  document.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => toggleCountry(b.dataset.rm));
+  document.getElementById('addC').onchange = e => e.target.value && toggleCountry(e.target.value);
+  drawChart(meta);
+}
+
+function toggleCountry(c){
+  if(S.countries.includes(c)) S.countries = S.countries.filter(x => x !== c);
+  else { S.countries.push(c); if(S.countries.length > 5) S.countries.shift(); }
+  render();
+}
+
+function profileTable(c){
+  if(!c) return '';
+  const rows = D.source.indicators.map(i => {
+    const recs = D[i.table].rows.filter(r => r.Indicator_Code === i.code && r.Country_ID === c);
+    const last = recs.sort((a,b) => b.Year - a.Year)[0];
+    const vals = Object.values(latestByCountryAll(i)).map(r => r.Value).sort((a,b) => b-a);
+    const rank = last ? vals.indexOf(last.Value) + 1 : null;
+    return `<tr><td><span class="tag${i.table==='aidivide'?' ai':''}">${esc(i.category)}</span></td>
+      <td>${esc(i.name)}</td>
+      <td class="num">${last ? fmt(last.Value) : '—'}</td>
+      <td class="num">${last ? last.Year : ''}</td>
+      <td class="num">${rank ? `${rank}/${vals.length}` : ''}</td></tr>`;
+  }).join('');
+  return `<table><thead><tr><th>분야</th><th>지표</th><th style="text-align:right">값</th><th style="text-align:right">연도</th><th style="text-align:right">순위</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+function latestByCountryAll(ind){
+  const out = {};
+  for(const r of D[ind.table].rows){
+    if(r.Indicator_Code !== ind.code) continue;
+    if(!out[r.Country_ID] || r.Year > out[r.Country_ID].Year) out[r.Country_ID] = r;
+  }
+  return out;
+}
+
+function drawChart(meta){
+  const rows = rowsFor(S.ind);
+  const years = [...new Set(rows.map(r => r.Year))].sort();
+  const datasets = S.countries.map((c,i) => {
+    const m = Object.fromEntries(rows.filter(r => r.Country_ID === c).map(r => [r.Year, r.Value]));
+    return {label: D.cmap[c]?.Country_Name || c, data: years.map(y => m[y] ?? null),
+      borderColor: COLORS[i], backgroundColor: COLORS[i], spanGaps: true, tension: .25, pointRadius: 2, borderWidth: 2};
+  });
+  if(chart) chart.destroy();
+  chart = new Chart(document.getElementById('chart'), {
+    type: 'line', data: {labels: years, datasets},
+    options: {responsive: true, maintainAspectRatio: false, interaction: {mode: 'index', intersect: false},
+      plugins: {legend: {position: 'bottom', labels: {boxWidth: 10, font: {size: 11}}},
+        tooltip: {callbacks: {label: ctx => ctx.parsed.y == null ? null : `${ctx.dataset.label}: ${fmt(ctx.parsed.y)}`}}},
+      scales: {y: {beginAtZero: true, ticks: {font: {size: 11}}}, x: {ticks: {font: {size: 11}, maxTicksLimit: 10}}}}
+  });
+}
+
+load();
+</script>
+</body>
+</html>
