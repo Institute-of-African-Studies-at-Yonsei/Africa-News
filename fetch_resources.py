@@ -15,8 +15,8 @@ OUTPUT, MANUAL = "resources.json", "manual_resources.json"
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "")  # optional, makes OpenAlex API faster
 
 # Major outlets, searched through Google News RSS (the "site:" filter picks the outlet).
-OUTLETS = {"Reuters": "reuters.com", "NYT": "nytimes.com", "BBC": "bbc.com", "Financial Times": "ft.com",
-           "Bloomberg": "bloomberg.com", "The Guardian": "theguardian.com", "Al Jazeera": "aljazeera.com",
+# Paywalled outlets (Reuters, NYT, Financial Times, Bloomberg) are excluded.
+OUTLETS = {"BBC": "bbc.com", "The Guardian": "theguardian.com", "Al Jazeera": "aljazeera.com",
            "CNN": "cnn.com", "Semafor": "semafor.com"}
 NEWS_QUERIES = ['Africa "artificial intelligence"', 'Africa "data centre" OR "data center"',
                 'Africa broadband OR "submarine cable" OR "fibre"', 'Africa "digital infrastructure"']

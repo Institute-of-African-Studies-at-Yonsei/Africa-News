@@ -21,4 +21,4 @@ Themes, countries and sources appear as filters automatically from the data, so 
 ## Notes
 - Data accumulates: new items are added daily, duplicates are skipped by URL, news older than ~18 months is pruned (papers and reports are kept).
 - Tagging is keyword-based, so some items will be mis-tagged. Fix a specific one by adding it to `manual_resources.json` with explicit `theme`/`country`.
-- Paywalled outlets (FT, Bloomberg, NYT) show headline and link only.
+- Paywalled outlets (Reuters, NYT, FT, Bloomberg) are not collected.
