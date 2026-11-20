@@ -49,6 +49,7 @@ select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--border
 .cname{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .track{display:block;height:12px;background:var(--bg);border-radius:3px;overflow:hidden}
 .fill{display:block;height:100%;background:#2a5b8c;border-radius:3px}
+.fill.neg{background:#b9b6aa}
 .bar.sel .fill{background:var(--accent)}
 .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--t2)}
 .val small{color:var(--t3);font-size:10px;margin-left:2px}
@@ -64,6 +65,7 @@ th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--border)}
 th{font-weight:500;color:var(--t3);font-size:11px}
 td.num{text-align:right;font-variant-numeric:tabular-nums}
 .tag{font-size:10px;padding:1px 6px;border-radius:4px;background:#f0f7ff;color:#1a4a7a;white-space:nowrap}
+.srccell{font-size:11px;color:var(--t3)}.srccell a,.sub a{color:var(--t2)}
 .tag.ai{background:#f0edf8;color:#4a2080}
 
 .foot{margin-top:14px;font-size:12px;color:var(--t2)}
@@ -143,6 +145,18 @@ async function load(){
   }
 }
 
+const SRC_SHORT = {WB_WDI:'World Bank WDI', ITU:'ITU (World Bank 경유)', WB_FINDEX:'World Bank Global Findex', OXF_GARI:'Oxford Insights'};
+// 지표별 출처·라이선스 표시 (연구원 계산 지표는 원자료 출처와 함께 '연구원 계산' 명시)
+function sourceLabel(ind, short){
+  const src = (D.source.rows || []).find(r => r.Source_ID === ind.source) || {};
+  const name = short ? (SRC_SHORT[ind.source] || ind.source) : (src.Source_Name || SRC_SHORT[ind.source] || ind.source);
+  const lic = src.License || 'CC BY 4.0';
+  const licUrl = src.License_URL || 'https://data.worldbank.org/summary-terms-of-use';
+  const derived = ind.code.startsWith('IAS.') ? '연구원 계산 · 원자료: ' : '';
+  return `${derived}<a href="${esc(src.Source_URL || '#')}" target="_blank" rel="noopener">${esc(name)}</a>` +
+    (short ? '' : ` · <a href="${esc(licUrl)}" target="_blank" rel="noopener">${esc(lic)}</a>`);
+}
+
 function indicatorsFor(table){ return D.source.indicators.filter(i => i.table === table); }
 
 function initControls(){
@@ -175,6 +189,7 @@ function initControls(){
     }).join('') + `</ul></div>` +
     `<p class="lic-note">이 페이지의 수치는 위 출처의 공개 데이터를 연세대학교 아프리카연구원이 아프리카 54개국 기준으로 추출·정리(국가명 한글화, 지표 분류)한 것입니다. ` +
     `원 데이터 제공 기관은 이 사이트나 그 이용 방식을 보증하지 않습니다. 각 데이터의 이용 조건은 해당 라이선스를 따르며, Oxford Insights 자료를 가공·재배포할 때는 같은 조건(CC BY-SA 4.0)으로 공개해야 합니다.</p>` +
+    `<p class="lic-note">※ 격차 지표에서 회색 막대는 값이 음수(예: 여성 보유율이 남성보다 높음)인 경우입니다.</p>` +
     `<p class="lic-note">※ 정부 AI 준비도 지수는 2025년판부터 평가 체계가 바뀌어 이전 연도와 점수를 직접 비교하지 않습니다.</p>` +
     `<p class="lic-note">※ 국가별로 최신 자료 연도가 다르며, 막대 옆 작은 숫자가 해당 값의 연도입니다. 자료가 없는 국가는 순위에서 제외됩니다.</p>`;
 }
@@ -203,7 +218,7 @@ function render(){
   let list = Object.values(latest)
     .filter(r => S.region === 'All' || D.cmap[r.Country_ID]?.Region === S.region)
     .sort((a,b) => b.Value - a.Value);
-  const max = Math.max(...list.map(r => r.Value), 0) || 1;
+  const max = Math.max(...list.map(r => Math.abs(r.Value)), 0) || 1;
   const missing = D.country.rows.filter(c => (S.region === 'All' || c.Region === S.region) && !latest[c.Country_ID]);
 
   const bars = list.map((r,i) => {
@@ -211,7 +226,7 @@ function render(){
     const sel = S.countries.includes(r.Country_ID) ? ' sel' : '';
     return `<div class="bar${sel}" data-c="${r.Country_ID}" title="${esc(c.Country_Name_EN||'')}">
       <span class="rank">${i+1}</span><span class="cname">${esc(c.Country_Name)}</span>
-      <span class="track"><span class="fill" style="width:${(r.Value/max*100).toFixed(1)}%"></span></span>
+      <span class="track"><span class="fill${r.Value < 0 ? ' neg' : ''}" style="width:${(Math.abs(r.Value)/max*100).toFixed(1)}%"></span></span>
       <span class="val">${fmt(r.Value)}<small>'${String(r.Year).slice(2)}</small></span></div>`;
   }).join('');
 
@@ -220,7 +235,7 @@ function render(){
   <div class="grid">
     <div class="card">
       <h2>${esc(meta.name)} — 국가별 최신값</h2>
-      <div class="sub">단위: ${esc(meta.unit)} · 국가를 누르면 오른쪽 추이 그래프에 추가됩니다</div>
+      <div class="sub">단위: ${esc(meta.unit)} · 출처: ${sourceLabel(meta)}<br>국가를 누르면 오른쪽 추이 그래프에 추가됩니다</div>
       <div class="bars">${bars || '<div class="nodata">자료가 없습니다.</div>'}</div>
       ${missing.length ? `<div class="nodata">자료 없음: ${missing.map(c => esc(c.Country_Name)).join(', ')}</div>` : ''}
     </div>
@@ -268,9 +283,9 @@ function profileTable(c){
       <td>${esc(i.name)}</td>
       <td class="num">${last ? fmt(last.Value) : '—'}</td>
       <td class="num">${last ? last.Year : ''}</td>
-      <td class="num">${rank ? `${rank}/${vals.length}` : ''}</td></tr>`;
+      <td class="num">${rank ? `${rank}/${vals.length}` : ''}</td><td class="srccell">${sourceLabel(i, true)}</td></tr>`;
   }).join('');
-  return `<table><thead><tr><th>분야</th><th>지표</th><th style="text-align:right">값</th><th style="text-align:right">연도</th><th style="text-align:right">순위</th></tr></thead><tbody>${rows}</tbody></table>`;
+  return `<table><thead><tr><th>분야</th><th>지표</th><th style="text-align:right">값</th><th style="text-align:right">연도</th><th style="text-align:right">순위</th><th>출처</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 function latestByCountryAll(ind){
