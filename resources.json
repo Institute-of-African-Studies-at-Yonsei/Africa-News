@@ -1,1 +1,3088 @@
-{"updated":"","count":0,"resources":[]}
+{
+ "updated": "2026-11-20 06:02 UTC",
+ "count": 172,
+ "resources": [
+  {
+   "id": "5809ee6698e8",
+   "title": "Kuda cuts jobs for second time in 2026 as it targets 2027 profitability",
+   "desc": "Kuda, the Nigerian digital bank, is cutting jobs for the second time this year. This time, it is cutting 40 jobs, as it pursues group profitability.",
+   "url": "https://techcabal.com/2026/11/19/kuda-cut-jobs-again/",
+   "date": "2026-11-19",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "General",
+   "country": "Nigeria",
+   "authors": "",
+   "keywords": [
+    "kuda",
+    "cuts",
+    "jobs",
+    "second"
+   ]
+  },
+  {
+   "id": "69d1b75da10f",
+   "title": "Who is actually using AI in Africa? It depends on whom you count",
+   "desc": "By one count, Kenya leads the world in AI use. In DataReportal’s July 2025 survey, 42.1% of Kenyan internet users aged 16 and over said they had used ChatGPT in the past month, the highest share of any market surveyed.",
+   "url": "https://techcabal.com/2026/11/19/who-is-using-ai-in-africa/",
+   "date": "2026-11-19",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Connectivity & telecoms",
+   "country": "Kenya",
+   "authors": "",
+   "keywords": [
+    "actually",
+    "using",
+    "depends",
+    "whom"
+   ]
+  },
+  {
+   "id": "71df970a84d9",
+   "title": "Can agritech investment turn Africa Into a global food supplier? {Business Africa}",
+   "desc": "Can agritech and investment transform Africa into a global food supplier? West Africa launches a $650 million push to boost local production and African nations unite in Cotonou to strengthen defences against increasingly sophisticated cyberattacks.",
+   "url": "http://www.africanews.com/2026/11/19/can-agritech-investment-turn-africa-into-a-global-food-supplier-business-africa/",
+   "date": "2026-11-19",
+   "type": "News",
+   "source": "Africanews",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "agritech",
+    "investment",
+    "turn",
+    "global"
+   ]
+  },
+  {
+   "id": "cc5b6b578859",
+   "title": "Elon Musk’s policy difficulty prevents Starlink’s South Africa entry",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQN0JRcm9FYVh5NGh0ME90b2IzZUJZZUtEcWk4MXBDc2VyUlhlOUFHQWJDVUZPSldjMXhSdHRfRWRWZGt2a2xNbmxiVHE4M2ZURklsd09kd1U0cFU4YTl6X3Z3NTd4LXNFOGV0MHN3bzI3OXZwNmd3ZHJ5N21wX19oTlBmTUJ3eFNBbTA4NEZWZHhteHhDWDZob25Bd3hpcXNPUW9hRmx3Yw?oc=5",
+   "date": "2026-11-17",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "elon",
+    "musk",
+    "policy",
+    "difficulty"
+   ]
+  },
+  {
+   "id": "ffaa9ae8d2c8",
+   "title": "AI learning tool helps blind students excel in Malawi",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOa3J5MjdqalhDNjhTcVhBaUhfUmt1Tm1IMTd6QTl1Qmh0Y243VFZCYjNzVHV4TF8wV3BRXzZxZUpZUUx5eURGUV9lRVdmSm95bDBaVE5vY2FqQUsyY0t0UWRkdS16NWtqS0s3d2hzMWMzdzlqc3lEbjllWk9DYmdfS2xMZGpRVVBvWnV0X1dwYkV1cVhfaUR1UWYxTk5RdlAxMWhtN3dwNjbSAa4BQVVfeXFMTndtV0NyUVJNOXFXY1l2LTlFLUJaT2hXdFFkbURUWW5ZcWt3ZTdHN2pjSlZNY1VTRVY4Q0JDZnd5V0JfTUE3ZzF4cmdCN19YQUxyMTVQcFZIcFlGUHNfY3NuZWJuZlhRa2d5dlhfYVprdTBjS05sY1I4NV9sUEFLbm1ValVUVWlTZ3RfdjhVSGZ5ZWJNNEZNR2pLV1VsR3AwQnFJZVFwQ1NSSXozWnRB?oc=5",
+   "date": "2026-11-16",
+   "type": "News",
+   "source": "Al Jazeera",
+   "theme": "AI applications",
+   "country": "Malawi",
+   "authors": "",
+   "keywords": [
+    "learning",
+    "tool",
+    "helps",
+    "blind"
+   ]
+  },
+  {
+   "id": "20e8852a9626",
+   "title": "The small African lab sounding the alarm on AI bioweapons",
+   "desc": "Photograph showing Georgina an AI Engineer building and working on the user interface of the new model Moremi.",
+   "url": "https://restofworld.org/2026/ghana-ai-lab-minohealth-bioweapons-threat-dna-synthesis-regulation/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+   "date": "2026-11-16",
+   "type": "News",
+   "source": "Rest of World",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "small",
+    "sounding",
+    "alarm",
+    "bioweapons"
+   ]
+  },
+  {
+   "id": "42f5649e2e66",
+   "title": "South Africa’s Ramaphosa takes AI pitch to Musk’s turf",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPakxGcC1zTl9qT0FKRnBRX21ldHc2RWFrbWlmT1JFX0V2NzZlVk5ZTmlMalNOSEVCQXZibXItUlNUQ1M2ZGJSZ3hqbFY4TWEydFJzYnBMMC1sT0MtMk9OMko3WHF0WVdoRmozbk5wRWp0M0tlRWhnTDJJY0h4VnYtN203WlcySjRYTU1aYlhXQWFwQ1po?oc=5",
+   "date": "2026-11-13",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "AI applications",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "south",
+    "ramaphosa",
+    "takes",
+    "pitch"
+   ]
+  },
+  {
+   "id": "6e4f39d09822",
+   "title": "View / Nvidia CEO’s exit marks pivotal moment for African AI",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTE5QT3M5bF9ydjN4bVRBVnhWLVZkb09ZanA4bngwUHJ2aXhkVXN6VjA4RVdRaFltRkhIeW1leWgzMlRqRGFMMDJFWWJBNjlrQ1pGTFY1UlI0bzFWMEpPQ1FDb19hZ2RERmNSRXh5MW9QbXUwV3ZmUk45LXlMZUg1UC05Yzd2Wlo2TzIyNU5NU09sdm5LaThsMXFqLThuNTZP?oc=5",
+   "date": "2026-11-13",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "view",
+    "nvidia",
+    "exit",
+    "marks"
+   ]
+  },
+  {
+   "id": "002291b86357",
+   "title": "Distant wars pose risks for Africa’s digital services",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYUJHeGotbzdEOWRwQ1B3c1o4QURkQ2w5c3hPYU8tMGQzdVFSVkF3V2Q5Nmg3TVZhMVZUcEhfbWNienFyRHpwMi1VV3llMGFRVmh5TTRFQWxJZ3ZmdnJBcTlMWmhZcUFnUk9nQXBlbXBCMndvSXJXRWRRQzl6VkczV1BzSC1TczF1MkpSNTZ5aDJ6X0ZXUTZpaGlQVQ?oc=5",
+   "date": "2026-11-11",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "General",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "distant",
+    "wars",
+    "pose",
+    "risks"
+   ]
+  },
+  {
+   "id": "ad57156b043f",
+   "title": "Securing Africa’s digital backbone: Subsea cable vulnerability and the case for an African critical infrastructure protection regime",
+   "desc": "Africa's participation in the digital economy rests on a small number of subsea cables whose ownership, routing, repair and protection largely escape African control. Three disruption episodes in 2024 – in the Red Sea, off Côte d'Ivoire and off KwaZulu-Natal in South Africa – exposed the continent’s",
+   "url": "https://doi.org/10.1080/10220461.2026.2742401",
+   "date": "2026-11-06",
+   "type": "Academic paper",
+   "source": "South African Journal of International Affairs",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Fabian Maximilian Johannes Teichmann",
+   "keywords": [
+    "securing",
+    "digital",
+    "backbone",
+    "subsea"
+   ]
+  },
+  {
+   "id": "674b958c27cc",
+   "title": "AI's role in transforming Africa's digital infrastructure",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBQcF82SlB2dTc5VEI1VXpENVNISzZpVkZvY3BKbGhCai0tRFh2ODExXzZnUUc4c1B2WC1kTnBGNVI4STdUOEotYUlqNmdPQWlwRnlsdGFvSTE?oc=5",
+   "date": "2026-11-03",
+   "type": "News",
+   "source": "BBC",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "role",
+    "transforming",
+    "digital",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "399769ad2e35",
+   "title": "Kenya’s mobile subscriber base grows amid rising broadband demand",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWi1mMmo3WHl5eTN0Z0dVM0wwUWI1MkdOTTNmWE40QUJnQmMzTjhyZ2pSVXNzcG85aFY5cnJUSDZDMzBVekFrbGVvRlRJNnZXejZIR3lrNzRIY0V0OXNfSHUxTGo1bGNZd2VfS0JsTXR2SVNSVzlJbDFadlZCOEZuNjV1N1V1OWUybXlaU1hvT0t5Zkduc2xMblhiTWNuWVlEREFZNFlGMDdWck0?oc=5",
+   "date": "2026-11-02",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "Connectivity & telecoms",
+   "country": "Kenya",
+   "authors": "",
+   "keywords": [
+    "kenya",
+    "mobile",
+    "subscriber",
+    "base"
+   ]
+  },
+  {
+   "id": "cb71d576186f",
+   "title": "Strategic Planning for AI-Enabled Cloud Business Intelligence in Commercial Banks: Comparative Evidence from South Africa and Nigeria",
+   "desc": "Artificial intelligence (AI), cloud computing, and business intelligence (BI) are converging into a new infrastructure platform layer for commercial banks in Africa. Their organizational value depends on strategic, rather than purely technical deployments across the technology stack. This study exam",
+   "url": "https://doi.org/10.32479/irmm.24807",
+   "date": "2026-11-01",
+   "type": "Academic paper",
+   "source": "International Review of Management and Marketing",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Olalekan Samuel Ogunleye, Olusola Salami",
+   "keywords": [
+    "strategic",
+    "planning",
+    "enabled",
+    "cloud"
+   ]
+  },
+  {
+   "id": "6410e8e67945",
+   "title": "Why Africa needs its own AI off switch",
+   "desc": "Africa must develop AI systems with local control to protect critical infrastructure such as mobile money networks from growing AI-powered cyberthreats.",
+   "url": "https://restofworld.org/2026/africa-sovereign-ai-off-switch/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+   "date": "2026-10-29",
+   "type": "News",
+   "source": "Rest of World",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "needs",
+    "switch"
+   ]
+  },
+  {
+   "id": "44490fdd47a5",
+   "title": "Hollywood actor Idris Elba backs African AI filmmaking",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWWtjNjhvYjFUb0lxY29ZaWVkNThnbzVuSF9zWUdVQ1FNZHA5ZkY3b1dMaWVPcWdTcU0xSWNvcm5BLTVsQlZYdVVIR0FFU3diQjdFcFQxc3lDVFh6bXRjZzlnMHRXYno0NGxGUS1YeUFzRGNEcVJlQXdJdzJ5Y0RLSTdOTlpOSzhSVkczQURxNFdWWkt2ZUlSa2FubGNhQQ?oc=5",
+   "date": "2026-10-28",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "hollywood",
+    "actor",
+    "idris",
+    "elba"
+   ]
+  },
+  {
+   "id": "754730c38c20",
+   "title": "The Environmental Footprint of Artificial Intelligence: A Theoretical Framework of Energy, Water, Minerals and Waste in the Sustainability Assessment of Digital Transformation in Africa",
+   "desc": "Artificial intelligence (AI) is promoted as an instrument of sustainability, yet the infrastructure that runs it draws electricity and water, embodies critical minerals and ends its life as electronic waste. Sustainability assessments of digital transformation in Africa rarely count that infrastruct",
+   "url": "https://doi.org/10.68854/r032hp31",
+   "date": "2026-10-27",
+   "type": "Academic paper",
+   "source": "IIAR Journal of Agriculture Environment and Sustainability",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Umar Kawu Atolagbe, IGWE Emmanuel Sunday, Paul Idowu Bamigbola, OGAH Sunday Ogbo et al.",
+   "keywords": [
+    "environmental",
+    "footprint",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "b371695f7f51",
+   "title": "Computational Social Science and African Realities: A Methodological and Theoretical Critique of Big Data, Machine Learning and the Measurement of African Societies",
+   "desc": "Social scientists increasingly measure African societies through data that Africans did not produce for that purpose: satellite imagery, night-time lights, mobile-phone and platform data, social-media text, conflict event records and, most recently, large language models, processed by machine learni",
+   "url": "https://doi.org/10.68854/0qwktq15",
+   "date": "2026-10-27",
+   "type": "Academic paper",
+   "source": "IIAR Journal of Social Sciences and African Studies",
+   "theme": "AI policy & governance",
+   "country": "Nigeria",
+   "authors": "Igwe Emmanuel Sunday, Umar Kawu Atolagbe, Ogah Sunday Ogbo, Paul Idowu Bamigbola et al.",
+   "keywords": [
+    "computational",
+    "social",
+    "science",
+    "realities"
+   ]
+  },
+  {
+   "id": "ca1e4ffd0910",
+   "title": "African Languages and Language Technology: A Theoretical Framework of Linguistic Inequality, Cultural Transmission and the Future of Low-Resource Languages Under Large Language Models",
+   "desc": "Language technologies such as large language models, machine translation and speech interfaces are becoming the gateway to information, public services, learning and work, yet they perform worst in the languages most Africans speak. Research on this gap is largely technical and treats it as an engin",
+   "url": "https://doi.org/10.68854/kk2epq88",
+   "date": "2026-10-27",
+   "type": "Academic paper",
+   "source": "IIAR Journal of Social Sciences and African Studies",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Umar Kawu Atolagbe, Ogah Sunday Ogbo, Emmanuel Usulor Nwogboji",
+   "keywords": [
+    "languages",
+    "language",
+    "technology",
+    "theoretical"
+   ]
+  },
+  {
+   "id": "9fcae9f57e00",
+   "title": "Artificial Intelligence and Digital Agriculture for Smallholder Farming: An Africa-Centred Scoping Review of Global South Evidence",
+   "desc": "Artificial intelligence (AI) is increasingly applied in agriculture, but evidence concerning its relevance to smallholder farming remains heterogeneous and geographically uneven. This scoping review mapped evidence on AI and related digital agricultural technologies, their applications, adoption con",
+   "url": "https://doi.org/10.3390/world7110184",
+   "date": "2026-10-26",
+   "type": "Academic paper",
+   "source": "World",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Olaitan Ayotunde Shemfe, Palesa Maketha-Kosi",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "digital",
+    "agriculture"
+   ]
+  },
+  {
+   "id": "f46ee3bc303a",
+   "title": "AI and Digital Colonialism in Africa: Artificial Intelligence, as Currently Built and Governed, Is Extractive by Default",
+   "desc": "This African Position Paper examines how artificial intelligence reproduces structural asymmetries between Africa and the centres of digital power, and sets out what institutions should do about it. It tests a claim now common in public debate: that AI is inherently an instrument of digital colonial",
+   "url": "https://doi.org/10.5281/zenodo.23609897",
+   "date": "2026-10-24",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Getty Musiiwa",
+   "keywords": [
+    "digital",
+    "colonialism",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "bd86017d1608",
+   "title": "Convergence and divergence in the discourse of AI governance: a comparative analysis of global and African contexts",
+   "desc": "This study examines convergence and divergence between Africa-focused and global-level AI governance narratives. Using sentence-level embeddings and K-means clustering, the analysis identifies five thematic clusters. Whereas the selected global-level documents place greater emphasis on safety, risk ",
+   "url": "https://doi.org/10.1080/01436597.2026.2741923",
+   "date": "2026-10-23",
+   "type": "Academic paper",
+   "source": "Third World Quarterly",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Minjun Hong, David Essuman Mensah",
+   "keywords": [
+    "convergence",
+    "divergence",
+    "discourse",
+    "governance"
+   ]
+  },
+  {
+   "id": "ca2f646c34dd",
+   "title": "Mapping the territorial politics of data centre opposition",
+   "desc": "Despite growing scholarly interest in data centres, opposition to their construction has so far been studied mainly through single cases, and rarely through a geographical lens. This commentary addresses that gap by presenting an original dataset of around seventy documented cases of mobilisation ag",
+   "url": "https://doi.org/10.1016/j.diggeo.2026.100196",
+   "date": "2026-10-17",
+   "type": "Academic paper",
+   "source": "Digital Geography and Society",
+   "theme": "Data centres & cloud",
+   "country": "Pan-African",
+   "authors": "Cecilia Biancalana",
+   "keywords": [
+    "mapping",
+    "territorial",
+    "politics",
+    "data"
+   ]
+  },
+  {
+   "id": "742de3b60398",
+   "title": "AI infrastructure, governance preparedness, and digital state systems in Africa",
+   "desc": "This paper investigates the relationship between AI infrastructure integration and governance across Africa using project-level data on 123 Chinese-financed AI-related infrastructure projects implemented in 40 countries between 2002 and 2022. The empirical analysis employs multivariate logistic regr",
+   "url": "https://doi.org/10.1016/j.sftr.2026.102213",
+   "date": "2026-10-12",
+   "type": "Academic paper",
+   "source": "Sustainable Futures",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Michael Mbate",
+   "keywords": [
+    "infrastructure",
+    "governance",
+    "preparedness",
+    "digital"
+   ]
+  },
+  {
+   "id": "34d34b037bd6",
+   "title": "Building Africa's Digital & AI Foundation: Data Infrastructure & Trust",
+   "desc": "Building Africa's Digital Foundation: Data, Infrastructure and Trust is the inaugural whitepaper in a thought leadership series exploring the forces shaping Africa's digital and artificial intelligence future. Written from the perspective of a telecommunications and data transformation leader, the p",
+   "url": "https://doi.org/10.5281/zenodo.23243801",
+   "date": "2026-10-08",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Ghana",
+   "authors": "Asiedu Ansu",
+   "keywords": [
+    "building",
+    "digital",
+    "foundation",
+    "data"
+   ]
+  },
+  {
+   "id": "8e7d6889e1df",
+   "title": "Artificial intelligence and children's rights in Africa",
+   "desc": "The rapid integration of artificial intelligence (AI) into education, healthcare, child protection, and social protection across Africa presents both transformative opportunities and serious structural risks to the realisation of children’s rights. This chapter argues that navigating this terrain re",
+   "url": "https://doi.org/10.4324/9781003663669-15",
+   "date": "2026-10-07",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Clement Chipenda",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "children",
+    "rights"
+   ]
+  },
+  {
+   "id": "0cc5a95553cc",
+   "title": "Mining for Data Centres",
+   "desc": "Africa's severe shortage of data centres, hosting only 1% of its generated data, undermines its digital transformation and economic development. This chapter explores resources-for-infrastructure (R4I) investment contracts as a viable, decolonial model for financing and constructing data centres in ",
+   "url": "https://doi.org/10.4324/9781032664781-16",
+   "date": "2026-10-07",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Dunia Zongwe",
+   "keywords": [
+    "mining",
+    "data",
+    "centres"
+   ]
+  },
+  {
+   "id": "7c06406c8fb7",
+   "title": "19. Digital Governance and State Capacity in Africa: Institutional Challenges in Public-Sector Digital Transformation",
+   "desc": "The drive towards digital transformation has been a growing part of the agenda for public-sector reform in Africa. Governments are implementing various technologies—such as digital identification systems, online public service platforms, electronic payment systems, data-sharing infrastructure, digit",
+   "url": "https://doi.org/10.5281/zenodo.23117650",
+   "date": "2026-10-03",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Oluwafemi Agboola",
+   "keywords": [
+    "digital",
+    "governance",
+    "state",
+    "capacity"
+   ]
+  },
+  {
+   "id": "4c919e80e572",
+   "title": "Exploring the Intersection of Artificial Intelligence and Food Sustainability in Africa",
+   "desc": "Artificial intelligence (AI) can accelerate the achievement of most Sustainable Development Goals (SDGs) in African countries, including SDG 2 and SDG 1. Based on a bibliometric and systematic literature review (B-SLR), this chapter explores the intersection of AI and food sustainability in Africa. ",
+   "url": "https://doi.org/10.1079/9781836994930.0003",
+   "date": "2026-09-23",
+   "type": "Academic paper",
+   "source": "CABI eBooks",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Tamisai Chipunza, Lungile Ntsalaze",
+   "keywords": [
+    "exploring",
+    "intersection",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "b13681709885",
+   "title": "Governing Africa's Digital Infrastructure and Artificial Intelligence for Regional Anti-Corruption and Public Service Delivery",
+   "desc": "Africa’s digital transformation is advancing faster than the governance frameworks required to make digital infrastructure and artificial intelligence (AI) accountable, inclusive and effective. This study examines how digital infrastructure and AI interact with anti-corruption efforts and public ser",
+   "url": "https://doi.org/10.47772/ijriss.2026.100801045",
+   "date": "2026-09-23",
+   "type": "Academic paper",
+   "source": "International Journal of Research and Innovation in Social Science",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Thomas Angesha, Catherine Kalondu Mutua, Rosemary Chiedza Mukucha, Naim Shehu",
+   "keywords": [
+    "governing",
+    "digital",
+    "infrastructure",
+    "artificial"
+   ]
+  },
+  {
+   "id": "08aae2ae922e",
+   "title": "Communicating Power and Resistance: Africa in the Era of Artificial Intelligence",
+   "desc": "Abstract Globally, the domination of one group by another has usually been met with resistance because humans were born free and desire to exercise their political, economic, and religious freedom without restriction. This informed the declaration of American States in 1776 that men were created equ",
+   "url": "https://doi.org/10.5281/zenodo.22901828",
+   "date": "2026-09-22",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "Johnson Chinasa Alegu, Philemon Chukwu Ajah, Chima Denma EZEH",
+   "keywords": [
+    "communicating",
+    "power",
+    "resistance",
+    "artificial"
+   ]
+  },
+  {
+   "id": "053c2ae22f55",
+   "title": "Leveraging a Locally Anchored Learning Health Care System Toward Equitable Telehealth: Assessing Broadband Access and Supporting Use of Federal Internet Subsidies in a Safety‐Net Setting",
+   "desc": "Objective: Connectivity Program (ACP) in an urban, safety-net setting, using community-engaged iterative learning cycles to improve patient-centered care. Data Sources and Study Setting: Roots Community Health, a health center focused on uplifting those impacted by systemic inequities, functions as ",
+   "url": "https://doi.org/10.1002/lrh2.70121",
+   "date": "2026-09-21",
+   "type": "Academic paper",
+   "source": "Learning Health Systems",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Samantha M.R. Kling, Jonathan Glazer Shaw, Aaron A. Tierney, Mayra Reyes et al.",
+   "keywords": [
+    "leveraging",
+    "locally",
+    "anchored",
+    "learning"
+   ]
+  },
+  {
+   "id": "fd8a875c67fd",
+   "title": "Broadband Disparities and Digital Divide: A Proposal for Inclusive Policy Reform",
+   "desc": "Digital exclusion continues to restrict educational, economic, and civic opportunities in underserved communities, particularly in the Global South. This study examines how broadband infrastructure, affordability measures, digital literacy, governance, and socioeconomic conditions shape digital incl",
+   "url": "https://doi.org/10.21275/mr26831004023",
+   "date": "2026-09-17",
+   "type": "Academic paper",
+   "source": "International Journal of Science and Research (IJSR)",
+   "theme": "AI policy & governance",
+   "country": "Ghana",
+   "authors": "Joshua D Thomas",
+   "keywords": [
+    "broadband",
+    "disparities",
+    "digital",
+    "divide"
+   ]
+  },
+  {
+   "id": "92dabc55b519",
+   "title": "Artificial Intelligence, Large Language Models, and Machine Learning in African Health Professions Education: A Systematic Review of Adoption, Literacy, Institutional Feasibility, and Ethical Perceptions",
+   "desc": "Abstract Background Artificial intelligence (AI), including large language models (LLMs) and machine learning (ML), is increasingly present in health professions education (HPE), yet evidence on its adoption, literacy, institutional feasibility, and ethical implications specific to African settings ",
+   "url": "https://doi.org/10.21203/rs.3.rs-10707419/v1",
+   "date": "2026-09-17",
+   "type": "Academic paper",
+   "source": "Research Square",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Promise Oladejo, Oserebameh Augustine Beckley, John Chukwuemeka Amamdikwa, Joshua Oladiipo Owoyemi et al.",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "large",
+    "language"
+   ]
+  },
+  {
+   "id": "70445eab3a6f",
+   "title": "India’s digital public infrastructure diplomacy in Africa: Development goals, co-creation and structural frictions",
+   "desc": "The strategic recalibration of India–Africa relations in a changing international landscape is marked by a pragmatic shift from ‘moral geographies’ of anti-colonialism to techno-infrastructural cooperation. This article examines India’s digital public infrastructure (DPI) as a pathway for advancing ",
+   "url": "https://doi.org/10.1080/10220461.2026.2731646",
+   "date": "2026-09-13",
+   "type": "Academic paper",
+   "source": "South African Journal of International Affairs",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Ankita Dutta, Obja Borah Hazarika, Rimon Bhuyan Gogoi",
+   "keywords": [
+    "india",
+    "digital",
+    "public",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "b4f03508fd7c",
+   "title": "Artificial Intelligence, the Internet of Things, and Cloud Computing as Catalysts for Sustainable Language Education Transformation in Africa: A Conceptual Review",
+   "desc": "Education remains a critical driver of socioeconomic development, yet many African countries continue to face challenges related to limited access to quality education, inadequate infrastructure, shortages of qualified teachers, weak educational administration, and persistent digital inequalities. E",
+   "url": "https://doi.org/10.70382/ajaias.v13i2.0109",
+   "date": "2026-09-04",
+   "type": "Academic paper",
+   "source": "Journal of African Innovation and Advanced Studies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Andrews Edeki Aghahowa",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "internet",
+    "things"
+   ]
+  },
+  {
+   "id": "da7f8cd070ca",
+   "title": "The Politics of Tech-adoption and Artificial Intelligence in Africa",
+   "desc": "The present Tech-adoption, visible in the proliferation of Artificial Intelligence (AI) or Self Service Technologies (SST) in Africa is political. This is as it involves a Tech-economic interaction that is undergirded by politics. The supply of AI/SST to Africa has opened another vista of Tech-geopo",
+   "url": "https://integralresearch.in/index.php/index/article/view/639",
+   "date": "2026-08-30",
+   "type": "Academic paper",
+   "source": "Integral Research",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Gregory Emeka Chinweuba, Uchenna Azubuike Ezeogu",
+   "keywords": [
+    "politics",
+    "tech",
+    "adoption",
+    "artificial"
+   ]
+  },
+  {
+   "id": "ecda9fda9208",
+   "title": "Africa AI Governance Index Report 2026",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.15693.81120",
+   "date": "2026-08-17",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Lawyers Hub, Bendjédid Rachad Sanoussi",
+   "keywords": [
+    "governance",
+    "index",
+    "report"
+   ]
+  },
+  {
+   "id": "fcf040ec8c9f",
+   "title": "Speech processing in computer science: a review of feature extractors, approaches, Machine Learning and Deep Learning techniques",
+   "desc": "A lot of research has been carried out on speech analysis since the 1970s. In this study, we focus on the current state of knowledge on audio feature extraction techniques, the machine learning and deep learning techniques used in this field, as well as the approaches and types of databases that can",
+   "url": "https://hal.science/hal-04491975v2",
+   "date": "2026-08-14",
+   "type": "Academic paper",
+   "source": "HAL",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "Borlli Michel Jonas Somé, Go Issa Traoré",
+   "keywords": [
+    "speech",
+    "processing",
+    "computer",
+    "science"
+   ]
+  },
+  {
+   "id": "cef4c57e9734",
+   "title": "Architecting Fair Equity Just AI-Driven Digital Public Infrastructure for Africa",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.24557.55526",
+   "date": "2026-08-13",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "Lavina Ramkissoon",
+   "keywords": [
+    "architecting",
+    "fair",
+    "equity",
+    "just"
+   ]
+  },
+  {
+   "id": "1930275090f1",
+   "title": "Digital Infrastructure and Interoperability for Continental Integration in Africa",
+   "desc": "This study shows that digital infrastructure and interoperability are pivotal to Africa’s continental integration agenda, providing a means to address persistent structural fragmentation, high trade costs, and coordination failures. It examines how digital infrastructure and interoperability can adv",
+   "url": "https://doi.org/10.4324/9781003751106-3",
+   "date": "2026-08-12",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "Ibrahim Nandom Yakubu, Khadijah Iddrisu",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "interoperability",
+    "continental"
+   ]
+  },
+  {
+   "id": "2bda1c3baaf5",
+   "title": "Broadband Connectivity and Economic Performance in MENA Countries",
+   "desc": "Abstract Broadband connectivity is an important component of national economic infrastructure. However, empirical evidence on the relationship between broadband connectivity and economic performance remains limited for the Middle East and North Africa (MENA) countries. We examine the association bet",
+   "url": "https://doi.org/10.1515/rmeef-2026-0003",
+   "date": "2026-08-01",
+   "type": "Academic paper",
+   "source": "Review of Middle East Economics and Finance",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Augustine Abakpa, Ondřej Dvouletý",
+   "keywords": [
+    "broadband",
+    "connectivity",
+    "economic",
+    "performance"
+   ]
+  },
+  {
+   "id": "2ad7c61c3473",
+   "title": "Beyond Extraction: An Architectural Blueprint for Sovereign Digital Infrastructure in Sub-Saharan Africa",
+   "desc": "Summary Beyond Extraction: An Architectural Blueprint for Sovereign Digital Infrastructure in Sub-Saharan Africa is a technical commentary and policy brief prepared by the Hitherto Center for the Advancement of Technological Trust (H-CATT, SCIO) in response to the International Monetary Fund (IMF) 2",
+   "url": "https://doi.org/10.5281/zenodo.21495986",
+   "date": "2026-07-22",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Robin Vabolis, R. Verity Vabolis",
+   "keywords": [
+    "beyond",
+    "extraction",
+    "architectural",
+    "blueprint"
+   ]
+  },
+  {
+   "id": "8587fe92645b",
+   "title": "Digital public infrastructure (DPI) across Africa: A national identity systems perspective",
+   "desc": "A rising global politics advocates for national investments in digital public infrastructure (DPI). The national DPI paradigm combines three core elements: digital national identity systems, digital national payment systems, and safe and secure data exchange. This study, grounded in literature on na",
+   "url": "https://doi.org/10.23962/ajic.i37.25654",
+   "date": "2026-07-17",
+   "type": "Academic paper",
+   "source": "The African Journal of Information and Communication (AJIC)",
+   "theme": "Digital public infrastructure",
+   "country": "Multiple countries",
+   "authors": "Jonathan Klaaren",
+   "keywords": [
+    "digital",
+    "public",
+    "infrastructure",
+    "across"
+   ]
+  },
+  {
+   "id": "bd93ed509690",
+   "title": "Digital Infrastructure Development and Economic Growth in Nigeria: The Role of Broadband Connectivity, Digital Identity, Data Centres, and Cybersecurity (2000-2025)",
+   "desc": "This paper examines the relationship between digital infrastructure development and economic growth in Nigeria over the period 2000 to 2025, disaggregating digital infrastructure into four components: broadband connectivity, digital identity infrastructure, data centre capacity, and cybersecurity pr",
+   "url": "https://doi.org/10.47772/ijriss.2026.100601291",
+   "date": "2026-07-17",
+   "type": "Academic paper",
+   "source": "International Journal of Research and Innovation in Social Science",
+   "theme": "AI policy & governance",
+   "country": "Nigeria",
+   "authors": "PhD. Alochukwu Christian NZELU, Irene Olanma Onwuemeka, CHINYEAKA CHIDERA GIDEON",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "development",
+    "economic"
+   ]
+  },
+  {
+   "id": "0eee0686cf1c",
+   "title": "Sustainable Adoption of Cloud Computing for Small and Medium Enterprises in Sub- Saharan Africa: A Bibliometric Analysis",
+   "desc": "Abstract This study examines the sustainable adoption of cloud computing among small and medium enterprises (SMEs) in sub-Saharan Africa (SSA) through a bibliometric analysis supplemented by narrative synthesis, drawing on peer-reviewed literature from Scopus, Web of Science, and Google Scholar alon",
+   "url": "https://doi.org/10.21203/rs.3.rs-10186955/v1",
+   "date": "2026-07-13",
+   "type": "Academic paper",
+   "source": "Research Square",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Zibusisozenkosi Dube¹, Shadreck Nhorito",
+   "keywords": [
+    "sustainable",
+    "adoption",
+    "cloud",
+    "computing"
+   ]
+  },
+  {
+   "id": "622472f7d206",
+   "title": "FROM AWARENESS TO PARTICIPATION: RETHINKING CLIMATE ACTION THROUGH DIGITAL PUBLIC INFRASTRUCTURE IN AFRICA",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.29342.70720",
+   "date": "2026-07-12",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "Gyasi Amos Kwadwo",
+   "keywords": [
+    "awareness",
+    "participation",
+    "rethinking",
+    "climate"
+   ]
+  },
+  {
+   "id": "6a4ce46268fd",
+   "title": "Human Understanding and Artificial Intelligence - Africa",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.34993.54883",
+   "date": "2026-07-02",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "F D Amonya",
+   "keywords": [
+    "human",
+    "understanding",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "b4e1e7aa463e",
+   "title": "Re-Examination of the Relationship Between Digital Connectivity and Foreign Direct Investment in West African Economic and Monetary Union (WAEMU) Countries",
+   "desc": "The relationship between digital transformation and the attractiveness of foreign direct investment (FDI) warrants further investigation, given the crucial role of foreign capital in the socioeconomic development of developing nations. This study analyzes the impact of information and communication ",
+   "url": "https://doi.org/10.1177/21582440261473715",
+   "date": "2026-07-01",
+   "type": "Academic paper",
+   "source": "SAGE Open",
+   "theme": "Connectivity & telecoms",
+   "country": "Pan-African",
+   "authors": "Hamidou Ouedraogo",
+   "keywords": [
+    "examination",
+    "relationship",
+    "between",
+    "digital"
+   ]
+  },
+  {
+   "id": "c4affa2e3930",
+   "title": "Artificial Intelligence for Integrated Food, Energy and Water Systems in Africa: A Human-Centred Framework for Data Resource Management",
+   "desc": "This paper provides an overview of how AI can be repositioned from isolated optimization tools to an integrative capability for managing the interdependence of food, energy, and water resources in African contexts. A structured integrative review was conducted using Scopus, Web of Science, IEEE Xplo",
+   "url": "https://doi.org/10.36615/8761xd75",
+   "date": "2026-06-30",
+   "type": "Academic paper",
+   "source": "Journal of Digital Food Energy & Water Systems",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Folakemi Ayodele",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "integrated",
+    "food"
+   ]
+  },
+  {
+   "id": "b1712ef906f5",
+   "title": "Digital Identification as an Element of Digital Public Infrastructure: Towards Localization of Production in Africa",
+   "desc": "Although digital identification is already a vital component of Digital Public Infrastructure (DPI), its structural importance in promoting industrial localization and regional economic integration throughout Africa is yet largely unexplored. With an emphasis on agriculture—one of the most economica",
+   "url": "https://doi.org/10.31132/2412-5717-2026-75-2-132-153",
+   "date": "2026-06-30",
+   "type": "Academic paper",
+   "source": "Uchenie zapiski Instituta Afriki RAN",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Karim Mohamed Aboul Dahab",
+   "keywords": [
+    "digital",
+    "identification",
+    "element",
+    "digital"
+   ]
+  },
+  {
+   "id": "07f1ced481d9",
+   "title": "GLOBAL BROADBAND ACCESS: COST, SPEED, RELIABILITY, AND THE DIGITAL DIVIDE (2021–2026)",
+   "desc": "Broadband communication has evolved into one of the most important components of modern digital infrastructure, enabling economic development, digital governance, education, healthcare, financial inclusion, scientific research, and industrial automation.Between 2021 and 2026, global broadband connec",
+   "url": "https://doi.org/10.5120/ijcaac8e8aa0b35e",
+   "date": "2026-06-30",
+   "type": "Academic paper",
+   "source": "International Journal of Computer Applications",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Lakshmi Devi C., Sajana Balan Manian",
+   "keywords": [
+    "global",
+    "broadband",
+    "access",
+    "cost"
+   ]
+  },
+  {
+   "id": "6188ee3f65a3",
+   "title": "Data Colonialism: The Ubuntu Philosophy as an African Regulation of Digital Data and Infrastructure",
+   "desc": "Africa’s digital transformation process currently operates under data colonialism because international powers extract user behavior data while they maintain control over essential internet facilities, which include submarine cables and data centers. The study demonstrates how Western regulatory sys",
+   "url": "https://doi.org/10.68928/alr-2026-2-1-03",
+   "date": "2026-06-28",
+   "type": "Academic paper",
+   "source": "Afrocentric Legal Review",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Faith Kelechi Ekwe, Tabu Lochupar Baroch Kumoi",
+   "keywords": [
+    "data",
+    "colonialism",
+    "ubuntu",
+    "philosophy"
+   ]
+  },
+  {
+   "id": "98d480380a64",
+   "title": "UG AIMS: A Scalable AI Governance and Certification Framework for Africa",
+   "desc": "Artificial intelligence (AI) adoption across Uganda and the wider African market is accelerating across healthcare, agriculture, financial services, public administration, and cross-border digital services. These use cases create significant opportunities for development and service delivery, but th",
+   "url": "https://doi.org/10.5281/zenodo.20723049",
+   "date": "2026-06-16",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Uganda",
+   "authors": "Erich Barlow",
+   "keywords": [
+    "aims",
+    "scalable",
+    "governance",
+    "certification"
+   ]
+  },
+  {
+   "id": "26eb0cdbb5e6",
+   "title": "Mapping the Artificial Intelligence Divide in Africa: Infrastructure, Accessibility and Capacity",
+   "desc": "Artificial Intelligence (AI) has the potential to be transformative for development, but Africa is currently facing a fragmented and challenging \"AI divide\". This paper provides an empirical analysis of the current state of the AI landscape and how it compares with Africa's technological preparednes",
+   "url": "https://doi.org/10.48550/arxiv.2606.30656",
+   "date": "2026-06-16",
+   "type": "Academic paper",
+   "source": "arXiv (Cornell University)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Abayomi Olusola Agbeyangi, Jose M. Lukose",
+   "keywords": [
+    "mapping",
+    "artificial",
+    "intelligence",
+    "divide"
+   ]
+  },
+  {
+   "id": "1f89db3885da",
+   "title": "Digital Connectivity and Labour Market Outcomes in Sub-Saharan Africa",
+   "desc": "This study examines how digital connectivity impacts the performance of labour markets in ten countries in SSA in terms of total unemployment, youth unemployment, and employment-to-population ratios using data sourced from world development indicators (WDI) from 2000 to 2025. The random-effects pane",
+   "url": "https://doi.org/10.56919/jbam.2621.002",
+   "date": "2026-05-30",
+   "type": "Academic paper",
+   "source": "UMYU Journal of Business Administration and Management",
+   "theme": "Connectivity & telecoms",
+   "country": "Pan-African",
+   "authors": "SHIEKUMA JOHN KAVKAV, Samuel Agility Michael, Fidelis Samuel, Fatima Aliyu et al.",
+   "keywords": [
+    "digital",
+    "connectivity",
+    "labour",
+    "market"
+   ]
+  },
+  {
+   "id": "4f8c4cc09e43",
+   "title": "Neuro-Ubuntu Maʽat Ethics for Neuro-AI Governance in Africa",
+   "desc": "This article develops a normative framework for governing neuro-AI in African business and policy contexts. Drawing on a structured literature review of neuroethics, neural data governance, neurorights, and African philosophy, the article argues that prevailing regulatory approaches remain insuffici",
+   "url": "https://doi.org/10.59857/mp49zh15",
+   "date": "2026-05-15",
+   "type": "Academic paper",
+   "source": "International Journal of Advanced Business Studies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Edward Musole",
+   "keywords": [
+    "neuro",
+    "ubuntu",
+    "ethics",
+    "neuro"
+   ]
+  },
+  {
+   "id": "cd1eb0560657",
+   "title": "Toward an African Cognitive Sovereignty: The Missing Layer in AI Governance",
+   "desc": "Between July 2024 and May 2026, a continental conversation on artificial intelligence consolidated across Africa. The African Union adopted a Continental AI Strategy. African states meeting at the Global AI Summit on Africa endorsed the Africa Declaration on Artificial Intelligence in Kigali. The AU",
+   "url": "https://doi.org/10.5281/zenodo.20152143",
+   "date": "2026-05-13",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Béatrice ODUNLAMI",
+   "keywords": [
+    "toward",
+    "cognitive",
+    "sovereignty",
+    "missing"
+   ]
+  },
+  {
+   "id": "524bdc138bcf",
+   "title": "Innovativeness and self-efficacy in lecturers’ intentions to use cloud computing services in teaching and learning in South African higher education",
+   "desc": "Abstract There has been an acceleration of the adoption of cloud computing in higher education institutions (HEIs), especially in response to the COVID-19 pandemic. This shift to virtual and blended learning environments, led to a migration of HEIs’ information management processes to cloud-based sy",
+   "url": "https://doi.org/10.1007/s10639-026-14016-x",
+   "date": "2026-05-09",
+   "type": "Academic paper",
+   "source": "Education and Information Technologies",
+   "theme": "Data centres & cloud",
+   "country": "South Africa",
+   "authors": "John Mangundu, Laizah Sashah Mutasa, Madugoda Gunaratnege Senali, Martin Mabeifam Ujakpa",
+   "keywords": [
+    "innovativeness",
+    "self",
+    "efficacy",
+    "lecturers"
+   ]
+  },
+  {
+   "id": "7cf5c1b7173b",
+   "title": "Artificial intelligence and machine learning for sustainable agriculture in Africa",
+   "desc": "Sustainable agriculture is central to Africa’s socio-economic development, food security, and resilience to climate change. However, agricultural systems across the continent face persistent challenges, including low productivity, climate variability, land degradation, limited access to extension se",
+   "url": "https://doi.org/10.46909/alse-584200",
+   "date": "2026-04-22",
+   "type": "Academic paper",
+   "source": "Journal of Applied Life Sciences and Environment",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Emmanuel Abayomi ROTIMI, Grace Oyebola ROTIMI, Andrew Ayomide ROTIMI",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "machine",
+    "learning"
+   ]
+  },
+  {
+   "id": "6196f7e9163b",
+   "title": "Towards Digital Sovereignty in Africa: A Machine Learning Characterization of the Yoruba Language Alphabets Using their Graphical Data Structures",
+   "desc": "Geometric-based metrics are often conventionally deployed for digital sovereignty and machine learning systems. These metrics do not sufficiently address the nano-structural characteristics of language alphabets. In particular, metrics that are based on the vertices and edges of graphical structures",
+   "url": "https://doi.org/10.1201/9781003581581-10",
+   "date": "2026-04-16",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Bamidele Oluwade",
+   "keywords": [
+    "towards",
+    "digital",
+    "sovereignty",
+    "machine"
+   ]
+  },
+  {
+   "id": "c1347dfba0cf",
+   "title": "Artificial Intelligence and Entrepreneurship in Africa",
+   "desc": "This study examines the complex relationship between the integration of artificial intelligence (AI), the education system, and the entrepreneurial intentions of young graduates in Africa, with a particular focus on the Malian context (a multidimensional economic analysis). In an environment charact",
+   "url": "https://doi.org/10.63883/ijsrisjournal.v5i2.628",
+   "date": "2026-04-02",
+   "type": "Academic paper",
+   "source": "International Journal of Scientific Research and Innovative Studies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Aboubacar Abdou TOURÉ, Amidou BALLO",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "entrepreneurship"
+   ]
+  },
+  {
+   "id": "7115bfe7cc11",
+   "title": "Telecom Connectivity as Economic Infrastructure: Assessing the Impact of Mobile Broadband Expansion on SME Productivity and Market Participation in Africa",
+   "desc": "Purpose: In this article, the authors examine the aspect of telecom connectivity as a constituent of the economic infrastructure of a country. They also examine the role of the growth of mobile broadband connectivity in the improvement of the productivity of small and medium-sized enterprises (SMEs)",
+   "url": "https://doi.org/10.47672/jde.2888",
+   "date": "2026-04-02",
+   "type": "Academic paper",
+   "source": "Journal of Developing Economies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Babajide Olaitan",
+   "keywords": [
+    "telecom",
+    "connectivity",
+    "economic",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "8d957f0f0995",
+   "title": "Digital risk intelligence and supplier failure in African public infrastructure delivery: evidence from Nigeria",
+   "desc": "Digital risk intelligence (DRI) has emerged as a strategic mechanism for mitigating supplier failures in public infrastructure delivery, particularly in African contexts where project delays, cost overruns, and non-compliance remain pervasive. This review critically examines empirical studies from t",
+   "url": "https://doi.org/10.58881/jcmts.v5i1.445",
+   "date": "2026-04-02",
+   "type": "Academic paper",
+   "source": "Journal of Commerce Management and Tourism Studies",
+   "theme": "AI policy & governance",
+   "country": "Nigeria",
+   "authors": "Aondofa Jerome Tyozenda, T. P. J. Jato, S. A. Tyoakosu",
+   "keywords": [
+    "digital",
+    "risk",
+    "intelligence",
+    "supplier"
+   ]
+  },
+  {
+   "id": "64db1da5107f",
+   "title": "Catalyzing AI Governance and Democratic Resilience in Africa",
+   "desc": "The democratic evolution of governments across Africa took prominence after a series of military dictatorships following the shift from colonial rule. This era of post-independence democratization efforts, often referred to as the \"third wave of democratization\" [25], began in the early 90s, with co",
+   "url": "https://doi.org/10.1145/3842677.3842683",
+   "date": "2026-04-01",
+   "type": "Academic paper",
+   "source": "ACM SIGCAS Computers and Society",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Chinasa T. Okolo",
+   "keywords": [
+    "catalyzing",
+    "governance",
+    "democratic",
+    "resilience"
+   ]
+  },
+  {
+   "id": "abf34c8dc472",
+   "title": "Energy Outcomes in Africa: Is Digital Infrastructure Relevant?",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-3-032-03646-9_15",
+   "date": "2026-04-01",
+   "type": "Academic paper",
+   "source": "Springer eBooks",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "Simplice Anutechia Asongu, Osman Issah, Marijana Iddrisu, Khadijah Iddrisu",
+   "keywords": [
+    "energy",
+    "outcomes",
+    "digital",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "37a2de78439b",
+   "title": "AI governance in North Africa: an ecosystems approach",
+   "desc": "Abstract Artificial intelligence (AI) holds transformative potential for North African societies, yet its development and deployment present complex ethical, social, and regulatory challenges within the region's diverse contexts. This paper examines the state of AI governance in North Africa, focusi",
+   "url": "https://doi.org/10.1093/scipol/scag007",
+   "date": "2026-03-18",
+   "type": "Academic paper",
+   "source": "Science and Public Policy",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "George Ogoh, Damian Eke, Bernd Carsten Stahl",
+   "keywords": [
+    "governance",
+    "north",
+    "ecosystems",
+    "approach"
+   ]
+  },
+  {
+   "id": "b1a16ddd749b",
+   "title": "Mobile Broadband and Its Impact on the Economy: Evidence from Zimbabwe",
+   "desc": "Mobile broadband is the dominant pathway to internet access in low- and middle-income countries (LMICs), yet its macroeconomic effects remain understudied at the country level in Sub-Saharan Africa. This paper provides, to our knowledge, the first Zimbabwe-specific quarterly time series assessment (",
+   "url": "https://doi.org/10.37284/eajis.9.1.4657",
+   "date": "2026-03-17",
+   "type": "Academic paper",
+   "source": "East African Journal of Interdisciplinary Studies",
+   "theme": "AI policy & governance",
+   "country": "Zimbabwe",
+   "authors": "Vengesai Magadzire, Gift Kallisto Machengete",
+   "keywords": [
+    "mobile",
+    "broadband",
+    "impact",
+    "economy"
+   ]
+  },
+  {
+   "id": "4de4ae306617",
+   "title": "Data Sovereignty and Cloud Computing: African States and Foreign Data Infrastructure: A Feminist Political Economy Approach",
+   "desc": "This article examines Data Sovereignty and Cloud Computing: African States and Foreign Data Infrastructure: A Feminist Political Economy Approach with a focused emphasis on Burkina Faso within the field of Political Science. It is structured as a policy brief that organises the problem, the stronges",
+   "url": "https://doi.org/10.5281/zenodo.19549864",
+   "date": "2026-03-09",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Abraham Kuol Nyuon",
+   "keywords": [
+    "data",
+    "sovereignty",
+    "cloud",
+    "computing"
+   ]
+  },
+  {
+   "id": "eb43b509be40",
+   "title": "Challenges of Emerging Technologies in Africa",
+   "desc": "This study reviews emerging technologies within Africa’s burgeoning tech ecosystems. This study employs a literature review approach to understand the interplay between key stakeholders, technological domains, challenges, and outcomes. Thematic analysis identified key challenges such as infrastructu",
+   "url": "https://doi.org/10.4324/9781003532422-14",
+   "date": "2026-03-03",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "George Oppong Appiagyei Ampong, George Kofi Amoako, Antoinette Yaa Benewaa Gabrah, Edmund Asante",
+   "keywords": [
+    "challenges",
+    "emerging",
+    "technologies"
+   ]
+  },
+  {
+   "id": "9487c9163ee3",
+   "title": "Framing the Discourse on Artificial Intelligence (AI) and Digital Entrepreneurship in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-3-032-11592-8_1",
+   "date": "2026-02-24",
+   "type": "Academic paper",
+   "source": "Springer eBooks",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Patient Rambe, Brighton Nyagadza",
+   "keywords": [
+    "framing",
+    "discourse",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "08bbe40de7a8",
+   "title": "Assessing the Case for Africa-Centric AI Safety Evaluations",
+   "desc": "Frontier AI systems are being adopted across Africa, yet most AI safety evaluations are designed and validated in Western environments. In this paper, we argue that the portability gap can leave Africa-centric pathways to severe harm untested when frontier AI systems are embedded in materially const",
+   "url": "https://doi.org/10.48550/arxiv.2602.13757",
+   "date": "2026-02-14",
+   "type": "Academic paper",
+   "source": "arXiv (Cornell University)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Gathoni Ireri, Cecil Abungu, Jean Cheptumo, Sienka Dounia et al.",
+   "keywords": [
+    "assessing",
+    "case",
+    "centric",
+    "safety"
+   ]
+  },
+  {
+   "id": "1924fa08769a",
+   "title": "Digital Infrastructure for Tourism and Hospitality Competitiveness in Africa",
+   "desc": "Tourism and hospitality are among the growing sectors in Africa, contributing significantly to economies. However, the continent’s competitiveness in the global tourism market increasingly depends on its capacity to adopt and leverage digital infrastructure. This study examines the nexus between dig",
+   "url": "https://doi.org/10.37284/ajthm.5.1.4420",
+   "date": "2026-01-29",
+   "type": "Academic paper",
+   "source": "African Journal of Tourism and Hospitality Management",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Destaings Nyongesa, Irungu Samuel Kimungu, Auma Joan Salome",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "tourism",
+    "hospitality"
+   ]
+  },
+  {
+   "id": "93984f2a82ea",
+   "title": "Digital Infrastructure and Sino-African Relations: Chinese ICT Companies and African Agency",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-981-95-4370-0_9",
+   "date": "2026-01-28",
+   "type": "Academic paper",
+   "source": "Springer eBooks",
+   "theme": "General",
+   "country": "Pan-African",
+   "authors": "Mayer, Yen-Chi Lu, Alexander Demissie",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "sino",
+    "relations"
+   ]
+  },
+  {
+   "id": "09ba3f40c780",
+   "title": "DIGITAL INFRASTRUCTURE AND CAPACITY BUILDING ON RESEARCH DATA MANAGEMENT IN AFRICAN LIBRARY SETTINGS",
+   "desc": "This study investigates the impact of digital infrastructure and capacity building on Research Data Management (RDM) services in African libraries, emphasizing their critical roles in enhancing research productivity and data accessibility.Digital infrastructure including institutional repositories, ",
+   "url": "https://doi.org/10.61955/lijlsh",
+   "date": "2026-01-28",
+   "type": "Academic paper",
+   "source": "Rivers State University Journal of Librarianship Information and Contemporary Studies (RSU-JOLICS)",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "UZOAGBA, UZOAGBA,",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "capacity",
+    "building"
+   ]
+  },
+  {
+   "id": "3ae140452bfd",
+   "title": "Success Factors for Implementing AgriTech Solutions in Rural African SMEs: A Comparative Case Study",
+   "desc": "This study examines critical success factors for implementing Agricultural Technology (AgriTech) solutions in rural African Small and Medium Enterprises (SMEs), focusing on comparative case studies from Zimbabwe, Kenya, Nigeria, Ghana, and Rwanda. The research adopts a comprehensive desk review meth",
+   "url": "https://doi.org/10.51583/ijltemas.2026.150100030",
+   "date": "2026-01-28",
+   "type": "Academic paper",
+   "source": "International Journal of Latest Technology in Engineering Management & Applied Science",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Sigale Dadirai Mweha",
+   "keywords": [
+    "success",
+    "factors",
+    "implementing",
+    "agritech"
+   ]
+  },
+  {
+   "id": "c2e0d6512705",
+   "title": "Protein language modeling and supervised machine learning reveal the functional landscape of antimicrobial resistance genes in African metagenomes",
+   "desc": "Abstract In this work, we analyzed 184 metagenomes from sub-Saharan Africa to characterize the functional landscape of ARGs using a combination of homology-based annotation and protein language model embeddings. We obtained 5,066 high-confidence ARG protein sequences from the African metagenomes, wh",
+   "url": "https://doi.org/10.64898/2026.01.24.701459",
+   "date": "2026-01-25",
+   "type": "Academic paper",
+   "source": "bioRxiv (Cold Spring Harbor Laboratory)",
+   "theme": "Energy & compute",
+   "country": "Malawi",
+   "authors": "Martin N. Muigano, Grace W Kamau",
+   "keywords": [
+    "protein",
+    "language",
+    "modeling",
+    "supervised"
+   ]
+  },
+  {
+   "id": "bdd30deff194",
+   "title": "AI Governance and Data Privacy: Comparative Analysis of U.S., EU and African Frameworks",
+   "desc": "The rapid proliferation of Artificial Intelligence (AI) systems, which are capable of replicating human cognitive functions such as learning, reasoning, perception, and natural language processing, has led to transformative changes across multiple sectors worldwide. While AI continues to enhance ope",
+   "url": "https://doi.org/10.30574/wjaets.2026.18.1.0036",
+   "date": "2026-01-24",
+   "type": "Academic paper",
+   "source": "World Journal of Advanced Engineering Technology and Sciences",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "OYEYEMI AKINRELE",
+   "keywords": [
+    "governance",
+    "data",
+    "privacy",
+    "comparative"
+   ]
+  },
+  {
+   "id": "b4eb7cfea303",
+   "title": "Socioeconomic Impact of Cloud Computing and ICT Interventions in Ghana’s Digital Economy",
+   "desc": "Cloud computing and broader ICT interventions have become key enablers of Ghana’s digital transformation agenda, shaping how public services are delivered, how firms compete, and how citizens participate in economic and social life. Yet, while technical and regulatory analyses of Ghana’s digital eco",
+   "url": "https://doi.org/10.47772/ijriss.2026.10100095",
+   "date": "2026-01-23",
+   "type": "Academic paper",
+   "source": "International Journal of Research and Innovation in Social Science",
+   "theme": "AI policy & governance",
+   "country": "Ghana",
+   "authors": "Roland Yaw Kudozia, Carolyn Elizabeth Kudozia, Abdul-Razak Salifu, Nii Ayitey Komey et al.",
+   "keywords": [
+    "socioeconomic",
+    "impact",
+    "cloud",
+    "computing"
+   ]
+  },
+  {
+   "id": "d9783609495f",
+   "title": "The Sickle Africa Data Coordinating Centre (SADaCC): a data science hub for interdisciplinary sickle cell disease research and training",
+   "desc": "Sickle cell disease (SCD) is one of the most prevalent monogenic disorders worldwide, with the highest burden in Africa, where ~75% of the 7.74 million global cases occur. Scientific progress in understanding its epidemiology, clinical heterogeneity, and treatment outcomes has been constrained by he",
+   "url": "https://doi.org/10.1093/database/baag007",
+   "date": "2026-01-15",
+   "type": "Academic paper",
+   "source": "Database",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Ambroise Wonkam, Nchangwi Syntia Munung, Mario Jonas, Wilson Mupfurirwa et al.",
+   "keywords": [
+    "sickle",
+    "data",
+    "coordinating",
+    "centre"
+   ]
+  },
+  {
+   "id": "15e7bd544344",
+   "title": "Privacy-preserving data publishing in cloud computing using a genetic-African vultures optimization-based enhanced data anonymization framework",
+   "desc": "",
+   "url": "https://doi.org/10.1007/s42044-025-00353-6",
+   "date": "2026-01-13",
+   "type": "Academic paper",
+   "source": "Iran Journal of Computer Science",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "R. Sahana Lokesh",
+   "keywords": [
+    "privacy",
+    "preserving",
+    "data",
+    "publishing"
+   ]
+  },
+  {
+   "id": "8682fc7b1f7b",
+   "title": "Text Detoxification in isiXhosa and Yorùbá: A Cross-Lingual Machine Learning Approach for Low-Resource African Languages",
+   "desc": "Toxic language is one of the major barrier to safe online participation, yet robust mitigation tools are scarce for African languages. This study addresses this critical gap by investigating automatic text detoxification (toxic to neutral rewriting) for two low-resource African languages, isiXhosa a",
+   "url": "https://doi.org/10.48550/arxiv.2601.05624",
+   "date": "2026-01-09",
+   "type": "Academic paper",
+   "source": "arXiv (Cornell University)",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "Abayomi Olusola Agbeyangi",
+   "keywords": [
+    "text",
+    "detoxification",
+    "isixhosa",
+    "cross"
+   ]
+  },
+  {
+   "id": "91ca1d015428",
+   "title": "Advancing unpaved road assessment in Africa: Leveraging multimodal machine learning and large language-and-vision assistants across satellite imagery resolutions",
+   "desc": "",
+   "url": "https://doi.org/10.1016/j.jtrangeo.2025.104525",
+   "date": "2026-01-08",
+   "type": "Academic paper",
+   "source": "Journal of Transport Geography",
+   "theme": "Connectivity & telecoms",
+   "country": "Pan-African",
+   "authors": "Zhao Wang, Chunlei Xin, Robin Workman, Hang Hu et al.",
+   "keywords": [
+    "advancing",
+    "unpaved",
+    "road",
+    "assessment"
+   ]
+  },
+  {
+   "id": "dc42374cb4ba",
+   "title": "Impact of Digital Infrastructure on Inclusive Growth in Africa",
+   "desc": "This study aims to investigate the role of digital infrastructure in promoting inclusive growth in Africa. The study employs fixed-effects and random-effects econometric techniques, followed by the Generalized Method of Moments (GMM), on secondary data from international databases (World Bank, Inter",
+   "url": "https://doi.org/10.51584/ijrias.2025.10120021",
+   "date": "2026-01-02",
+   "type": "Academic paper",
+   "source": "International Journal of Research and Innovation in Applied Science",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Zenabou TOURERE",
+   "keywords": [
+    "impact",
+    "digital",
+    "infrastructure",
+    "inclusive"
+   ]
+  },
+  {
+   "id": "b170644ce522",
+   "title": "Positioning Africa in the age of Artificial Intelligence",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7120278",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Eden Raph PAMBO NTSANTSI",
+   "keywords": [
+    "positioning",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "e3e40092102c",
+   "title": "Artificial Intelligence and African Studies",
+   "desc": "African Studies is a conglomerate of multidisciplinary academic fields that include paleontology, history, literature, linguistics, philosophy, African Traditional Religion and theology, art, and Afrofuturism, as well as African Indigenous Knowledge Systems. This paper focuses on the latter, namely ",
+   "url": "https://scholarsarchive.byu.edu/ccr/vol94/iss94/10",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "ScholarsArchive  (Brigham Young University)",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Gloria Emeagwali",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "studies"
+   ]
+  },
+  {
+   "id": "121dd6e21a8c",
+   "title": "The Case for an AI Governance Policy in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.23676.40323",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Kelechukwu Okoronkwo",
+   "keywords": [
+    "case",
+    "governance",
+    "policy"
+   ]
+  },
+  {
+   "id": "8df2f6fdf5ac",
+   "title": "Between Hype and Ambivalence: The Governance of Criminal Justice AI in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.6988798",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Kinfe Yilma",
+   "keywords": [
+    "between",
+    "hype",
+    "ambivalence",
+    "governance"
+   ]
+  },
+  {
+   "id": "82ba9bd13178",
+   "title": "Who Gets a Voice in AI Governance? Why Africa Needs Digital Sovereignty",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7504738",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "DEIDRE KAPIJIMPANGA",
+   "keywords": [
+    "gets",
+    "voice",
+    "governance",
+    "needs"
+   ]
+  },
+  {
+   "id": "d2b8817aa532",
+   "title": "Africa Shouldn't Import AI Governance Rather It Should Build It",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7671239",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Abdulmuhmeen Olawoyin",
+   "keywords": [
+    "shouldn",
+    "import",
+    "governance",
+    "rather"
+   ]
+  },
+  {
+   "id": "52e8bab19ab3",
+   "title": "Powering AI Data Centres in Grid-Constrained Economies: A Techno-Economic Assessment of Renewable Energy Supply Pathways in South Africa",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7291444",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Data centres & cloud",
+   "country": "South Africa",
+   "authors": "Rahimat Oyiza Yakubu, Hannelie Nel, George Alex Thopil",
+   "keywords": [
+    "powering",
+    "data",
+    "centres",
+    "grid"
+   ]
+  },
+  {
+   "id": "abb69f544b26",
+   "title": "African Brain Data Network (ABDN) Policy Brief",
+   "desc": "This is a policy brief from the African Brain Data Network (ABDN) that examines who owns, controls, and benefits from brain data generated across Africa. It identifies a critical governance gap: while African populations contribute neuroimaging, electrophysiological, and clinical data to global rese",
+   "url": "https://doi.org/10.17605/osf.io/8fqvp",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Damian Eke, Olivia P. Matshabane, Patrick Leo Filima, Alfred Kongnyu NJAMNSHI et al.",
+   "keywords": [
+    "brain",
+    "data",
+    "network",
+    "abdn"
+   ]
+  },
+  {
+   "id": "244f40b1819b",
+   "title": "China’s Digital Infrastructures in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.5040/9781350580121.ch-013",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "Bloomsbury Publishing Plc eBooks",
+   "theme": "General",
+   "country": "Pan-African",
+   "authors": "Iginio Gagliardone",
+   "keywords": [
+    "china",
+    "digital",
+    "infrastructures"
+   ]
+  },
+  {
+   "id": "1e0220628275",
+   "title": "Enhancing Trade Competitiveness in Africa: The Role of Smart Infrastructure and Digital Logistics",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.30480.98563",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "General",
+   "country": "Pan-African",
+   "authors": "Moses Ojonugwa Odumu",
+   "keywords": [
+    "enhancing",
+    "trade",
+    "competitiveness",
+    "role"
+   ]
+  },
+  {
+   "id": "01fdfb275a2c",
+   "title": "Governing Digital Public Infrastructure for Rights and Equity in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.32895.16804",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "Bonaventure Saturday, Bobina Zulfa",
+   "keywords": [
+    "governing",
+    "digital",
+    "public",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "b6b86deec2f5",
+   "title": "Digital Public Infrastructure in Africa: Advancing Inclusion or Creating New Forms of Dependence?",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7484978",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "DEIDRE KAPIJIMPANGA",
+   "keywords": [
+    "digital",
+    "public",
+    "infrastructure",
+    "advancing"
+   ]
+  },
+  {
+   "id": "dedf8ccbe060",
+   "title": "Digital Transformation and Regional Integration in Africa: Institutional Challenges and Opportunities for Inclusive Development",
+   "desc": "Digital transformation is increasingly important to Africa's economic development and regional integration. The expansion of broadband networks, digital financial services, digital platforms, artificial intelligence, e-commerce and digital public infrastructure creates opportunities for African coun",
+   "url": "https://doi.org/10.5281/zenodo.22180827",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "SOLOMON MENSAH OPOKU",
+   "keywords": [
+    "digital",
+    "transformation",
+    "regional",
+    "integration"
+   ]
+  },
+  {
+   "id": "fc91946b239e",
+   "title": "Migration of Applications and Information Systems to Cloud Computing Infrastructure: Lessons from a South African Retail Bank",
+   "desc": "The accelerating digitalisation of financial services has transformed how retail banks architect, operate, and govern their information systems. Within emerging market banking environments, the transition from on-premises, monolithic estates to programmable, service-oriented cloud platforms has beco",
+   "url": "https://doi.org/10.54660/.ijmrge.2025.6.6.1361-1375",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "International Journal of Multidisciplinary Research and Growth Evaluation",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Olasunkanmi Oluwasanjo Ladapo, Adetomiwa A. Dosunmu, Demilade Jooda, Toyosi O Abolaji",
+   "keywords": [
+    "migration",
+    "applications",
+    "information",
+    "systems"
+   ]
+  },
+  {
+   "id": "f5f38b350368",
+   "title": "A computational framework for analyzing urban data usage patterns in African cities: a 25-year data-driven review using natural language processing and machine learning",
+   "desc": "This study provides a scoping review of urban data usage in African cities over the past 25 years, leveraging advanced Natural Language Processing − NLP, Machine Learning − ML, and hybrid approaches to classify urban data. The fine-tuned classification framework demonstrated robust performance, achi",
+   "url": "https://doi.org/10.1016/j.cacint.2026.100296",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "City and Environment Interactions",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Rida Azmi, Jérôme Chenal, El Bachir Diop, Seyid Abdellahi Ebnou Abdem et al.",
+   "keywords": [
+    "computational",
+    "framework",
+    "analyzing",
+    "urban"
+   ]
+  },
+  {
+   "id": "e690a3a850b5",
+   "title": "Integration of Artificial Intelligence and Machine Learning into African Nutrition: Missed Opportunities for Public Health",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7342920",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Isabel Madzorera, Boma Levy-Braide, Tafadzwa Nyanhanda, Chinwe Obudulu et al.",
+   "keywords": [
+    "integration",
+    "artificial",
+    "intelligence",
+    "machine"
+   ]
+  },
+  {
+   "id": "b40c195a2b45",
+   "title": "A Semantic Wiki for Language Learning: The Case of the Baoulé Language",
+   "desc": "This article presents BAOULE-WIKI, an innovative project aimed at preserving and teaching the Baoulé language through a semantic wiki that combines community collaboration and semantic web technologies. Based on the alarming findings of UNESCO and FORTIN on the imminent disappearance of African lang",
+   "url": "https://doi.org/10.4236/ojapps.2026.161001",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "Open Journal of Applied Sciences",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Lagasane Ouattara Kra, Chieke Othniel Konan, Nouho Ouattara, Konan Marcellin Brou",
+   "keywords": [
+    "semantic",
+    "wiki",
+    "language",
+    "learning"
+   ]
+  },
+  {
+   "id": "2c95baf18ffb",
+   "title": "From Awareness to Participation: Rethinking Climate Action Through Digital Public Infrastructure in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7073958",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "Gyasi Amos Kwadwo",
+   "keywords": [
+    "awareness",
+    "participation",
+    "rethinking",
+    "climate"
+   ]
+  },
+  {
+   "id": "a5c86a6bf727",
+   "title": "Digital Public Infrastructure for State-Building in Low-Income Africa: Evidence From E-Immigration System in Burundi",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.7429699",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "Tharcisse Ndayipfukamiye, Serge Ndayirata, Joëlle Fidès Gakuba, Célestin Hatungimana et al.",
+   "keywords": [
+    "digital",
+    "public",
+    "infrastructure",
+    "state"
+   ]
+  },
+  {
+   "id": "9c3b5a850064",
+   "title": "Public-Private Partnerships in Financing Digital Infrastructure: Lessons from African Case Studies (Ghana, Nigeria, and South Africa)",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.6868358",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "General",
+   "country": "Multiple countries",
+   "authors": "Kenneth Amoah-Binfoh",
+   "keywords": [
+    "public",
+    "private",
+    "partnerships",
+    "financing"
+   ]
+  },
+  {
+   "id": "1efe977f1cbc",
+   "title": "Systemic Barriers, Gendered Consequences: An Afro-feminist Analysis of Digital Public Infrastructure in Uganda, South Africa and Kenya.",
+   "desc": "",
+   "url": "https://doi.org/10.13140/rg.2.2.26184.28168",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "Digital public infrastructure",
+   "country": "Multiple countries",
+   "authors": "Bonaventure Saturday, Bobina Zulfa",
+   "keywords": [
+    "systemic",
+    "barriers",
+    "gendered",
+    "consequences"
+   ]
+  },
+  {
+   "id": "769ce7345c04",
+   "title": "Wiring Influence: China's Infrastructure Diplomacy, Public Narratives, and Digital Soft Power in Sub-Saharan Africa's Geopolitical Transformation",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.6979618",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "Noufou Ouédraogo",
+   "keywords": [
+    "wiring",
+    "influence",
+    "china",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "d4aa52919916",
+   "title": "Artificial Intelligence and Peace Education in Africa: Potential and Challenges",
+   "desc": "The study examines Artificial Intelligence and peace education in Africa: potential and challenges.The research utilized secondary sources of data. Transformative Learning Theory was used to guide the study. The empirical studies identify significant barriers to AI adoption in Africa, including low ",
+   "url": "https://doi.org/10.36108/ijss/5202.32.0290",
+   "date": "2025-12-31",
+   "type": "Academic paper",
+   "source": "IBADAN JOURNAL OF THE SOCIAL SCIENCES",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Ember Yange",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "peace",
+    "education"
+   ]
+  },
+  {
+   "id": "bf0aab712f1b",
+   "title": "Broadband Network, Governance and Inclusive Growth: New Evidence from Selected Asian and African Economies",
+   "desc": "This study examined the link between broadband networks, governance, and inclusive growth in Africa and Asia.The motivation arises from the unequal distribution of high-speed broadband in many low-income countries, which risks widening income inequality and increasing poverty.Using panel least squar",
+   "url": "https://doi.org/10.32327/ijmess/14.3-4.2025.4",
+   "date": "2025-12-30",
+   "type": "Academic paper",
+   "source": "International Journal of Management Economics and Social Sciences",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Azuka Elvis Ozegbe, Nkemdilim Iheanachor",
+   "keywords": [
+    "broadband",
+    "network",
+    "governance",
+    "inclusive"
+   ]
+  },
+  {
+   "id": "4a3ea7bdc2eb",
+   "title": "Digital Transformation in West African SMEs: The Role of Cloud Computing and Artificial Intelligence in Enhancing Operational Efficiency",
+   "desc": "Small and Medium-sized Enterprises (SMEs) are the backbone of West Africa’s economy, contributing substantially to employment and GDP, yet they face persistent constraints such as limited access to finance, inadequate infrastructure, and intensifying global competition. This paper examines how SMEs ",
+   "url": "https://doi.org/10.58578/mikailalsys.v3i3.7489",
+   "date": "2025-12-18",
+   "type": "Academic paper",
+   "source": "Journal of Multidisciplinary Science MIKAILALSYS",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Abdullahi Lawal, Rilwan Abdulyekeen",
+   "keywords": [
+    "digital",
+    "transformation",
+    "west",
+    "smes"
+   ]
+  },
+  {
+   "id": "19ca40cf126b",
+   "title": "An African Perspective on Artificial Intelligence and Climate Finance",
+   "desc": "The chapter explores the role of artificial intelligence (AI) in climate finance, with a specific focus on AI-driven solutions for climate finance investments in Africa. It explores the potential benefits of integrating AI with climate finance, taking into account the financial landscape in a changi",
+   "url": "https://doi.org/10.1201/9781003611646-10",
+   "date": "2025-12-16",
+   "type": "Academic paper",
+   "source": "Chapman & Hall/CRC eBooks",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Wilson E. Herbert, M. N. Nwala",
+   "keywords": [
+    "perspective",
+    "artificial",
+    "intelligence",
+    "climate"
+   ]
+  },
+  {
+   "id": "52c245a35821",
+   "title": "Generative AI governance in higher education: a case study from Africa",
+   "desc": "Introduction The rapid rise of generative artificial intelligence (Gen-AI), particularly large language models (LLMs), is reshaping the higher education landscape. Yet, there is limited empirical documentation of how African universities are integrating Gen-AI into teaching, learning, and research. ",
+   "url": "https://doi.org/10.3389/fpos.2025.1666661",
+   "date": "2025-12-09",
+   "type": "Academic paper",
+   "source": "Frontiers in Political Science",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Donrich Willem Thaldar, Marietjie Botes, Abdulbaqi Eyitayo Badru, Hafizah Yousuf Chenia et al.",
+   "keywords": [
+    "generative",
+    "governance",
+    "higher",
+    "education"
+   ]
+  },
+  {
+   "id": "c64c83ca7945",
+   "title": "Digitization and the energy paradox: Does broadband adoption increase the electricity intensity of African businesses?",
+   "desc": "The digitization of African firms reveals a persistent energy paradox: while digital tools can improve efficiency, they may also intensify electricity demand in contexts marked by infrastructural fragility. This study provides the first multi-country, firm-level assessment of how broadband adoption ",
+   "url": "https://doi.org/10.1016/j.sciaf.2025.e03130",
+   "date": "2025-12-09",
+   "type": "Academic paper",
+   "source": "Scientific African",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Youssef Bouazizi, Mohammed Ghazouani",
+   "keywords": [
+    "digitization",
+    "energy",
+    "paradox",
+    "does"
+   ]
+  },
+  {
+   "id": "ad4fddb4fbf5",
+   "title": "CULTURAL LAG: ARTIFICIAL INTELLIGENCE, AFRICAN INDIGENOUS KNOWLEDGE SYSTEMS, AND SUSTAINABLE DEVELOPMENT IN THE MODERN DIGITAL WORLD",
+   "desc": "The rapid advancement of Artificial Intelligence (AI) is reshaping societies worldwide, but in Africa its integration often collides with deep-rooted Indigenous Knowledge Systems (IKS). This tension can be understood through the sociological concept of cultural lag, where material culture (technolog",
+   "url": "https://journals.unizik.edu.ng/index/article/view/7232",
+   "date": "2025-12-05",
+   "type": "Academic paper",
+   "source": "CACH Journal of Humanities and Cultural Studies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Gideon Sunday Omachonu",
+   "keywords": [
+    "cultural",
+    "artificial",
+    "intelligence",
+    "indigenous"
+   ]
+  },
+  {
+   "id": "f373aeb6e06c",
+   "title": "Artificial intelligence anchored in African intelligence: toward equitable mental health systems in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1016/j.lanafr.2025.100006",
+   "date": "2025-12-05",
+   "type": "Academic paper",
+   "source": "The Lancet Regional Health - Africa",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Isaac Iyinoluwa Olufadewa, Miracle Ayomikun Adesina, Ruth Ifeoluwa Oladele, Ayodele Samuel Jegede",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "anchored",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "f0e23d29665f",
+   "title": "Data sovereignty in Africa: steering digital transformation between China and the West",
+   "desc": "Abstract Digital sovereignty has become a pivotal concern for Africa striving to reduce their reliance on foreign powers for data storage and processing. Central to these efforts is the development of digital infrastructure, including data centres, often established with the support of Chinese telec",
+   "url": "https://doi.org/10.1365/s43439-025-00165-1",
+   "date": "2025-12-04",
+   "type": "Academic paper",
+   "source": "International Cybersecurity Law Review",
+   "theme": "Data centres & cloud",
+   "country": "Pan-African",
+   "authors": "Qingxiu Bu",
+   "keywords": [
+    "data",
+    "sovereignty",
+    "steering",
+    "digital"
+   ]
+  },
+  {
+   "id": "f23c84025cdc",
+   "title": "ETHICAL FRAMEWORKS FOR AI GOVERNANCE IN AFRICA: A MIXED-METHODS EMPIRICAL STUDY",
+   "desc": "Artificial intelligence (AI) systems are increasingly integrated into governance, economic planning, and social service delivery across African countries. While these technologies offer transformative potential, they also raise profound ethical concerns relating to accountability, transparency, fair",
+   "url": "https://journals.chroniva.org/index.php/index/article/view/40",
+   "date": "2025-11-01",
+   "type": "Academic paper",
+   "source": "International Journal of AI Ethics and Society",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Samuel Adekunle Adebayo, Ibrahim Suleiman Abdulrahman",
+   "keywords": [
+    "ethical",
+    "frameworks",
+    "governance",
+    "mixed"
+   ]
+  },
+  {
+   "id": "d3ec81941353",
+   "title": "Unlocking trade locks in landlocked developing countries (LLDCs) in Africa: The role of digital infrastructure",
+   "desc": "Digital infrastructure has emerged as a crucial driver of trade, yet its potential to address the low trade volumes of African landlocked developing countries (LLDCs) remains underexplored. African LLDCs face unique challenges stemming from both traditional trade barriers and their geographic disadv",
+   "url": "https://doi.org/10.1016/j.telpol.2025.103101",
+   "date": "2025-10-28",
+   "type": "Academic paper",
+   "source": "Telecommunications Policy",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "Joshua Adeyemi Afolabi, Basiru Oyeniran Fatai",
+   "keywords": [
+    "unlocking",
+    "trade",
+    "locks",
+    "landlocked"
+   ]
+  },
+  {
+   "id": "288237ddda6b",
+   "title": "An Opposition‐Based Chaotic Enhanced African Vulture Algorithm for Efficient Scientific Workflow Scheduling in Cloud",
+   "desc": "ABSTRACT With the increasing compute and data demands of intricate scientific applications, cloud computing has emerged as a key solution for executing scientific workflows while adhering to Quality of Service (QoS) parameters. Developing an efficient and cost‐effective solution, especially for larg",
+   "url": "https://doi.org/10.1002/cpe.70399",
+   "date": "2025-10-28",
+   "type": "Academic paper",
+   "source": "Concurrency and Computation Practice and Experience",
+   "theme": "Data centres & cloud",
+   "country": "Pan-African",
+   "authors": "Prasanth Kumar Bevara, Ravi Shankar Singh, V. V. D. Prasad Chelluri, Medara Rambabu",
+   "keywords": [
+    "opposition",
+    "based",
+    "chaotic",
+    "enhanced"
+   ]
+  },
+  {
+   "id": "7bf328b931f1",
+   "title": "In search of justifiable AI governance for Africa",
+   "desc": "The Fourth Industrial Revolution (4IR), with its emphasis on the quest for more sophisticated technologies, not only hold beautiful promises for our world but also comes with some challenges. While some countries in the West are already committed to the domestication of artificial intelligence (AI),",
+   "url": "https://doi.org/10.4324/9781003688853-8",
+   "date": "2025-10-22",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Isaiah Aduojo Negedu, Oluwaseun T. Babatuyi",
+   "keywords": [
+    "search",
+    "justifiable",
+    "governance"
+   ]
+  },
+  {
+   "id": "32e6091a0690",
+   "title": "digital infrastructure and training on Research Data Management (RDM) services in African libraries",
+   "desc": "This study examines the impact of digital infrastructure and training on Research Data Management (RDM) services in African libraries, emphasizing their critical roles in enhancing research productivity and data accessibility.A systematic review design was adopted.Relevant studies were sourced from ",
+   "url": "https://doi.org/10.61955/nmdooq",
+   "date": "2025-10-18",
+   "type": "Academic paper",
+   "source": "Information Managers : A Journal of Nigerian Library Association , Rivers State Chapter",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Elejene Elejene",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "training",
+    "research"
+   ]
+  },
+  {
+   "id": "18cf00e451a3",
+   "title": "Cloud Computing Adoption in the South African Public Administration: A Systematic Analysis of Key Constraints",
+   "desc": "Globally, cloud computing has reshaped business models of various public sectors, leading to intensified efficiency in digital transformation and enhanced data administration. Although governments continuously provide seamless public services and effectively manage massive datasets using cloud compu",
+   "url": "https://doi.org/10.38124/ijisrt/25oct001",
+   "date": "2025-10-08",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Wiston Mbhazima Baloyi",
+   "keywords": [
+    "cloud",
+    "computing",
+    "adoption",
+    "south"
+   ]
+  },
+  {
+   "id": "a027ae93cbd3",
+   "title": "Artificial Intelligence and Development in Africa: Challenges, Opportunities, and Future Perspectives",
+   "desc": "Artificial intelligence (AI) has emerged as a transformative force capable of reshaping economic structures, governance systems, and social relations across the globe. In Africa, it occupies a paradoxical position: it embodies the promise of accelerated development and innovation, yet it also risks ",
+   "url": "https://doi.org/10.63883/ijsrisjournal.v4i5.488",
+   "date": "2025-10-01",
+   "type": "Academic paper",
+   "source": "International Journal of Scientific Research and Innovative Studies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Amidou BALLO, Daman-Guilé DIAWARA",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "development",
+    "challenges"
+   ]
+  },
+  {
+   "id": "958489f131a9",
+   "title": "Towards Holistic AI Governance in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-3-031-83445-5_2",
+   "date": "2025-09-26",
+   "type": "Academic paper",
+   "source": "Studies in national governance and emerging technologies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Cesa Salaam, Danda B. Rawat, Thema Monroe‐White",
+   "keywords": [
+    "towards",
+    "holistic",
+    "governance"
+   ]
+  },
+  {
+   "id": "76d5abf1bdea",
+   "title": "Artificial Intelligence (AI) for Public Policy and Governance in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-3-031-83445-5_1",
+   "date": "2025-09-26",
+   "type": "Academic paper",
+   "source": "Studies in national governance and emerging technologies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Gedion Onyango",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "public",
+    "policy"
+   ]
+  },
+  {
+   "id": "178cfd4b1896",
+   "title": "Feminist Artificial Intelligence (AI) Approaches for Civic Governance in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-3-031-83445-5_5",
+   "date": "2025-09-26",
+   "type": "Academic paper",
+   "source": "Studies in national governance and emerging technologies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Mardiya Siba Yahaya, Zanele Sokatsha",
+   "keywords": [
+    "feminist",
+    "artificial",
+    "intelligence",
+    "approaches"
+   ]
+  },
+  {
+   "id": "5d747268c3fc",
+   "title": "How Starlink Has Impacted Connectivity Initiatives in Africa",
+   "desc": "Despite the technological capability of Starlink and other low Earth orbit (LEO) satellite broadband services to provide global, high-speed internet, many countries remain hesitant or resistant to adopting such services. This chapter explores the paradox of advanced satellite connectivity being with",
+   "url": "https://doi.org/10.18778/8331-719-9.11",
+   "date": "2025-09-15",
+   "type": "Academic paper",
+   "source": "Wydawnictwo Uniwersytetu Łódzkiego eBooks",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Jason Bonsall",
+   "keywords": [
+    "starlink",
+    "impacted",
+    "connectivity",
+    "initiatives"
+   ]
+  },
+  {
+   "id": "7e4ccd1f4377",
+   "title": "The Role of Machine Translation in African Languages: Potentials and Pitfalls",
+   "desc": "This article examines the evolving role of machine translation (MT) in the context of African languages, highlighting its potential for linguistic equity and digital inclusion. With over 2,000 languages spoken across the continent, MT technologies present a unique opportunity to bridge linguistic di",
+   "url": "https://doi.org/10.59384/uirtus.2025.2947",
+   "date": "2025-08-31",
+   "type": "Academic paper",
+   "source": "Uirtus",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "Ulrich Douo",
+   "keywords": [
+    "role",
+    "machine",
+    "translation",
+    "languages"
+   ]
+  },
+  {
+   "id": "e11299c9d0d8",
+   "title": "Artificial Intelligence for Genomics and Bioinformatics: Is Africa Lagging Behind?",
+   "desc": "Summary Africa’s diverse pathogen and human genetics present significant opportunities for genomic medicine research using artificial intelligence (AI). We surveyed 250 genomics researchers across 46 of the 55 African Union Member States to assess the state of AI use. The survey revealed that only 4",
+   "url": "https://doi.org/10.1101/2025.08.27.668885",
+   "date": "2025-08-28",
+   "type": "Academic paper",
+   "source": "bioRxiv (Cold Spring Harbor Laboratory)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Sofonias Kifle Tessema, Collins Kipngetich Tanui, Harris Onywera, Alan Gilbert Christoffels et al.",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "genomics",
+    "bioinformatics"
+   ]
+  },
+  {
+   "id": "fbec822d32f8",
+   "title": "Enhancing Digital Public Infrastructure in West Africa",
+   "desc": "Digital identity, payment, and data exchange systems form the foundationof Digital Public Infrastructure (DPI), to which other designed forms can beadded for application across various sectors. However, the possibilities andopportunities they offer to people in West Africa are narrow or unstable whe",
+   "url": "https://doi.org/10.5281/zenodo.22702936",
+   "date": "2025-08-19",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Ferdinand Mayéda Digamnt'n Bassonna",
+   "keywords": [
+    "enhancing",
+    "digital",
+    "public",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "52f0ddd170bd",
+   "title": "Democratic AI governance: framing a vision for Africa in view of the EU experience",
+   "desc": "Democracy is, centrally, a system of making collective decisions on matters of public concerns in a way that gives each individual a fair and equal opportunity of influence over decisions (Christiano and Bajaj 2024; Himmelreich 2024; Hirvonen 2023). This is materially realised by citizen participati",
+   "url": "https://doi.org/10.1080/13600869.2025.2506924",
+   "date": "2025-08-14",
+   "type": "Academic paper",
+   "source": "International Review of Law Computers & Technology",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Mehmet Bilal Ünver",
+   "keywords": [
+    "democratic",
+    "governance",
+    "framing",
+    "vision"
+   ]
+  },
+  {
+   "id": "9053528a07f7",
+   "title": "Collaborative regulation: leveraging existing authorities for effective AI governance in Africa",
+   "desc": "Artificial intelligence (AI) is gradually evolving in Africa, presenting unique regulatory challenges, including its potential ability and potential to disrupt industries, exacerbate inequalities, and impact human rights. While calls for new AI-specific laws and the creation of new agencies are wide",
+   "url": "https://doi.org/10.1080/13600869.2025.2506916",
+   "date": "2025-08-04",
+   "type": "Academic paper",
+   "source": "International Review of Law Computers & Technology",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Ridwan Oloyede",
+   "keywords": [
+    "collaborative",
+    "regulation",
+    "leveraging",
+    "existing"
+   ]
+  },
+  {
+   "id": "b9ea5f072d17",
+   "title": "AI-Powered Innovations for Documenting and Revitalizing African Languages",
+   "desc": "The documentation and revitalization of African languages are crucial for preserving the continent’s linguistic and cultural heritage amid increasing threats of language endangerment. This study presents a systematic review of existing literature on artificial intelligence (AI)-driven approaches to ",
+   "url": "https://doi.org/10.55121/card.v5i2.517",
+   "date": "2025-07-25",
+   "type": "Academic paper",
+   "source": "Cultural Arts Research and Development",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Jackton Otieno Midigo",
+   "keywords": [
+    "powered",
+    "innovations",
+    "documenting",
+    "revitalizing"
+   ]
+  },
+  {
+   "id": "c818716305f8",
+   "title": "Artificial Intelligence and the Humanities in Africa: Matters Arising",
+   "desc": "Artificial Intelligence (AI) is the simulation of human intelligence in machines designed to think and work like humans. Today, the dominance of a science-oriented worldview through AI is felt everywhere. Currently, it is challenging, if not impossible, for any right-thinking person to avoid or feel",
+   "url": "https://www.ajol.info/index.php/abraka/article/view/300634",
+   "date": "2025-07-14",
+   "type": "Academic paper",
+   "source": "Abraka Humanities Review",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "Cyrille Ngamen Kouassi, S.K. Akindele",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "humanities",
+    "matters"
+   ]
+  },
+  {
+   "id": "228c6da6a943",
+   "title": "EFFECT OF URBAN INFRASTRUCTURE ON DENSITY OF NEW FIRMS IN SOUTH AFRICA",
+   "desc": "Research Problem: Entrepreneurial growth across South African municipalities remains spatially uneven, with significant disparities linked to variations in urban infrastructure. Despite policy efforts to stimulate local economic development, limited empirical research has examined how specific infra",
+   "url": "https://doi.org/10.64633/wissj.v9i5.29",
+   "date": "2025-06-30",
+   "type": "Academic paper",
+   "source": "Wukari International Studies Journal",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Oloruntoba Oyedele",
+   "keywords": [
+    "effect",
+    "urban",
+    "infrastructure",
+    "density"
+   ]
+  },
+  {
+   "id": "17008fba3c39",
+   "title": "Artificial Intelligence for Community Engagement in Africa",
+   "desc": "Artificial intelligence (AI) has the potential to revolutionize community engagement in Africa, offering innovative solutions to challenges in various sectors and empowering communities to address their needs effectively. However, the successful implementation of AI for community engagement on the c",
+   "url": "https://doi.org/10.64553/vngm3464",
+   "date": "2025-06-21",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Mary Wangari Mutiga",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "community",
+    "engagement"
+   ]
+  },
+  {
+   "id": "58fa33d8587d",
+   "title": "Artificial Intelligence for Sustainable Community Development in Africa",
+   "desc": "Artificial intelligence (AI), a rapidly evolving field encompassing technologies like machine learning, natural language processing, and computer vision, offers immense potential to address the unique challenges and foster sustainable growth in African communities. By analyzing vast datasets, recogn",
+   "url": "https://doi.org/10.64553/glah7810",
+   "date": "2025-06-21",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "Mary Wangari Mutiga",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "sustainable",
+    "community"
+   ]
+  },
+  {
+   "id": "07b7f7bb6a2a",
+   "title": "Bridging the Gap Living Standards in Africa: The role of entrepreneurship and digital infrastructure",
+   "desc": "Most African countries face numerous socio-economic challenges, including poverty, high unemployment rates, lack of access to healthcare services, and limited access to quality education. While research, particularly from advanced economies, suggests that entrepreneurship is essential for improving ",
+   "url": "https://doi.org/10.64138/j.sir.2025.10002",
+   "date": "2025-06-13",
+   "type": "Academic paper",
+   "source": "Sustainability Impacts Review",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Jude N. Edeh",
+   "keywords": [
+    "bridging",
+    "living",
+    "standards",
+    "role"
+   ]
+  },
+  {
+   "id": "8d7dd64e1794",
+   "title": "78Chapter 6 Cloud Computing in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1515/9783112211984-006",
+   "date": "2025-06-07",
+   "type": "Academic paper",
+   "source": "De Gruyter eBooks",
+   "theme": "Data centres & cloud",
+   "country": "Pan-African",
+   "authors": "Matthew N. O. Sadiku",
+   "keywords": [
+    "chapter",
+    "cloud",
+    "computing"
+   ]
+  },
+  {
+   "id": "e1959e610397",
+   "title": "The creation of digital financial infrastructures in Africa and the philanthrocapitalism of the MCF",
+   "desc": "Financial infrastructures are socio-technical processes created and sustained by power relations in the global political economy. We examine how the Mastercard Foundation, an understudied development actor, articulates such power relations through its participation in creation of digital financial i",
+   "url": "https://doi.org/10.1080/14747731.2025.2513189",
+   "date": "2025-06-06",
+   "type": "Academic paper",
+   "source": "Globalizations",
+   "theme": "Energy & compute",
+   "country": "Pan-African",
+   "authors": "Marie Langevin, Valérie L’Heureux, Pierre-Alexandre Cardinal",
+   "keywords": [
+    "creation",
+    "digital",
+    "financial",
+    "infrastructures"
+   ]
+  },
+  {
+   "id": "33048e6d9169",
+   "title": "The State of Large Language Models for African Languages: Progress and Challenges",
+   "desc": "Large Language Models (LLMs) are transforming Natural Language Processing (NLP), but their benefits are largely absent for Africa's 2,000 low-resource languages. This paper comparatively analyzes African language coverage across six LLMs, eight Small Language Models (SLMs), and six Specialized SLMs ",
+   "url": "https://doi.org/10.48550/arxiv.2506.02280",
+   "date": "2025-06-02",
+   "type": "Academic paper",
+   "source": "arXiv (Cornell University)",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Kedir Yassin Hussen, Walelign Tewabe Sewunetie, Abinew Ali Ayele, Sukairaj Hafiz Imam et al.",
+   "keywords": [
+    "state",
+    "large",
+    "language",
+    "models"
+   ]
+  },
+  {
+   "id": "46b963666afa",
+   "title": "Ethics of AI in Africa: Interrogating the role of Ubuntu and AI governance initiatives",
+   "desc": "Abstract One of the common concerns raised in AI ethics scholarship is the overly western-centric nature of ongoing AI ethics discourse and governance initiatives. This has recently prompted many commentators to proclaim the emergence of an epistemic injustice or “ethical colonialism”. Many scholars",
+   "url": "https://doi.org/10.1007/s10676-025-09834-5",
+   "date": "2025-05-16",
+   "type": "Academic paper",
+   "source": "Ethics and Information Technology",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Kinfe Yilma",
+   "keywords": [
+    "ethics",
+    "interrogating",
+    "role",
+    "ubuntu"
+   ]
+  },
+  {
+   "id": "63c038cc49e5",
+   "title": "Opportunities and Challenges to Telehealth Implementation in Sub-Saharan Africa: A Secondary Data Analysis on Digital Infrastructures",
+   "desc": "Telehealth offers a promising solution to healthcare access challenges in Sub-Saharan Africa. Yet, significant digital infrastructure gaps, including limited internet connectivity, high mobile data costs, and a pronounced digital gender gap, hinder its implementation. This study uses secondary data ",
+   "url": "https://doi.org/10.54111/001c.138076",
+   "date": "2025-05-16",
+   "type": "Academic paper",
+   "source": "Boston Congress of Public Health Review (BCPHR Formerly HPHR)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Thierry Lienou, Jean Claude Tuyishime",
+   "keywords": [
+    "opportunities",
+    "challenges",
+    "telehealth",
+    "implementation"
+   ]
+  },
+  {
+   "id": "8afb9ebc4251",
+   "title": "Forecasting Mistakes in Machine Translation of Environmental Health Information to African Languages",
+   "desc": "This chapter introduces a novel translation quality assessment mechanism, which proposes to increase the translatability of English source texts through predictive assessment using machine learning classifiers, before sending the texts for actual translations. The benefits of the pre-editing approac",
+   "url": "https://doi.org/10.1017/9781009067386.006",
+   "date": "2025-05-15",
+   "type": "Academic paper",
+   "source": "Cambridge University Press eBooks",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Meng Ji, Michael Oakes",
+   "keywords": [
+    "forecasting",
+    "mistakes",
+    "machine",
+    "translation"
+   ]
+  },
+  {
+   "id": "0e5e9300a6fd",
+   "title": "Bridging the Digital Divide in Agriculture: Lessons from the United States and Africa in Smart Farming Adoption",
+   "desc": "The adoption of smart farming has altered food production by increasing efficiency, sustainability, and productivity. However, there is a digital divide, with affluent countries such as the United States benefiting from advanced agricultural technologies, nevertheless, many African countries face li",
+   "url": "https://doi.org/10.38124/ijisrt/25apr1024",
+   "date": "2025-04-26",
+   "type": "Academic paper",
+   "source": "OpenAlex",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Samuel Oshikoya, Adekunle Olaoluwa Adeyeye, Olufisayo Andrew Obebe, Oluwatosin Elizabeth Adeyeye",
+   "keywords": [
+    "bridging",
+    "digital",
+    "divide",
+    "agriculture"
+   ]
+  },
+  {
+   "id": "708e0074cba7",
+   "title": "Assessing the prospects of digital infrastructure in promoting rural economic development in South Africa",
+   "desc": "The prospects of digital infrastructure in promoting rural economic growth and development are by and large immense. The paper found that rural development is considerably important for economic development and for achievement of sustainable livelihoods that increases people’s ability to achieve goo",
+   "url": "https://doi.org/10.24294/jipd8817",
+   "date": "2025-04-15",
+   "type": "Academic paper",
+   "source": "Journal of Infrastructure Policy and Development",
+   "theme": "Skills & research",
+   "country": "South Africa",
+   "authors": "Knowledge Malusi Nkanyeni Gigaba, Eric Blanco Niyitunga, Dominique Emmanuel Uwizeyimana",
+   "keywords": [
+    "assessing",
+    "prospects",
+    "digital",
+    "infrastructure"
+   ]
+  },
+  {
+   "id": "8fcb8b279edc",
+   "title": "Sustainable public procurement through Internet of Things and cloud computing in South Africa",
+   "desc": "Background: The South African public sector uses procurement and supply chains to address service delivery mandates. This approach must be based on a system that is inclined to ‘value for money, open and effective competition, ethics and fair dealing, accountability and reporting, and equity’. The c",
+   "url": "https://doi.org/10.4102/apsdpr.v13i1.877",
+   "date": "2025-04-03",
+   "type": "Academic paper",
+   "source": "Africa’s Public Service Delivery and Performance Review",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Lawrence Moetapele Mojaki, Tite Tuyikeze, Nkanyiso K. Ndlovu",
+   "keywords": [
+    "sustainable",
+    "public",
+    "procurement",
+    "through"
+   ]
+  },
+  {
+   "id": "a7cd9da243a1",
+   "title": "Practical Recommendations for Artificial Intelligence and Machine Learning in Antimicrobial Stewardship for Africa",
+   "desc": "ABSTRACT The challenge of antimicrobial resistance (AMR) represents one of the most pressing global health crises, particularly, in resource‐constrained settings like Africa. In this paper, we explore artificial intelligence (AI) and machine learning (ML) potential in transforming the potential for ",
+   "url": "https://doi.org/10.1002/ail2.123",
+   "date": "2025-04-01",
+   "type": "Academic paper",
+   "source": "Applied AI Letters",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Tafadzwa Dzinamarira, Elliot Mbunge, Claire Steiner, Enos Moyo et al.",
+   "keywords": [
+    "practical",
+    "recommendations",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
+   "id": "e8f4dec20ce5",
+   "title": "The politics of locationality: Interrogating AI development, locational (dis)advantage and governance in Africa",
+   "desc": "The paper considers the question of location in the development and governance of artificial intelligence in Africa. The discussion draws from ideas on locational advantage and the mix of factors that affect inequalities in AI development and how this influences the ability that countries have to sh",
+   "url": "https://doi.org/10.1177/01634437251328209",
+   "date": "2025-03-26",
+   "type": "Academic paper",
+   "source": "Media Culture & Society",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Vincent Adakole Obia",
+   "keywords": [
+    "politics",
+    "locationality",
+    "interrogating",
+    "development"
+   ]
+  },
+  {
+   "id": "74959154a6b8",
+   "title": "A framework for assessing cloud-computing readiness in Limpopo provincial hospitals",
+   "desc": "Background: Organisational readiness for cloud-computing technology installation is crucial for improving healthcare service delivery. However, it is mostly unexplored in Limpopo provincial hospitals. Objectives: This study fills this gap by creating a framework for assessing organisational readines",
+   "url": "https://doi.org/10.4102/sajim.v27i1.1916",
+   "date": "2025-03-07",
+   "type": "Academic paper",
+   "source": "South African journal of information management",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Mathabatha Johannes Mmako, Alfred Thaga Kgopa",
+   "keywords": [
+    "framework",
+    "assessing",
+    "cloud",
+    "computing"
+   ]
+  },
+  {
+   "id": "5e85c094cd71",
+   "title": "State of urbanization in Africa: Digital transformation for inclusive, resilient and sustainable urbanization",
+   "desc": "This report examines Africa's rapid urbanization and the role of digital transformation in fostering inclusive, resilient, and sustainable cities. Focusing on four key dimensions digital infrastructure, affordability, digital skills, and e-government it highlights progress and disparities across sub",
+   "url": "https://hdl.handle.net/10855/50444",
+   "date": "2025-03-01",
+   "type": "Academic paper",
+   "source": "Economic Commission for Africa Knowledge Repository (Economic Commission for Africa)",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "",
+   "keywords": [
+    "state",
+    "urbanization",
+    "digital",
+    "transformation"
+   ]
+  },
+  {
+   "id": "f329f399b5be",
+   "title": "Using Machine Learning to Improve Readmission Risk in Surgical Patients in South Africa",
+   "desc": "Unplanned readmission within 30 days is a major challenge both globally and in South Africa. The aim of this study was to develop a machine learning model to predict unplanned surgical and trauma readmission to a public hospital in South Africa from unstructured text data. A retrospective cohort of ",
+   "url": "https://doi.org/10.3390/ijerph22030345",
+   "date": "2025-02-26",
+   "type": "Academic paper",
+   "source": "International Journal of Environmental Research and Public Health",
+   "theme": "Skills & research",
+   "country": "South Africa",
+   "authors": "Umit Tokac, Jennifer A. Chipps, Petra Brysiewicz, John Lambert Bruce et al.",
+   "keywords": [
+    "using",
+    "machine",
+    "learning",
+    "improve"
+   ]
+  },
+  {
+   "id": "8fd2e8f17a76",
+   "title": "Artificial Intelligence, Fintech, and Financial Inclusion in African Digital Space",
+   "desc": "The importance of the economy of a nation cannot be over-emphasized, as its technological progress is largely dependent on economic stability. The adoption of 21st-century technology, especially in financial technology, has strengthened the economic sector consisting of artificial intelligence (AI) ",
+   "url": "https://doi.org/10.4324/9781003514114-19",
+   "date": "2025-02-14",
+   "type": "Academic paper",
+   "source": "Routledge eBooks",
+   "theme": "Digital public infrastructure",
+   "country": "Pan-African",
+   "authors": "Basil Osayin Daudu, Goddy Uwa Osimen, Abdulrasheed Toyin Abubakar",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "fintech",
+    "financial"
+   ]
+  },
+  {
+   "id": "3fd604c24f17",
+   "title": "Challenges and Prospects of Deploying AI and Machine Learning for Clinical Diagnosis in African Healthcare",
+   "desc": "The integration of artificial intelligence (AI), machine learning (ML), and robotics into clinical diagnosis has become prevalent. For example, ML-driven image recognition has demonstrated remarkable efficacy, prompting clinicians to rely increasingly on these technologies for “accurate” medical dia",
+   "url": "https://doi.org/10.36615/dpfmva63",
+   "date": "2025-01-30",
+   "type": "Academic paper",
+   "source": "The Thinker",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Edmund Terem Ugar",
+   "keywords": [
+    "challenges",
+    "prospects",
+    "deploying",
+    "machine"
+   ]
+  },
+  {
+   "id": "ec0ac2d55a86",
+   "title": "ARTIFICIAL INTELLIGENCE: AN OPPORTUNITY OR A THREAT FOR AFRICA?",
+   "desc": "Artificial intelligence (AI) is poised to transform various sectors globally, including Africa. This paper investigates whether AI represents Africa’s opportunity or threat, considering the continent’s unique internet challenges, economic constraints, and infrastructural limitations. By examining AI",
+   "url": "https://doi.org/10.61784/wjit3019",
+   "date": "2025-01-21",
+   "type": "Academic paper",
+   "source": "World Journal of Information Technology ",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Eric Ateba Manga, Ahmad Zaid Ejaz, Zainab Ilyas",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "opportunity",
+    "threat"
+   ]
+  },
+  {
+   "id": "f28b6b97379f",
+   "title": "Migration of Applications and Information Systems to Cloud Computing Infrastructure: Lessons from a South African Retail Bank",
+   "desc": "The aim of this study was to investigate the benefits and challenges of moving information systems to the cloud infrastructure as part of phasing out legacy systems and preventing digital fraud. This study employed a qualitative research methodology and used interviews, observations and document ana",
+   "url": "https://doi.org/10.25159/2663-659x/16035",
+   "date": "2025-01-15",
+   "type": "Academic paper",
+   "source": "Mousaion South African Journal of Information Studies",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Rabelani Dagada",
+   "keywords": [
+    "migration",
+    "applications",
+    "information",
+    "systems"
+   ]
+  },
+  {
+   "id": "d568895f8dd9",
+   "title": "Enabling Technologies with Industry 4.0 for Renewable Energy in Africa",
+   "desc": "Africa can improve energy access, increase energy security, and speed the transition to a sustainable and resilient energy system by incorporating Industry 4.0 technologies into its renewable energy industry. However, successful integration necessitates investments in digital infrastructure, skill d",
+   "url": "https://doi.org/10.1201/9781003511298-7",
+   "date": "2025-01-02",
+   "type": "Academic paper",
+   "source": "CRC Press eBooks",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Robert T. F. Ah King, Bhimsen Rajkumarsingh",
+   "keywords": [
+    "enabling",
+    "technologies",
+    "industry",
+    "renewable"
+   ]
+  },
+  {
+   "id": "5f1cdd582eff",
+   "title": "The Impact of Artificial Intelligence (AI) on Human Rights in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.5884664",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Greatness Eyonsa Essien",
+   "keywords": [
+    "impact",
+    "artificial",
+    "intelligence",
+    "human"
+   ]
+  },
+  {
+   "id": "e8b23b376d59",
+   "title": "Reimagining AI Governance in Africa: The Case for a Multistakeholder Model",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.5439114",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Emile Ormond",
+   "keywords": [
+    "reimagining",
+    "governance",
+    "case",
+    "multistakeholder"
+   ]
+  },
+  {
+   "id": "6fe919139f91",
+   "title": "Digital infrastructure & sustainable data centers investment in Africa: Role of Tier III & Tier IV",
+   "desc": "Africa's digital transformation is accelerating, driven by rapid urbanization, increasing mobile connectivity, and the adoption of emerging technologies such as artificial intelligence (AI), the Internet of Things (IoT), and Big Data. However, the continent faces significant challenges in digital in",
+   "url": "https://doi.org/10.54660/.ijmrge.2025.6.1-1878-1888",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "International Journal of Multidisciplinary Research and Growth Evaluation",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Kehinde Emmanuel Abiodun",
+   "keywords": [
+    "digital",
+    "infrastructure",
+    "sustainable",
+    "data"
+   ]
+  },
+  {
+   "id": "3c19d8aab7ea",
+   "title": "Assessing Readiness in a Digital Age, Does Africa have the Requisite Infrastructure and Skills to Secure its Cyberspace?",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.5656190",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Sabina Ocharo",
+   "keywords": [
+    "assessing",
+    "readiness",
+    "digital",
+    "does"
+   ]
+  },
+  {
+   "id": "e1017152b537",
+   "title": "Considering Ethical Issues Affecting Patients’ Records Stored on the Cloud in South Africa",
+   "desc": "The study sought to investigate the ethical implications of patients’ medical and health records being stored on the cloud in South Africa. A literature review was conducted in this qualitative study to examine ethical implications of patients’ medical and health records being stored on the cloud in",
+   "url": "https://doi.org/10.51415/ajims.v7i1.1509",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "African Journal of Inter/Multidisciplinary Studies",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Ngoako Solomon Marutha, Azwihangwisi Helen Mavhandu‐Mudzusi",
+   "keywords": [
+    "considering",
+    "ethical",
+    "issues",
+    "affecting"
+   ]
+  },
+  {
+   "id": "1bfb98f3f40a",
+   "title": "The Confluence of Big Data and Cloud Computing in SME Adoption Strategies",
+   "desc": "This paper explores the adoption of cloud computing and big data technologies in small and medium enterprises (SMEs), focusing on synthesizing key factors influencing adoption. By conducting a comprehensive literature review and analyzing theoretical frameworks such as the Technology Acceptance Mode",
+   "url": "https://doi.org/10.1109/access.2025.3543265",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "IEEE Access",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Mahmoud Skafi, Manal M. Yunis, Ahmed Sherif Zekri, Julie Bu Daher",
+   "keywords": [
+    "confluence",
+    "data",
+    "cloud",
+    "computing"
+   ]
+  },
+  {
+   "id": "ca42ef2da54a",
+   "title": "Empowering Sentiment Analysis in African Low-Resource Languages Through Transformer Models and Strategic Language Selection",
+   "desc": "This research addresses the significant challenges of sentiment analysis in low-resource African languages by utilizing advanced transformer-based models to bridge gaps in natural language processing (NLP) for underrepresented linguistic communities. Covering 12 diverse languages: Hausa, Yoruba, Igb",
+   "url": "https://doi.org/10.1109/access.2025.3599480",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "IEEE Access",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Nilanjana Raychawdhary, Sutanu Bhattacharya, Cheryl Seals, Gerry Vernon Dozier",
+   "keywords": [
+    "empowering",
+    "sentiment",
+    "analysis",
+    "resource"
+   ]
+  },
+  {
+   "id": "fa1f5f0883b7",
+   "title": "Hate speech detection in Hausa code-mixed tweets using machine learning",
+   "desc": "Code-mixed communication in Nigeria, involving English, Nigerian Pidgin, Hausa, Yoruba, and Igbo, poses challenges for Natural Language Processing (NLP) systems, especially in detecting hate speech. Existing research typically focuses on high-resource languages, leaving code-mixed African data under",
+   "url": "https://doi.org/10.4314/swj.v20i4.21",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "Science World Journal",
+   "theme": "Skills & research",
+   "country": "Nigeria",
+   "authors": "Bashir Idris Sulaiman, Muhammad Aminu Ahmad",
+   "keywords": [
+    "hate",
+    "speech",
+    "detection",
+    "hausa"
+   ]
+  },
+  {
+   "id": "4a3110d07165",
+   "title": "Digital Inclusion in Africa: Bridging the Divide",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.5151540",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "General",
+   "country": "Pan-African",
+   "authors": "Sunday Ndubuisi Okonkwo",
+   "keywords": [
+    "digital",
+    "inclusion",
+    "bridging",
+    "divide"
+   ]
+  },
+  {
+   "id": "c40aec8c87ee",
+   "title": "Artificial Intelligence Readiness in Africa",
+   "desc": "",
+   "url": "https://doi.org/10.1007/978-3-031-76261-1_1",
+   "date": "2024-12-26",
+   "type": "Academic paper",
+   "source": "Springer eBooks",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Rashri Baboolal‐Frank",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "readiness"
+   ]
+  },
+  {
+   "id": "9c859a941996",
+   "title": "Technology factors required for adopting cloud-based big data analytics in South African banking",
+   "desc": "Background and Aim of Study: South African banks are generally known for early technology adoption. While this is so, there is a need to integrate some of the fourth industrial revolution technologies such as big data analytics and cloud computing collectively referred to as cloud-based big data ana",
+   "url": "https://doi.org/10.26697/ijsa.2024.2.5",
+   "date": "2024-12-25",
+   "type": "Academic paper",
+   "source": "International Journal of Science Annals",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "A. P. Msweli, Tshinakaho Relebogile Seaba, V. N. Paledi, Khuliso Sigama",
+   "keywords": [
+    "technology",
+    "factors",
+    "required",
+    "adopting"
+   ]
+  },
+  {
+   "id": "965f5222ece1",
+   "title": "Language Technology Research and Input from African Linguistics: Prospects and Challenges",
+   "desc": "The buzzword in technological research today is AI (Artificial Intelligence). AI is characterized by the ability to learn, deep learning, cloud computing and data ingestion. At the center of AI are Machine Learning (ML), Deep Learning (DL) and Natural Language Processing (NLP). Natural Language Proc",
+   "url": "https://doi.org/10.56907/gltnthzr",
+   "date": "2024-12-21",
+   "type": "Academic paper",
+   "source": "CLAREP Journal of English and Linguistics",
+   "theme": "Data centres & cloud",
+   "country": "Nigeria",
+   "authors": "Francis Olugbenga Oyebade",
+   "keywords": [
+    "language",
+    "technology",
+    "research",
+    "input"
+   ]
+  },
+  {
+   "id": "e7f82d82cabc",
+   "title": "Digital Public Infrastructure and Inclusive Governance in Africa: Human Rights and Governance Considerations",
+   "desc": "This article examines Digital Public Infrastructure and Inclusive Governance in Africa: Human Rights and Governance Considerations with a focused emphasis on Nigeria within the field of Law. It is structured as a theoretical framework article that organises the problem, the strongest verified schola",
+   "url": "https://doi.org/10.5281/zenodo.19528794",
+   "date": "2024-12-13",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Nigeria",
+   "authors": "Abraham Kuol Nyuon",
+   "keywords": [
+    "digital",
+    "public",
+    "infrastructure",
+    "inclusive"
+   ]
+  },
+  {
+   "id": "334bbb7ef2eb",
+   "title": "Responsible artificial intelligence in Africa: towards policy learning",
+   "desc": "Abstract Several African countries are developing artificial intelligence (AI) strategies and ethics frameworks with the goal of accelerating responsible AI development and adoption. However, many of these governance actions are emerging without consideration for their suitability to local contexts,",
+   "url": "https://doi.org/10.1017/dap.2024.60",
+   "date": "2024-12-08",
+   "type": "Academic paper",
+   "source": "Data & Policy",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Paul Plantinga, Kristophina Shilongo, Oarabile Mudongo, Angelique Umubyeyi et al.",
+   "keywords": [
+    "responsible",
+    "artificial",
+    "intelligence",
+    "towards"
+   ]
+  },
+  {
+   "id": "2792458c6353",
+   "title": "Artificial intelligence, digital colonialism, and the implications for Africa’s future development",
+   "desc": "Abstract In the mid to late 19th century, much of Africa was under colonial rule, with the colonisers exercising power over the labour and territory of Africa. However, as much as Africa has predominantly gained independence from traditional colonial rule, another form of colonial rule still dominat",
+   "url": "https://doi.org/10.1017/dap.2024.75",
+   "date": "2024-12-04",
+   "type": "Academic paper",
+   "source": "Data & Policy",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Aishat Oyenike Salami",
+   "keywords": [
+    "artificial",
+    "intelligence",
+    "digital",
+    "colonialism"
+   ]
+  },
+  {
+   "id": "29b9c639cf07",
+   "title": "INNOVATIVE EDUCATIONAL TECHNOLOGIES FOR AFRICA: BRIDGING THE DIGITAL DIVIDE",
+   "desc": "Africa faces considerable challenges in providing quality education to all citizens, a situation worsened by the digital divide, which limits access to modern learning tools. Many communities, especially in rural areas, lack adequate infrastructure, such as internet connectivity and electricity, pre",
+   "url": "https://doi.org/10.70382/tijerls.v06i8.008",
+   "date": "2024-11-30",
+   "type": "Academic paper",
+   "source": "International Journal of Educational Research and Library Science",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "MOHAMMED AHMED JIBRIN, U. V. OYINVWI, AKWADEN JOSHUA IBRAHIM",
+   "keywords": [
+    "innovative",
+    "educational",
+    "technologies",
+    "bridging"
+   ]
+  },
+  {
+   "id": "c809d4eacd76",
+   "title": "Compliance and Governance issues in Cloud Computing and AI: USA and Africa",
+   "desc": "The rapid expansion of cloud computing and artificial intelligence (AI) has driven transformative change across various industries, presenting both opportunities and challenges in the realms of compliance and governance. This review examines the distinctive and overlapping compliance and governance ",
+   "url": "https://doi.org/10.30574/gjeta.2024.21.2.0213",
+   "date": "2024-11-29",
+   "type": "Academic paper",
+   "source": "Global Journal of Engineering and Technology Advances",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Adebola Folorunso, Olufunbi Babalola, Chineme Edgar Nwatu, Urenna Ukonne",
+   "keywords": [
+    "compliance",
+    "governance",
+    "issues",
+    "cloud"
+   ]
+  }
+ ]
+}
