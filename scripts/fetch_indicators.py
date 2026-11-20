@@ -10,6 +10,7 @@
 - GitHub Actions에서 매월 자동 실행 (.github/workflows/indicators.yml)
 """
 import csv
+import glob
 import json
 import os
 import time
@@ -97,7 +98,20 @@ SOURCES = {
                   "Source_URL": "https://www.worldbank.org/en/publication/globalfindex",
                   "License": "CC BY 4.0",
                   "License_URL": "https://data.worldbank.org/summary-terms-of-use"},
+    "OXF_GARI": {"Source_Name": "Oxford Insights Government AI Readiness Index",
+                 "Source_Type": "연구기관 지수",
+                 "Source_URL": "https://oxfordinsights.com/ai-readiness/ai-readiness-index/",
+                 "License": "CC BY-SA 4.0",
+                 "License_URL": "https://creativecommons.org/licenses/by-sa/4.0/"},
 }
+
+# ── 직접 내려받아 변환한 지표 (data/manual/*.csv) ──
+# 파일은 scripts/manual/ 의 변환 스크립트로 만든다. 매월 수집 때 함께 합쳐진다.
+# show_levels: 지표 DB 화면 선택 목록에 보일 수준 (나머지는 CSV 내려받기에만 포함)
+MANUAL_FILES = [
+    {"pattern": "oxford_gari_*.csv", "table": "aidivide", "category": "AI 준비도",
+     "show_levels": ["total", "pillar"]},
+]
 
 
 def get_json(url, retries=4):
@@ -121,6 +135,11 @@ def fetch_countries():
     if data and len(data) > 1 and data[1]:
         for c in data[1]:
             meta[c["id"]] = {"name_en": c["name"], "income": c["incomeLevel"]["value"]}
+    else:
+        # API 실패 시 이전 국가 정보를 그대로 유지
+        print("  ✘ 국가 정보 수집 실패, 이전 데이터 유지")
+        for c in load_existing("country"):
+            meta[c["Country_ID"]] = {"name_en": c.get("Country_Name_EN", ""), "income": c.get("Income_Group", "")}
     rows = []
     for iso, (ko, region) in COUNTRIES.items():
         m = meta.get(iso, {})
@@ -184,6 +203,30 @@ def save(name, rows, extra=None):
     print(f"✔ {name}: {len(rows)} rows")
 
 
+def load_manual():
+    """data/manual/*.csv 를 읽어 (표별 행 목록, 화면 표시용 지표 목록) 반환"""
+    rows = {"digitalx": [], "aidivide": []}
+    shown = []
+    for spec in MANUAL_FILES:
+        for path in sorted(glob.glob(os.path.join(OUT, "manual", spec["pattern"]))):
+            with open(path, encoding="utf-8-sig") as f:
+                for r in csv.DictReader(f):
+                    level = r.pop("Level", "")
+                    rec = {
+                        "Country_ID": r["Country_ID"], "Year": int(r["Year"]),
+                        "Indicator_Code": r["Indicator_Code"], "Indicator_Name": r["Indicator_Name"],
+                        "Value": float(r["Value"]), "Unit": r["Unit"], "Source_ID": r["Source_ID"],
+                    }
+                    rec["Indicator_Category" if spec["table"] == "digitalx" else "AI_Dimension"] = spec["category"]
+                    rows[spec["table"]].append(rec)
+                    if level in spec["show_levels"] and not any(i["code"] == rec["Indicator_Code"] for i in shown):
+                        shown.append({"code": rec["Indicator_Code"], "table": spec["table"],
+                                      "category": spec["category"], "name": rec["Indicator_Name"],
+                                      "unit": rec["Unit"], "source": rec["Source_ID"]})
+            print(f"✔ 수동 자료 {os.path.basename(path)} 합침")
+    return rows, shown
+
+
 def main():
     print(f"== 지표 수집 시작 {TODAY} ==")
     countries = fetch_countries()
@@ -208,6 +251,10 @@ def main():
         status[ind["code"]] = "정상"
         print(f"  ✔ {len(rows)}건")
 
+    manual_rows, manual_shown = load_manual()
+    for t in tables:
+        tables[t].extend(manual_rows[t])
+
     # 컬럼 순서를 스키마에 맞게 정리
     order = {
         "digitalx": ["Country_ID", "Year", "Indicator_Category", "Indicator_Code",
@@ -229,8 +276,8 @@ def main():
         "Reliability_Level": "High",
     } for sid, s in SOURCES.items()]
 
-    indicator_meta = [{k: i[k] for k in ("code", "table", "category", "name", "unit", "source")}
-                      for i in INDICATORS]
+    indicator_meta = manual_shown + [{k: i[k] for k in ("code", "table", "category", "name", "unit", "source")}
+                                     for i in INDICATORS]
 
     save("country", countries)
     save("digitalx", tables["digitalx"])

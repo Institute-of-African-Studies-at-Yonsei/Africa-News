@@ -23,7 +23,8 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data.html` | 지표 DB 페이지 | 지표 DB 담당 |
 | `scripts/fetch_indicators.py` | World Bank 지표 수집 → `data/` | 지표 DB 담당 |
 | `data/` | 지표 DB 데이터 (자동 생성, 직접 수정 금지) | 자동 |
-| `data/manual/` | (예정) 직접 내려받은 지표 CSV (AI 준비도 지수 등, 라이선스가 허용하는 것만) | 지표 DB 담당 |
+| `data/manual/` | 직접 내려받아 변환한 지표 CSV (라이선스가 허용하는 것만). 현재 `oxford_gari_2025.csv` | 지표 DB 담당 |
+| `scripts/manual/` | 연 1회 수동으로 돌리는 변환 스크립트 (외부 패키지 사용 가능, Actions에서는 실행 안 함) | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
 | `.github/workflows/deploy.yml` | 사이트 배포. 파일이 올라오거나 자동 수집이 끝날 때마다 실행 (Settings → Pages → Source는 **GitHub Actions**) | 공유 · 수정 시 팀에 알림 |
@@ -39,6 +40,12 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 5. **수집 스크립트는 Python 표준 라이브러리만 사용한다** (`pip install` 없이 실행되도록). 외부 패키지가 꼭 필요하면 워크플로에 설치 단계를 추가하고 팀에 알린다.
 6. **수집이 실패해도 기존 데이터를 지우지 않는다.** 실패 시 이전 데이터를 유지하도록 작성한다 (`scripts/fetch_indicators.py` 참고).
 7. 커밋 메시지는 무엇을 바꿨는지 한 줄로 쓴다. 예: `보고서: ISS Africa RSS 추가`, `지표 DB: EGDI 추가`
+
+### 연 1회 수동 갱신: Oxford Insights 정부 AI 준비도 지수
+1. 새 연도 데이터 엑셀을 oxfordinsights.com에서 내려받는다.
+2. `pip install openpyxl` 후 `python scripts/manual/convert_oxford_gari.py <엑셀> <연도>` 실행 → `data/manual/oxford_gari_<연도>.csv` 생성
+3. CSV를 올리고 Actions에서 **Monthly Africa Indicators Update**를 실행하면 지표 DB에 반영된다.
+4. 평가 체계가 바뀐 해에는 이전 연도 CSV를 그대로 두되, 화면 주석에 비교 불가를 적는다 (2025년판부터 6개 Pillar 체계).
 
 ## 4. DB 스키마 (연구계획서 그림 6-1 기준)
 
