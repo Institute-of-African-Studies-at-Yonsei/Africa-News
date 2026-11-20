@@ -23,7 +23,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data.html` | 지표 DB 페이지 | 지표 DB 담당 |
 | `scripts/fetch_indicators.py` | World Bank 지표 수집 → `data/` | 지표 DB 담당 |
 | `data/` | 지표 DB 데이터 (자동 생성, 직접 수정 금지) | 자동 |
-| `data/manual/` | (예정) 직접 내려받은 지표 CSV (EGDI, AI 준비도 지수 등) | 지표 DB 담당 |
+| `data/manual/` | (예정) 직접 내려받은 지표 CSV (AI 준비도 지수 등, 라이선스가 허용하는 것만) | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
 
@@ -103,6 +103,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
   재배포가 허용되지 않거나 조건을 확인할 수 없는 자료는 수치를 게시하지 않고 링크만 건다.
   - World Bank: CC BY 4.0 (World Bank가 보증하는 것처럼 표현 금지)
   - Oxford Insights Government AI Readiness Index: CC BY-SA 4.0 (가공 데이터도 같은 조건으로 공개)
+  - UN E-Government Development Index(EGDI): UN 저작권(All rights reserved) → 수치 게시 금지, `data.html`의 "외부 지표 바로가기"에 링크만 둔다
 
 ## 7. 사이트 디자인 규칙
 
