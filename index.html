@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI &amp; Digital Infrastructure in Africa — Resource Database</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
@@ -11,29 +13,38 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(-
 header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem}
 .hin{max-width:1300px;margin:0 auto;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .logo{font-family:'DM Serif Display',serif;font-size:19px}.logo em{color:var(--accent);font-style:normal}
-.hlink{font-size:12px;padding:4px 12px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
-.wrap{max-width:1300px;margin:0 auto;padding:1.25rem 1.5rem;display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:start}
+.hlinks{display:flex;gap:6px;flex-wrap:wrap}.hlink{font-size:12px;padding:4px 12px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.wrap{max-width:1300px;margin:0 auto;padding:1.25rem 1.5rem;display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:22px;align-items:start}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--border);margin-bottom:14px}
+.tab{font:inherit;font-size:13px;padding:9px 13px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--t2);cursor:pointer}
+.tab:hover{color:var(--text)}.tab.on{border-bottom-color:var(--accent);color:var(--accent);font-weight:500}
+.tab small{opacity:.7;margin-left:4px}
 .search{display:flex;gap:8px;margin-bottom:12px}
-.search input,.search select{font:inherit;font-size:13px;color:var(--text);background:var(--surface);border:1px solid var(--bmd);border-radius:999px;padding:8px 14px;outline:none}
-.search input{flex:1;min-width:0}.search input:focus{border-color:var(--accent)}
+.search input,.search select,.select-control{font:inherit;font-size:13px;color:var(--text);background:var(--surface);border:1px solid var(--bmd);border-radius:999px;padding:8px 14px;outline:none}
+.search input{flex:1;min-width:0}.search input:focus,.search select:focus,.select-control:focus{border-color:var(--accent)}
 .row{display:flex;align-items:baseline;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-.lab{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;width:58px;flex-shrink:0}
+.lab{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;width:72px;flex-shrink:0}
 .chips{display:flex;gap:4px;flex-wrap:wrap}
 .chip{font:inherit;font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--t2);cursor:pointer}
 .chip:hover{border-color:var(--bmd)}.chip.on{background:var(--text);color:var(--bg);border-color:var(--text)}
 .chip small{opacity:.6;margin-left:3px}
+.control-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:8px 0 12px}
+.control-row label{font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px}
+.control-row select{font:inherit;font-size:12px;color:var(--text);background:var(--surface);border:1px solid var(--bmd);border-radius:7px;padding:6px 9px}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:.6rem 0;margin:.4rem 0 .6rem;border-bottom:1px solid var(--border);font-size:12px;color:var(--t2)}
 .bar button{font:inherit;font-size:12px;background:none;border:none;color:var(--accent);cursor:pointer}
-.res{display:block;padding:13px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}
+.res{display:block;padding:14px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}
 .res:hover .t{color:var(--accent)}
-.meta{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
-.b{font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;white-space:nowrap}
-.b-News{background:#e8eef8;color:#16368a}.b-Academic{background:#f0edf8;color:#4a2080}.b-Report{background:#fdf5e8;color:#7a4a00}
-@media(prefers-color-scheme:dark){.b-News{background:#1d2a44;color:#9bb8f5}.b-Academic{background:#2b2342;color:#c4aef0}.b-Report{background:#3d2f12;color:#e8c070}}
+.meta{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-bottom:5px}
+.badge{font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.badge-news{background:#e8eef8;color:#16368a}.badge-academic{background:#f0edf8;color:#4a2080}.badge-report{background:#fdf5e8;color:#7a4a00}
+@media(prefers-color-scheme:dark){.badge-news{background:#1d2a44;color:#9bb8f5}.badge-academic{background:#2b2342;color:#c4aef0}.badge-report{background:#3d2f12;color:#e8c070}}
 .tag{font-size:10px;color:var(--t3);border:1px solid var(--border);padding:2px 6px;border-radius:4px}
 .src{font-size:11px;color:var(--t2)}.date{margin-left:auto;font-size:11px;color:var(--t3)}
 .t{font-size:14px;font-weight:500;line-height:1.4;margin-bottom:3px}
-.au{font-size:12px;color:var(--t2);font-style:italic}.d{font-size:12px;color:var(--t2);line-height:1.55;margin-top:2px}
+.au{font-size:12px;color:var(--t2);font-style:italic}.d{font-size:12px;color:var(--t2);line-height:1.55;margin-top:3px}
+.academic-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px;font-size:11px;color:var(--t2)}
+.academic-meta span{padding:2px 7px;border-radius:4px;background:var(--bg)}
 .state{padding:3rem 0;text-align:center;color:var(--t2);font-size:13px}
 .more{display:block;margin:1.2rem auto;font:inherit;font-size:13px;padding:8px 22px;border-radius:999px;border:1px solid var(--bmd);background:var(--surface);color:var(--text);cursor:pointer}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;margin-bottom:14px;font-size:12px;color:var(--t2);line-height:1.7}
@@ -41,8 +52,12 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
 .card a{color:var(--accent);text-decoration:none;display:block;padding:3px 0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.grid div{background:var(--bg);border-radius:6px;padding:8px 10px}
 .grid b{display:block;font:400 20px 'DM Serif Display',serif;color:var(--text)}
+.hidden{display:none!important}
 @media(max-width:900px){.wrap{grid-template-columns:1fr}aside{order:-1}}
-</style></head><body>
+@media(max-width:560px){.wrap{padding:1rem}.search{flex-wrap:wrap}.search select{width:100%}.tab{padding:8px 9px}}
+</style>
+</head>
+<body>
 <header><div class="hin">
   <div class="logo">AI &amp; Digital Infrastructure <em>in Africa</em></div>
   <div style="display:flex;gap:6px;flex-wrap:wrap">
@@ -54,16 +69,33 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
 
 <div class="wrap">
 <main>
+  <nav class="tabs" id="tabs" aria-label="Resource type">
+    <button class="tab on" data-tab="all" aria-pressed="true">All resources <small id="tab-all-count">—</small></button>
+    <button class="tab" data-tab="News" aria-pressed="false">News <small id="tab-News-count">—</small></button>
+    <button class="tab" data-tab="Academic paper" aria-pressed="false">Academic papers <small id="tab-Academic paper-count">—</small></button>
+    <button class="tab" data-tab="Report" aria-pressed="false">Reports <small id="tab-Report-count">—</small></button>
+  </nav>
   <div class="search">
-    <input id="q" type="search" placeholder="Search titles, authors, sources, abstracts…">
-    <select id="sort"><option value="new">Newest first</option><option value="old">Oldest first</option></select>
+    <input id="q" type="search" placeholder="Search titles, authors, sources, abstracts…" aria-label="Search resources">
+    <select id="sort" aria-label="Sort resources"><option value="new">Newest first</option><option value="old">Oldest first</option></select>
   </div>
-  <div class="row"><span class="lab">Type</span><div class="chips" id="f-type"></div></div>
-  <div class="row"><span class="lab">Theme</span><div class="chips" id="f-theme"></div></div>
-  <div class="row"><span class="lab">Country</span><div class="chips" id="f-country"></div></div>
-  <div class="row"><span class="lab">Source</span><div class="chips" id="f-source"></div></div>
-  <div class="row"><span class="lab">Period</span><div class="chips" id="f-period"></div></div>
-  <div class="bar"><span id="count">—</span><button id="reset">Clear all filters</button></div>
+  <section id="standard-filters" aria-label="News and report filters">
+    <div class="row"><span class="lab">Theme</span><div class="chips" id="f-theme"></div></div>
+    <div class="row"><span class="lab">Country</span><div class="chips" id="f-country"></div></div>
+    <div class="row"><span class="lab">Source</span><div class="chips" id="f-source"></div></div>
+    <div class="row"><span class="lab">Published</span><div class="chips" id="f-period"></div></div>
+  </section>
+  <section id="academic-filters" class="hidden" aria-label="Academic paper filters">
+    <div class="row"><span class="lab">Theme</span><div class="chips" id="a-theme"></div></div>
+    <div class="row"><span class="lab">Country</span><div class="chips" id="a-country"></div></div>
+    <div class="row"><span class="lab">Publisher</span><div class="chips" id="a-source"></div></div>
+    <div class="control-row">
+      <label>Publication year from <select id="year-from" aria-label="Publication year from"></select></label>
+      <label>to <select id="year-to" aria-label="Publication year to"></select></label>
+      <label>Citations <select id="citations" aria-label="Minimum citations"><option value="0">Any count</option><option value="1">At least 1</option><option value="11">More than 10</option></select></label>
+    </div>
+  </section>
+  <div class="bar"><span id="count" aria-live="polite">Loading resources…</span><button id="reset">Clear filters</button></div>
   <div id="list"><div class="state">Loading…</div></div>
   <button class="more" id="more" hidden>Show more</button>
 </main>
@@ -74,67 +106,121 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
   <div class="card"><h3>Institute links</h3>
     <a href="http://ias.yonsei.ac.kr/" target="_blank" rel="noopener">연세대 아프리카연구원 →</a><a href="data.html">디지털·AI 격차 지표 DB →</a></div>
   <div class="card"><h3>About</h3>
-    Updated daily via GitHub Actions. News from major outlets and specialist tech media, academic papers from OpenAlex, and hand-picked reports. Last update: <span id="upd">—</span>.</div>
+    Updated daily via GitHub Actions. Select a resource tab to see filters tailored to news, academic papers, or reports. Academic publication year and citation details are shown when available. Last update: <span id="upd">—</span>.</div>
 </aside>
 </div>
 
 <script>
-const F={type:'all',theme:'all',country:'all',source:'all',period:'all'};
-const PERIODS=[['all','Any time',0],['30','Last 30 days',30],['90','Last 90 days',90],['365','Last year',365]];
-const FACETS=['type','theme','country','source'];
-const PAGE=40;let ALL=[],Q='',SORT='new',SHOWN=PAGE;
+const PERIODS=[['all','Any time'],['30','Last 30 days'],['90','Last 90 days'],['365','Last year']];
+const PAGE=40;
+const state={tab:'all',theme:'all',country:'all',source:'all',period:'all',academicTheme:'all',academicCountry:'all',academicSource:'all',yearFrom:2010,yearTo:2026,citations:0,query:'',sort:'new',shown:PAGE};
+let ALL=[];
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const safeUrl=u=>/^https?:\/\//i.test(u)?u:'#';
-
-function match(a,skip){
-  for(const k of FACETS)if(k!==skip&&F[k]!=='all'&&a[k]!==F[k])return false;
-  if(skip!=='period'&&F.period!=='all'&&Date.now()-new Date(a.date)>F.period*864e5)return false;
-  if(Q&&!`${a.title} ${a.desc} ${a.authors} ${a.source} ${a.theme} ${a.country}`.toLowerCase().includes(Q))return false;
-  return true;
+const safeUrl=u=>/^https?:\/\//i.test(u||'')?u:'#';
+const value=(a,k)=>String(a?.[k]??'');
+const isAcademic=a=>a.type==='Academic paper';
+function facets(rows,key){return [...new Set(rows.map(a=>value(a,key)).filter(Boolean))].sort((a,b)=>a.localeCompare(b))}
+function chipMarkup(id,key,selected,options){
+  $(id).innerHTML=options.map(([v,label,n])=>`<button type="button" class="chip${selected===v?' on':''}" data-filter="${key}" data-value="${esc(v)}" aria-pressed="${selected===v}">${esc(label)}${n!=null?`<small>${n}</small>`:''}</button>`).join('');
 }
-function chips(k,opts){
-  $('f-'+k).innerHTML=opts.map(([v,label,n])=>
-    `<button class="chip${F[k]===v?' on':''}" data-k="${k}" data-v="${esc(v)}">${esc(label)}${n!=null?`<small>${n}</small>`:''}</button>`).join('');
+function baseRows(){
+  let rows=state.tab==='all'?ALL:ALL.filter(a=>a.type===state.tab);
+  if(state.query){const q=state.query.toLowerCase();rows=rows.filter(a=>`${a.title} ${a.desc} ${a.authors} ${a.source} ${a.theme} ${a.country} ${a.citation_count??''} ${a.publication_year??''}`.toLowerCase().includes(q))}
+  return rows;
+}
+function filteredRows(skip=''){
+  let rows=baseRows();
+  if(state.tab==='Academic paper'){
+    rows=rows.filter(a=>{
+      const year=Number(a.publication_year)||Number(String(a.date||'').slice(0,4));
+      const citations=Number(a.citation_count);
+      return (skip==='academicTheme'||state.academicTheme==='all'||a.theme===state.academicTheme)
+        &&(skip==='academicCountry'||state.academicCountry==='all'||a.country===state.academicCountry)
+        &&(skip==='academicSource'||state.academicSource==='all'||a.source===state.academicSource)
+        &&(!year||(year>=state.yearFrom&&year<=state.yearTo))
+        &&(state.citations===0||(Number.isFinite(citations)&&citations>=state.citations));
+    });
+  }else{
+    rows=rows.filter(a=>(skip==='theme'||state.theme==='all'||a.theme===state.theme)
+      &&(skip==='country'||state.country==='all'||a.country===state.country)
+      &&(skip==='source'||state.source==='all'||a.source===state.source)
+      &&(skip==='period'||state.period==='all'||Date.now()-new Date(a.date)>0&&Date.now()-new Date(a.date)<=Number(state.period)*864e5));
+  }
+  return rows;
+}
+function renderFilters(){
+  if(state.tab==='Academic paper'){
+    $('standard-filters').classList.add('hidden');$('academic-filters').classList.remove('hidden');
+    const rows=filteredRows();
+    for(const [id,key,field,selected] of [['a-theme','academicTheme','theme',state.academicTheme],['a-country','academicCountry','country',state.academicCountry],['a-source','academicSource','source',state.academicSource]]){
+      const counts={};for(const a of filteredRows(key))counts[value(a,field)]=(counts[value(a,field)]||0)+1;
+      const opts=[['all','All',filteredRows(key).length],...Object.keys(counts).filter(Boolean).sort((a,b)=>counts[b]-counts[a]||a.localeCompare(b)).map(v=>[v,v,counts[v]])];
+      chipMarkup(id,key,selected,opts);
+    }
+  }else{
+    $('academic-filters').classList.add('hidden');$('standard-filters').classList.remove('hidden');
+    for(const [id,key,field,selected] of [['f-theme','theme','theme',state.theme],['f-country','country','country',state.country],['f-source','source','source',state.source]]){
+      const counts={};for(const a of filteredRows(key))counts[value(a,field)]=(counts[value(a,field)]||0)+1;
+      const opts=[['all','All',filteredRows(key).length],...Object.keys(counts).filter(Boolean).sort((a,b)=>counts[b]-counts[a]||a.localeCompare(b)).map(v=>[v,v,counts[v]])];
+      chipMarkup(id,key,selected,opts);
+    }
+    chipMarkup('f-period','period',state.period,PERIODS.map(([v,label])=>[v,label,null]));
+  }
+}
+function academicDetails(a){
+  if(!isAcademic(a))return '';
+  const year=a.publication_year||String(a.date||'').slice(0,4);
+  const citations=Number.isFinite(Number(a.citation_count))&&a.citation_count!==''?`${Number(a.citation_count).toLocaleString()} citations`:'Citations unavailable';
+  return `<div class="academic-meta">${year?`<span>Publication year: ${esc(year)}</span>`:''}<span>${esc(citations)}</span></div>`;
 }
 function render(){
-  FACETS.forEach(k=>{
-    const counts={};ALL.filter(a=>match(a,k)).forEach(a=>counts[a[k]]=(counts[a[k]]||0)+1);
-    if(F[k]!=='all'&&!(F[k] in counts))counts[F[k]]=0;
-    const vals=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]||a.localeCompare(b));
-    const total=Object.values(counts).reduce((x,y)=>x+y,0);
-    chips(k,[['all','All',total],...vals.map(v=>[v,v,counts[v]])]);
-  });
-  chips('period',PERIODS.map(([v,l])=>[v,l,null]));
-  const rows=ALL.filter(a=>match(a)).sort((a,b)=>SORT==='new'?b.date.localeCompare(a.date):a.date.localeCompare(b.date));
-  $('count').textContent=`${rows.length} resource${rows.length===1?'':'s'}`;
-  $('list').innerHTML=rows.length?rows.slice(0,SHOWN).map(a=>`<a class="res" href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener">
-    <div class="meta"><span class="b b-${a.type.split(' ')[0]}">${esc(a.type)}</span><span class="tag">${esc(a.theme)}</span>
-    ${a.country!=='Pan-African'?`<span class="tag">${esc(a.country)}</span>`:''}<span class="src">${esc(a.source)}</span><span class="date">${esc(a.date)}</span></div>
-    <div class="t">${esc(a.title)}</div>${a.authors?`<div class="au">${esc(a.authors)}</div>`:''}
-    ${a.desc?`<div class="d">${esc(a.desc.length>240?a.desc.slice(0,240)+'…':a.desc)}</div>`:''}</a>`).join(''):'<div class="state">No resources match these filters.</div>';
-  $('more').hidden=rows.length<=SHOWN;
+  renderFilters();
+  const rows=filteredRows().sort((a,b)=>state.sort==='new'?value(b,'date').localeCompare(value(a,'date')):value(a,'date').localeCompare(value(b,'date')));
+  $('count').textContent=`${rows.length} ${state.tab==='all'?'resource':state.tab==='News'?'news item':state.tab==='Report'?'report':'academic paper'}${rows.length===1?'':'s'}`;
+  $('list').innerHTML=rows.length?rows.slice(0,state.shown).map(a=>{
+    const type=a.type||'Resource';const typeClass=type==='News'?'news':type==='Report'?'report':'academic';
+    return `<a class="res" href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener">
+      <div class="meta"><span class="badge badge-${typeClass}">${esc(type)}</span>${a.theme?`<span class="tag">${esc(a.theme)}</span>`:''}${a.country&&a.country!=='Pan-African'?`<span class="tag">${esc(a.country)}</span>`:''}<span class="src">${esc(a.source)}</span><span class="date">${esc(a.date)}</span></div>
+      <div class="t">${esc(a.title)}</div>${a.authors?`<div class="au">${esc(a.authors)}</div>`:''}${a.desc?`<div class="d">${esc(a.desc.length>260?a.desc.slice(0,260)+'…':a.desc)}</div>`:''}${academicDetails(a)}</a>`;
+  }).join(''):'<div class="state">No resources match these filters.</div>';
+  $('more').hidden=rows.length<=state.shown;
 }
-function stats(){
-  const n=t=>ALL.filter(a=>a.type===t).length;
-  $('s-total').textContent=ALL.length;$('s-papers').textContent=n('Academic paper');
-  $('s-news').textContent=n('News');$('s-reports').textContent=n('Report');
+function updateCounts(){
+  const count=type=>ALL.filter(a=>type==='all'||a.type===type).length;
+  for(const type of ['all','News','Academic paper','Report']){$(`tab-${type}-count`).textContent=count(type)}
+  $('s-total').textContent=ALL.length;$('s-papers').textContent=count('Academic paper');$('s-news').textContent=count('News');$('s-reports').textContent=count('Report');
 }
+function resetFilters(){
+  Object.assign(state,{theme:'all',country:'all',source:'all',period:'all',academicTheme:'all',academicCountry:'all',academicSource:'all',yearFrom:2010,yearTo:2026,citations:0,query:'',shown:PAGE});
+  $('q').value='';$('year-from').value='2010';$('year-to').value='2026';$('citations').value='0';render();
+}
+for(let y=2010;y<=2026;y++){
+  $('year-from').insertAdjacentHTML('beforeend',`<option value="${y}">${y}</option>`);
+  $('year-to').insertAdjacentHTML('beforeend',`<option value="${y}">${y}</option>`);
+}
+$('year-from').value='2010';$('year-to').value='2026';
 document.addEventListener('click',e=>{
-  const c=e.target.closest('.chip');if(!c)return;
-  const k=c.dataset.k,v=c.dataset.v;
-  if(k==='period'){F.period=v}else F[k]=(F[k]===v&&v!=='all')?'all':v;
-  SHOWN=PAGE;render();
+  const tab=e.target.closest('[data-tab]');
+  if(tab){state.tab=tab.dataset.tab;state.shown=PAGE;document.querySelectorAll('[data-tab]').forEach(b=>{const on=b===tab;b.classList.toggle('on',on);b.setAttribute('aria-pressed',String(on))});render();return}
+  const chip=e.target.closest('[data-filter]');if(!chip)return;
+  const key=chip.dataset.filter;const val=chip.dataset.value;
+  if(key==='period')state.period=val;
+  else state[key]=state[key]===val&&val!=='all'?'all':val;
+  state.shown=PAGE;render();
 });
-$('q').addEventListener('input',e=>{Q=e.target.value.trim().toLowerCase();SHOWN=PAGE;render()});
-$('sort').addEventListener('change',e=>{SORT=e.target.value;render()});
-$('more').addEventListener('click',()=>{SHOWN+=PAGE;render()});
-$('reset').addEventListener('click',()=>{Object.keys(F).forEach(k=>F[k]='all');$('q').value='';Q='';SHOWN=PAGE;render()});
-
-fetch('resources.json?t='+Date.now()).then(r=>r.json()).then(d=>{
-  ALL=d.resources||[];$('upd').textContent=d.updated||'not yet';stats();
-  if(!ALL.length){$('list').innerHTML='<div class="state"><strong>No data yet.</strong><br>In your GitHub repo, open Actions → "Update resource database" → Run workflow.</div>';return}
+$('q').addEventListener('input',e=>{state.query=e.target.value.trim();state.shown=PAGE;render()});
+$('sort').addEventListener('change',e=>{state.sort=e.target.value;render()});
+$('more').addEventListener('click',()=>{state.shown+=PAGE;render()});
+$('reset').addEventListener('click',resetFilters);
+$('year-from').addEventListener('change',e=>{state.yearFrom=Number(e.target.value);if(state.yearFrom>state.yearTo){state.yearTo=state.yearFrom;$('year-to').value=String(state.yearTo)}state.shown=PAGE;render()});
+$('year-to').addEventListener('change',e=>{state.yearTo=Number(e.target.value);if(state.yearTo<state.yearFrom){state.yearFrom=state.yearTo;$('year-from').value=String(state.yearFrom)}state.shown=PAGE;render()});
+$('citations').addEventListener('change',e=>{state.citations=Number(e.target.value);state.shown=PAGE;render()});
+fetch('resources.json?t='+Date.now()).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
+  ALL=Array.isArray(d.resources)?d.resources:[];$('upd').textContent=d.updated||'not yet';updateCounts();
+  if(!ALL.length){$('list').innerHTML='<div class="state"><strong>No data yet.</strong><br>Run the resource database update workflow in GitHub Actions.</div>';return}
   render();
-}).catch(()=>{$('list').innerHTML='<div class="state">Could not load resources.json.</div>'});
+}).catch(()=>{$('count').textContent='Could not load resources';$('list').innerHTML='<div class="state">Could not load resources.json. Please try again later.</div>'});
 </script>
-</body></html>
+</body>
+</html>
