@@ -1,0 +1,55 @@
+﻿Country_ID,Country_Name,Country_Name_EN,Region,Income_Group
+DZA,알제리,Algeria,North,Upper middle income
+EGY,이집트,"Egypt, Arab Rep.",North,Lower middle income
+LBY,리비아,Libya,North,Upper middle income
+MRT,모리타니,Mauritania,North,Lower middle income
+MAR,모로코,Morocco,North,Lower middle income
+TUN,튀니지,Tunisia,North,Lower middle income
+BEN,베냉,Benin,West,Lower middle income
+BFA,부르키나파소,Burkina Faso,West,Low income
+CPV,카보베르데,Cabo Verde,West,Upper middle income
+CIV,코트디부아르,Cote d'Ivoire,West,Lower middle income
+GMB,감비아,"Gambia, The",West,Low income
+GHA,가나,Ghana,West,Lower middle income
+GIN,기니,Guinea,West,Lower middle income
+GNB,기니비사우,Guinea-Bissau,West,Low income
+LBR,라이베리아,Liberia,West,Low income
+MLI,말리,Mali,West,Low income
+NER,니제르,Niger,West,Low income
+NGA,나이지리아,Nigeria,West,Lower middle income
+SEN,세네갈,Senegal,West,Lower middle income
+SLE,시에라리온,Sierra Leone,West,Low income
+TGO,토고,Togo,West,Lower middle income
+BDI,부룬디,Burundi,Central,Low income
+CMR,카메룬,Cameroon,Central,Lower middle income
+CAF,중앙아프리카공화국,Central African Republic,Central,Low income
+TCD,차드,Chad,Central,Low income
+COG,콩고공화국,"Congo, Rep.",Central,Lower middle income
+COD,콩고민주공화국,"Congo, Dem. Rep.",Central,Low income
+GNQ,적도기니,Equatorial Guinea,Central,Upper middle income
+GAB,가봉,Gabon,Central,Upper middle income
+STP,상투메프린시페,Sao Tome and Principe,Central,Lower middle income
+COM,코모로,Comoros,East,Lower middle income
+DJI,지부티,Djibouti,East,Lower middle income
+ERI,에리트레아,Eritrea,East,Low income
+ETH,에티오피아,Ethiopia,East,Low income
+KEN,케냐,Kenya,East,Lower middle income
+MDG,마다가스카르,Madagascar,East,Low income
+MUS,모리셔스,Mauritius,East,Upper middle income
+RWA,르완다,Rwanda,East,Low income
+SYC,세이셸,Seychelles,East,High income
+SOM,소말리아,"Somalia, Fed. Rep.",East,Low income
+SSD,남수단,South Sudan,East,Low income
+SDN,수단,Sudan,East,Low income
+TZA,탄자니아,Tanzania,East,Lower middle income
+UGA,우간다,Uganda,East,Low income
+AGO,앙골라,Angola,Southern,Lower middle income
+BWA,보츠와나,Botswana,Southern,Upper middle income
+SWZ,에스와티니,Eswatini,Southern,Lower middle income
+LSO,레소토,Lesotho,Southern,Lower middle income
+MWI,말라위,Malawi,Southern,Low income
+MOZ,모잠비크,Mozambique,Southern,Low income
+NAM,나미비아,Namibia,Southern,Lower middle income
+ZAF,남아프리카공화국,South Africa,Southern,Upper middle income
+ZMB,잠비아,Zambia,Southern,Lower middle income
+ZWE,짐바브웨,Zimbabwe,Southern,Lower middle income

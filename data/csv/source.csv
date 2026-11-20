@@ -1,0 +1,4 @@
+﻿Source_ID,Source_Name,Source_Type,Source_URL,Collection_Date,Update_Date,Verification_Status,Reliability_Level
+WB_WDI,World Bank World Development Indicators,국제기구 통계,https://databank.worldbank.org/source/world-development-indicators,2026-11-20,2026-11-20,자동 수집,High
+ITU,ITU World Telecommunication/ICT Indicators (via World Bank WDI),국제기구 통계,https://datahub.itu.int/,2026-11-20,2026-11-20,자동 수집,High
+WB_FINDEX,World Bank Global Findex (via World Bank WDI),국제기구 설문 통계,https://www.worldbank.org/en/publication/globalfindex,2026-11-20,2026-11-20,자동 수집,High
