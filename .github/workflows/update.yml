@@ -1,12 +1,12 @@
-name: Daily Africa News Update
+name: Update resource database
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # 매일 09:00 (KST)
+  workflow_dispatch:       # Actions 탭에서 수동 실행 가능
 
 jobs:
-  update-articles:
+  update-resources:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,13 +20,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Fetch latest articles
-        run: python fetch_news.py
+      - name: Collect news, papers and reports
+        run: python fetch_resources.py
 
-      - name: Commit and push updated articles
+      - name: Commit and push updated resources
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add articles.json
-          git diff --cached --quiet || git commit -m "chore: update articles $(date +'%Y-%m-%d')"
+          git add resources.json
+          git diff --cached --quiet || git commit -m "chore: update resources $(date +'%Y-%m-%d')"
+          git pull --rebase
           git push
