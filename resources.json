@@ -1,7 +1,25 @@
 {
- "updated": "2026-11-20 06:14 UTC",
- "count": 172,
+ "updated": "2026-11-21 00:54 UTC",
+ "count": 174,
  "resources": [
+  {
+   "id": "d1af93f14399",
+   "title": "Huang: The boy who moved between China and South Africa wants to make Africa’s money move",
+   "desc": "For Harry Huang, the problem with moving money across borders was not something he discovered in a boardroom or at a fintech conference. He had seen it much earlier, through his family’s import-export business. His parents were building a business in South Africa, dealing with suppliers and customer",
+   "url": "https://techcabal.com/2026/11/20/huang-cross-border-payments-africa/",
+   "date": "2026-11-20",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Digital public infrastructure",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "huang",
+    "moved",
+    "between",
+    "china"
+   ]
+  },
   {
    "id": "5809ee6698e8",
    "title": "Kuda cuts jobs for second time in 2026 as it targets 2027 profitability",
@@ -108,6 +126,24 @@
     "sounding",
     "alarm",
     "bioweapons"
+   ]
+  },
+  {
+   "id": "e199c2481a40",
+   "title": "AI learning tool helps blind students excel in Malawi",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOa3J5MjdqalhDNjhTcVhBaUhfUmt1Tm1IMTd6QTl1Qmh0Y243VFZCYjNzVHV4TF8wV3BRXzZxZUpZUUx5eURGUV9lRVdmSm95bDBaVE5vY2FqQUsyY0t0UWRkdS16NWtqS0s3d2hzMWMzdzlqc3lEbjllWk9DYmdfS2xMZGpRVVBvWnV0X1dwYkV1cVhfaUR1UWYxTk5RdlAxMWhtN3dwNjY?oc=5",
+   "date": "2026-11-16",
+   "type": "News",
+   "source": "Al Jazeera",
+   "theme": "AI applications",
+   "country": "Malawi",
+   "authors": "",
+   "keywords": [
+    "learning",
+    "tool",
+    "helps",
+    "blind"
    ]
   },
   {
