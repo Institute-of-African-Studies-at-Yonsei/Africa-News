@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21 00:54 UTC",
- "count": 174,
+ "updated": "2026-11-22 00:47 UTC",
+ "count": 175,
  "resources": [
   {
    "id": "d1af93f14399",
@@ -90,6 +90,24 @@
     "musk",
     "policy",
     "difficulty"
+   ]
+  },
+  {
+   "id": "20bb6edfb428",
+   "title": "Electricity and Water Constraints on Sovereignty-Oriented Data Centres in Africa",
+   "desc": "African countries are considering local data centres as instruments of digital sovereignty, but these facilities heavily depend on electricity and water resources that remain constrained across sub-Saharan Africa. This paper asks how electricity and water constraints shape the feasible scale, coolin",
+   "url": "https://hal.science/hal-05868260",
+   "date": "2026-11-17",
+   "type": "Academic paper",
+   "source": "HAL",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "David Rutambuka, Gabriel Mugabe Nzarama",
+   "keywords": [
+    "electricity",
+    "water",
+    "constraints",
+    "sovereignty"
    ]
   },
   {
