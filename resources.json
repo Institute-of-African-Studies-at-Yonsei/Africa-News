@@ -1,7 +1,79 @@
 {
- "updated": "2026-11-22 00:47 UTC",
- "count": 175,
+ "updated": "2026-11-23 00:52 UTC",
+ "count": 182,
  "resources": [
+  {
+   "id": "9ce1c22e39e0",
+   "title": "Kenya’s internet metering bill raises privacy and affordability concerns",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQR0NvQ3NrTncwUlhUZmVzOW5BaUlIaXEzenhSSHI3YUZaTkFvTFU2azJUR1h6TkZndnJjb085bXFjNU1pOEh2Q0p5Tk1FcUJEdzBZYk9PLXBrOU80WnZmWjNJRnl4aTBwbG1aQ2Y2UGxwM0lyaTlSZGp0d0x0QlIxTU1LdVhoTFJIeHpnZmtNbUoyU0tST1IxTU0wTlVzbWJKaEp2RlY3bWE5a0JHRjE4VWhjWdIBuAFBVV95cUxNUGNzc3VpU0tTTjAtcENjYnBmLTNmYWE5Ul82V19SdW5OZ0VpTzd2VHdqb0h4dDVrenBVT0hIT0xxY0lSUzNrNnR6YWtZWE1BVDhyZkVpNTlEUU53c1pqSkZNeTg4NnA5cWZVY0tLZ1BJdUZnS2xZUnNvQjNOQTJROXNJMFpnUkpSSW0waHFUa003X0czNG0tbWRaVFBCR1MzTGtXbUU3bUM5eDJqMWR1MUNrV2h0Tmkx?oc=5",
+   "date": "2026-11-22",
+   "type": "News",
+   "source": "Al Jazeera",
+   "theme": "AI policy & governance",
+   "country": "Kenya",
+   "authors": "",
+   "keywords": [
+    "kenya",
+    "internet",
+    "metering",
+    "bill"
+   ]
+  },
+  {
+   "id": "6c81f3c11203",
+   "title": "Kenya’s internet metering bill raises privacy and affordability concerns",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUGNzc3VpU0tTTjAtcENjYnBmLTNmYWE5Ul82V19SdW5OZ0VpTzd2VHdqb0h4dDVrenBVT0hIT0xxY0lSUzNrNnR6YWtZWE1BVDhyZkVpNTlEUU53c1pqSkZNeTg4NnA5cWZVY0tLZ1BJdUZnS2xZUnNvQjNOQTJROXNJMFpnUkpSSW0waHFUa003X0czNG0tbWRaVFBCR1MzTGtXbUU3bUM5eDJqMWR1MUNrV2h0Tmkx0gG4AUFVX3lxTE1QY3NzdWlTS1NOMC1wQ2NicGYtM2ZhYTlSXzZXX1J1bk5nRWlPN3ZUd2pvSHh0NWt6cFVPSEhPTHFjSVJTM2s2dHpha1lYTUFUOHJmRWk1OURRTndzWmpKRk15ODg2cDlxZlVjS0tnUEl1RmdLbFlSc29CM05BMlE5c0kwWmdSSlJJbTBocVRrTTdfRzM0bS1tZFpUUEJHUzNMa1dtRTdtQzl4MmoxZHUxQ2tXaHROaTE?oc=5",
+   "date": "2026-11-22",
+   "type": "News",
+   "source": "Al Jazeera",
+   "theme": "AI policy & governance",
+   "country": "Kenya",
+   "authors": "",
+   "keywords": [
+    "kenya",
+    "internet",
+    "metering",
+    "bill"
+   ]
+  },
+  {
+   "id": "a585889c91e0",
+   "title": "The Next Wave: What Africa’s instant payment systems keep getting wrong on the way to maturity",
+   "desc": "Only one of Africa’s 39 instant payment systems earned AfricaNenda’s highest rating. Kenya’s PesaLink shows why the next step is so hard. The banks that own the network can decide what they charge for transfers, while fintechs and other non-bank members have no vote in how it’s run.",
+   "url": "https://techcabal.com/2026/11/22/africa-instant-payment-systems-maturity/",
+   "date": "2026-11-22",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Digital public infrastructure",
+   "country": "Kenya",
+   "authors": "",
+   "keywords": [
+    "next",
+    "wave",
+    "what",
+    "instant"
+   ]
+  },
+  {
+   "id": "3ee668269e93",
+   "title": "Zimbabwean author cleared of using AI to write prize-winning story",
+   "desc": "Simbarashe Kundizeza says he is 'relieved and happy' after a month-long investigation found his entry was human-written.",
+   "url": "http://www.africanews.com/2026/11/22/zimbabwean-author-cleared-of-using-ai-to-write-prize-winning-story/",
+   "date": "2026-11-22",
+   "type": "News",
+   "source": "Africanews",
+   "theme": "Startups & investment",
+   "country": "Zimbabwe",
+   "authors": "",
+   "keywords": [
+    "zimbabwean",
+    "author",
+    "cleared",
+    "using"
+   ]
+  },
   {
    "id": "d1af93f14399",
    "title": "Huang: The boy who moved between China and South Africa wants to make Africa’s money move",
@@ -1491,6 +1563,24 @@
    ]
   },
   {
+   "id": "2079a4b9339c",
+   "title": "AI Governance and the Future of Creative Practice: African and Global Perspectives",
+   "desc": "Artificial intelligence (AI) is increasingly transforming creative practice across music, visual arts, film, fashion, literature, and digital media. While these technologies offer new modes of production and dissemination, they also generate profound legal, economic, and cultural challenges. Central",
+   "url": "https://doi.org/10.5281/zenodo.18207078",
+   "date": "2026-01-10",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Ogunleye Tolulope",
+   "keywords": [
+    "governance",
+    "future",
+    "creative",
+    "practice"
+   ]
+  },
+  {
    "id": "8682fc7b1f7b",
    "title": "Text Detoxification in isiXhosa and Yorùbá: A Cross-Lingual Machine Learning Approach for Low-Resource African Languages",
    "desc": "Toxic language is one of the major barrier to safe online participation, yet robust mitigation tools are scarce for African languages. This study addresses this critical gap by investigating automatic text detoxification (toxic to neutral rewriting) for two low-resource African languages, isiXhosa a",
@@ -1937,6 +2027,24 @@
    ]
   },
   {
+   "id": "a9e119b932c7",
+   "title": "Broadband and Rural Development Efforts in Alabama's Black Belt: A Review of Current Literature",
+   "desc": "Broadband is widely perceived as an important instrument for accessing vital resources, such as jobs, education, and health care in this information driven society. Yet, some rural communities in the United States lagging behind in access. Rural communities remain disadvantaged by ongoing gaps in in",
+   "url": "https://doi.org/10.46998/ijcmcr.2026.59.001459",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "International Journal of Clinical Studies and Medical Case Reports",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Andrew A. Zekeri",
+   "keywords": [
+    "broadband",
+    "rural",
+    "development",
+    "efforts"
+   ]
+  },
+  {
    "id": "d4aa52919916",
    "title": "Artificial Intelligence and Peace Education in Africa: Potential and Challenges",
    "desc": "The study examines Artificial Intelligence and peace education in Africa: potential and challenges.The research utilized secondary sources of data. Transformative Learning Theory was used to guide the study. The empirical studies identify significant barriers to AI adoption in Africa, including low ",
@@ -2103,6 +2211,24 @@
    "title": "ETHICAL FRAMEWORKS FOR AI GOVERNANCE IN AFRICA: A MIXED-METHODS EMPIRICAL STUDY",
    "desc": "Artificial intelligence (AI) systems are increasingly integrated into governance, economic planning, and social service delivery across African countries. While these technologies offer transformative potential, they also raise profound ethical concerns relating to accountability, transparency, fair",
    "url": "https://journals.chroniva.org/index.php/index/article/view/40",
+   "date": "2025-11-01",
+   "type": "Academic paper",
+   "source": "International Journal of AI Ethics and Society",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "Samuel Adekunle Adebayo, Ibrahim Suleiman Abdulrahman",
+   "keywords": [
+    "ethical",
+    "frameworks",
+    "governance",
+    "mixed"
+   ]
+  },
+  {
+   "id": "a1b78fffc74f",
+   "title": "ETHICAL FRAMEWORKS FOR AI GOVERNANCE IN AFRICA: A MIXED-METHODS EMPIRICAL STUDY",
+   "desc": "Artificial intelligence (AI) systems are increasingly integrated into governance, economic planning, and social service delivery across African countries. While these technologies offer transformative potential, they also raise profound ethical concerns relating to accountability, transparency, fair",
+   "url": "https://journals.chroniva.org/index.php/IJAES/article/view/40",
    "date": "2025-11-01",
    "type": "Academic paper",
    "source": "International Journal of AI Ethics and Society",
