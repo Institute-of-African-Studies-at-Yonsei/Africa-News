@@ -73,6 +73,12 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 
 `Indicator_Code`가 `IAS.`로 시작하는 지표는 연구원이 계산한 파생 지표다 (예: `IAS.FINDEX.GAP.GENDER` = 남성−여성 금융계좌 보유율, %p). 계산식은 `scripts/fetch_indicators.py`의 `GAPS`에 있다.
 
+### codebook (변수 설명서, 영문) — `data/codebook.json`, `data/csv/codebook.csv`
+`Indicator_Code`, `Table`, `Category_KO`, `Name_KO`, `Name_EN`, `Definition_EN`, `Unit`, `Source_ID`, `Source_Name`, `Original_Source_Note`, `License`, `Years`, `Countries`, `Shown_On_Site`
+- World Bank 지표의 영문 이름·정의는 매월 수집 때 World Bank API에서 자동으로 가져온다.
+- 수동 지표의 영문 이름·정의는 변환 스크립트가 만드는 `data/manual/*_meta.csv`에 있다. **새 지표를 추가할 때는 반드시 영문 이름과 정의를 함께 넣는다** (원 기관의 정의 문구를 우선 사용).
+- 연구원 계산 지표(`IAS.`)의 영문 이름은 `GAPS`의 `name_en`, 정의는 계산식으로 자동 생성된다.
+
 ### aidivide_table (AI 격차 지표) — `data/aidivide.json`
 `Country_ID`, `Year`, `AI_Dimension`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
 

@@ -234,15 +234,20 @@ def save(name, rows, extra=None):
 # 두 지표의 차이로 만드는 격차 지표 (연구원 계산)
 GAPS = [
     {"code": "IAS.FINDEX.GAP.GENDER", "name": "금융계좌 보유율 성별 격차 (남성−여성)",
+     "name_en": "Account ownership gender gap (male minus female, percentage points)",
      "high": "FX.OWN.TOTL.MA.ZS", "low": "FX.OWN.TOTL.FE.ZS", "category": "디지털 금융 격차", "source": "WB_FINDEX"},
     {"code": "IAS.FINDEX.GAP.INCOME", "name": "금융계좌 보유율 소득 격차 (상위 60%−하위 40%)",
+     "name_en": "Account ownership income gap (richest 60% minus poorest 40%, percentage points)",
      "high": "FX.OWN.TOTL.60.ZS", "low": "FX.OWN.TOTL.40.ZS", "category": "디지털 금융 격차", "source": "WB_FINDEX"},
     {"code": "IAS.FINDEX.GAP.EDU", "name": "금융계좌 보유율 교육 격차 (중등 이상−초등 이하)",
+     "name_en": "Account ownership education gap (secondary or more minus primary or less, percentage points)",
      "high": "FX.OWN.TOTL.SO.ZS", "low": "FX.OWN.TOTL.PL.ZS", "category": "디지털 금융 격차", "source": "WB_FINDEX"},
     # 망은 깔려 있지만 쓰지 않는 인구 (usage gap)
     {"code": "IAS.ITU.GAP.USAGE", "name": "4G 커버리지 대비 미이용 격차 (4G 커버리지−인터넷 이용률)",
+     "name_en": "Usage gap: 4G/LTE population coverage minus Internet use (percentage points)",
      "high": "ITU.COV.4G", "low": "IT.NET.USER.ZS", "category": "접근성 격차", "source": "ITU_DH"},
     {"code": "IAS.ITU.GAP.MOBILE.GENDER", "name": "휴대전화 보유율 성별 격차 (남성−여성)",
+     "name_en": "Mobile phone ownership gender gap (male minus female, percentage points)",
      "high": "ITU.MOBILE.OWN.MA", "low": "ITU.MOBILE.OWN.FE", "category": "접근성 격차", "source": "ITU_DH"},
 ]
 
@@ -270,12 +275,82 @@ def add_gaps(rows):
     return shown
 
 
+def fetch_wb_meta(code):
+    """World Bank 지표의 영문 이름·정의·원 제공기관"""
+    data = get_json(f"{API}/indicator/{code}?format=json")
+    if data and len(data) > 1 and data[1]:
+        m = data[1][0]
+        return {"name_en": m.get("name", ""), "definition": " ".join((m.get("sourceNote") or "").split()),
+                "source_org": " ".join((m.get("sourceOrganization") or "").split())}
+    return None
+
+
+def load_manual_meta():
+    """data/manual/*_meta.csv → {지표코드: (영문 이름, 영문 정의)}"""
+    meta = {}
+    for path in sorted(glob.glob(os.path.join(OUT, "manual", "*_meta.csv"))):
+        with open(path, encoding="utf-8-sig") as f:
+            for r in csv.DictReader(f):
+                meta[r["Indicator_Code"]] = (r["Name_EN"], r["Definition_EN"])
+    return meta
+
+
+def gap_definition(g, names):
+    hi, lo = names.get(g["high"], g["high"]), names.get(g["low"], g["low"])
+    return (f"Calculated by the Institute of African Studies, Yonsei University: '{hi}' minus '{lo}' "
+            f"for the same country and year (percentage points). Positive values mean the first group is higher.")
+
+
+def build_codebook(tables, shown_codes, wb_meta):
+    """모든 지표의 변수 설명서(영문) 행 목록"""
+    manual_meta = load_manual_meta()
+    names_en = {c: v[0] for c, v in manual_meta.items()}
+    names_en.update({c: m["name_en"] for c, m in wb_meta.items() if m})
+    gaps = {g["code"]: g for g in GAPS}
+    stats = {}
+    for t, rows in tables.items():
+        for r in rows:
+            st = stats.setdefault(r["Indicator_Code"], {"table": t, "row": r, "years": set(), "countries": set()})
+            st["years"].add(r["Year"])
+            st["countries"].add(r["Country_ID"])
+    out = []
+    for code, st in sorted(stats.items(), key=lambda kv: (kv[1]["table"], kv[0])):
+        r = st["row"]
+        if code in gaps:
+            name_en, definition, org = gaps[code]["name_en"], gap_definition(gaps[code], names_en), ""
+        elif code in wb_meta and wb_meta[code]:
+            name_en, definition, org = wb_meta[code]["name_en"], wb_meta[code]["definition"], wb_meta[code]["source_org"]
+        else:
+            name_en, definition = manual_meta.get(code, ("", ""))
+            org = ""
+        src = SOURCES.get(r["Source_ID"], {})
+        out.append({
+            "Indicator_Code": code,
+            "Table": f"{st['table']}_table",
+            "Category_KO": r.get("Indicator_Category") or r.get("AI_Dimension", ""),
+            "Name_KO": r["Indicator_Name"],
+            "Name_EN": name_en,
+            "Definition_EN": definition,
+            "Unit": r["Unit"],
+            "Source_ID": r["Source_ID"],
+            "Source_Name": src.get("Source_Name", ""),
+            "Original_Source_Note": org,
+            "License": src.get("License", ""),
+            "Years": f"{min(st['years'])}-{max(st['years'])}",
+            "Countries": len(st["countries"]),
+            "Shown_On_Site": "yes" if code in shown_codes else "no (CSV only)",
+        })
+    return out
+
+
 def load_manual():
     """data/manual/*.csv 를 읽어 (표별 행 목록, 화면 표시용 지표 목록) 반환"""
     rows = {"digitalx": [], "aidivide": []}
     shown = []
     for spec in MANUAL_FILES:
         for path in sorted(glob.glob(os.path.join(OUT, "manual", spec["pattern"]))):
+            if path.endswith("_meta.csv"):
+                continue
             with open(path, encoding="utf-8-sig") as f:
                 for r in csv.DictReader(f):
                     level = r.pop("Level", "")
@@ -303,8 +378,15 @@ def main():
     old = {t: load_existing(t) for t in tables}
     status = {}
 
+    prev_codebook = {r["Indicator_Code"]: r for r in load_existing("codebook")}
+    wb_info = {}
     for ind in INDICATORS:
         print(f"- {ind['code']} {ind['name']}")
+        m = fetch_wb_meta(ind["code"])
+        if m is None and ind["code"] in prev_codebook:
+            p = prev_codebook[ind["code"]]
+            m = {"name_en": p["Name_EN"], "definition": p["Definition_EN"], "source_org": p["Original_Source_Note"]}
+        wb_info[ind["code"]] = m
         rows = fetch_indicator(ind)
         if rows is None:
             # API 실패 시 이전 데이터를 그대로 유지 (데이터가 지워지지 않도록)
@@ -357,6 +439,13 @@ def main():
                       derived_shown +
                       [m for m in wb_meta if m["table"] == "aidivide"])
 
+    codebook = build_codebook(tables, {m["code"] for m in indicator_meta}, wb_info)
+    cb = {r["Indicator_Code"]: r for r in codebook}
+    for m in indicator_meta:
+        m["name_en"] = cb.get(m["code"], {}).get("Name_EN", "")
+        m["definition"] = cb.get(m["code"], {}).get("Definition_EN", "")
+
+    save("codebook", codebook)
     save("country", countries)
     save("digitalx", tables["digitalx"])
     save("aidivide", tables["aidivide"])

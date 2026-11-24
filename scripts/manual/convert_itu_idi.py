@@ -36,6 +36,24 @@ SCORES = {
     "Meaningful Connectivity Pillar": ("ITU.IDI.MEANINGFUL", "IDI: 의미 있는 연결성", "main"),
 }
 
+# 영문 이름·정의 (IDI 2026 보고서 방법론 기준)
+META_EN = {
+    "ITU.IDI": ("ICT Development Index (IDI) score",
+                "Composite index (0-100) published by ITU measuring universal and meaningful connectivity. "
+                "It combines 10 indicators organized in two pillars of equal weight: Universal connectivity and "
+                "Meaningful connectivity. New methodology since the 2023 edition; the year is the edition year "
+                "and indicator values generally refer to two years earlier."),
+    "ITU.IDI.UNIVERSAL": ("IDI Universal connectivity pillar score",
+                          "Pillar score (0-100) of the ITU ICT Development Index: average of normalized scores for "
+                          "individuals using the Internet, households with Internet access at home, and active "
+                          "mobile-broadband subscriptions per 100 inhabitants."),
+    "ITU.IDI.MEANINGFUL": ("IDI Meaningful connectivity pillar score",
+                           "Pillar score (0-100) of the ITU ICT Development Index: average of normalized scores for "
+                           "3G and 4G/LTE network coverage, mobile- and fixed-broadband Internet traffic per "
+                           "subscription, mobile data and voice and fixed-broadband basket prices, and individuals "
+                           "owning a mobile phone."),
+}
+
 
 def main(path):
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
@@ -71,6 +89,11 @@ def main(path):
         w = csv.DictWriter(f, fieldnames=list(out[0].keys()))
         w.writeheader()
         w.writerows(out)
+    with open(OUT.replace(".csv", "_meta.csv"), "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["Indicator_Code", "Name_EN", "Definition_EN"])
+        for code, (name_en, definition) in sorted(META_EN.items()):
+            w.writerow([code, name_en, definition])
     print(f"✔ {OUT}: {len(out)}행")
     for y in sorted({o["Year"] for o in out}):
         print(f"  {y}년판: {len({o['Country_ID'] for o in out if o['Year'] == y})}개국")

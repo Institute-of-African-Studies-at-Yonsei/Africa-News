@@ -95,6 +95,26 @@ def main(path, year):
         sys.exit(f"엑셀에서 찾지 못한 국가: {sorted(missing)} → AFRICA 표기를 엑셀에 맞게 고칠 것")
 
     os.makedirs(OUT_DIR, exist_ok=True)
+    with open(os.path.join(OUT_DIR, "oxford_gari_meta.csv"), "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["Indicator_Code", "Name_EN", "Definition_EN"])
+        for xl_name, (code, ko, kind) in COLUMNS.items():
+            if kind == "total":
+                name_en = "Government AI Readiness Index: total score"
+                d = ("Overall score (0-100) of the Oxford Insights Government AI Readiness Index, which assesses how "
+                     "ready governments are to implement AI in the delivery of public services. The 2025 edition "
+                     "examines 69 indicators across 14 dimensions within six pillars: Policy Capacity, Governance, "
+                     "AI Infrastructure, Public Sector Adoption, Development & Diffusion and Resilience.")
+            elif kind == "rank":
+                name_en = "Government AI Readiness Index: global rank"
+                d = "Global rank of the government in the Oxford Insights Government AI Readiness Index (1 = highest)."
+            elif kind == "pillar":
+                name_en = f"Government AI Readiness Index pillar: {xl_name}"
+                d = f"Pillar score (0-100) for '{xl_name}' in the Oxford Insights Government AI Readiness Index."
+            else:
+                name_en = f"Government AI Readiness Index dimension: {xl_name}"
+                d = f"Dimension score (0-100) for '{xl_name}' in the Oxford Insights Government AI Readiness Index."
+            w.writerow([code, name_en, d])
     dest = os.path.join(OUT_DIR, f"oxford_gari_{year}.csv")
     with open(dest, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(out[0].keys()))

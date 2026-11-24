@@ -1,0 +1,23 @@
+Indicator_Code,Name_EN,Definition_EN
+OXF.GARI.TOTAL,Government AI Readiness Index: total score,"Overall score (0-100) of the Oxford Insights Government AI Readiness Index, which assesses how ready governments are to implement AI in the delivery of public services. The 2025 edition examines 69 indicators across 14 dimensions within six pillars: Policy Capacity, Governance, AI Infrastructure, Public Sector Adoption, Development & Diffusion and Resilience."
+OXF.GARI.RANK,Government AI Readiness Index: global rank,Global rank of the government in the Oxford Insights Government AI Readiness Index (1 = highest).
+OXF.GARI.P.POLICY,Government AI Readiness Index pillar: Policy Capacity,Pillar score (0-100) for 'Policy Capacity' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.P.INFRA,Government AI Readiness Index pillar: AI Infrastructure,Pillar score (0-100) for 'AI Infrastructure' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.P.GOV,Government AI Readiness Index pillar: Governance,Pillar score (0-100) for 'Governance' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.P.PUBLIC,Government AI Readiness Index pillar: Public Sector Adoption,Pillar score (0-100) for 'Public Sector Adoption' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.P.DEV,Government AI Readiness Index pillar: Development & Diffusion,Pillar score (0-100) for 'Development & Diffusion' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.P.RESIL,Government AI Readiness Index pillar: Resilience,Pillar score (0-100) for 'Resilience' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.VISION,Government AI Readiness Index dimension: Policy vision,Dimension score (0-100) for 'Policy vision' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.COMMIT,Government AI Readiness Index dimension: Policy commitment,Dimension score (0-100) for 'Policy commitment' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.COMPUTE,Government AI Readiness Index dimension: Compute capacity,Dimension score (0-100) for 'Compute capacity' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.TECHINFRA,Government AI Readiness Index dimension: Enabling technical infrastructure,Dimension score (0-100) for 'Enabling technical infrastructure' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.DATA,Government AI Readiness Index dimension: Data quality,Dimension score (0-100) for 'Data quality' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.PRINCIPLES,Government AI Readiness Index dimension: Governance principles,Dimension score (0-100) for 'Governance principles' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.REGUL,Government AI Readiness Index dimension: Regulatory compliance,Dimension score (0-100) for 'Regulatory compliance' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.DIGPOLICY,Government AI Readiness Index dimension: Government digital policy,Dimension score (0-100) for 'Government digital policy' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.EGOV,Government AI Readiness Index dimension: e-Government delivery,Dimension score (0-100) for 'e-Government delivery' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.HUMAN,Government AI Readiness Index dimension: Human capital,Dimension score (0-100) for 'Human capital' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.SECTOR,Government AI Readiness Index dimension: AI sector maturity,Dimension score (0-100) for 'AI sector maturity' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.DIFFUSION,Government AI Readiness Index dimension: AI technology diffusion,Dimension score (0-100) for 'AI technology diffusion' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.SOCIETY,Government AI Readiness Index dimension: Societal transition,Dimension score (0-100) for 'Societal transition' in the Oxford Insights Government AI Readiness Index.
+OXF.GARI.D.SAFETY,Government AI Readiness Index dimension: Safety and security,Dimension score (0-100) for 'Safety and security' in the Oxford Insights Government AI Readiness Index.

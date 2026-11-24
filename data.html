@@ -75,6 +75,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .dl a:hover{background:var(--bg)}
 .lic ul{margin:0 0 6px 18px}.lic li{margin:2px 0}
 .lic-note{font-size:11px;color:var(--t3);margin-top:6px;line-height:1.6}
+.defn{margin:-4px 0 10px;font-size:12px;color:var(--t2)}.defn summary{cursor:pointer;color:var(--t2)}.defn p{margin-top:6px;line-height:1.6}.defn .code{color:var(--t3);font-size:11px}
 .loading{padding:2rem;text-align:center;color:var(--t3)}
 </style>
 </head>
@@ -117,6 +118,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
       <a href="data/csv/aidivide.csv" download>AI 격차 지표</a>
       <a href="data/csv/country.csv" download>국가 기본정보</a>
       <a href="data/csv/source.csv" download>자료 출처</a>
+      <a href="data/csv/codebook.csv" download>변수 설명서 (Codebook, EN)</a>
     </div>
     <div id="sourceNote"></div>
   </div>
@@ -199,8 +201,17 @@ function initControls(){
 function fillIndicators(){
   const list = indicatorsFor(S.table);
   if(!S.ind || !list.find(i => i.code === S.ind)) S.ind = list[0]?.code;
-  document.getElementById('indSel').innerHTML = list.map(i =>
-    `<option value="${i.code}"${i.code===S.ind?' selected':''}>[${esc(i.category)}] ${esc(i.name)}</option>`).join('');
+  // 분류별로 묶어서 표시 (분류 순서는 지표 목록에 처음 나온 순서)
+  const groups = [];
+  for(const i of list){
+    let g = groups.find(g => g.cat === i.category);
+    if(!g){ g = {cat: i.category, items: []}; groups.push(g); }
+    g.items.push(i);
+  }
+  document.getElementById('indSel').innerHTML = groups.map(g =>
+    `<optgroup label="${esc(g.cat)}">` + g.items.map(i =>
+      `<option value="${i.code}"${i.code===S.ind?' selected':''}>${esc(i.name)}</option>`).join('') +
+    `</optgroup>`).join('');
 }
 
 function rowsFor(code){ return D[S.table].rows.filter(r => r.Indicator_Code === code); }
@@ -238,6 +249,7 @@ function render(){
     <div class="card">
       <h2>${esc(meta.name)} — 국가별 최신값</h2>
       <div class="sub">단위: ${esc(meta.unit)} · 출처: ${sourceLabel(meta)}<br>국가를 누르면 오른쪽 추이 그래프에 추가됩니다</div>
+      ${meta.name_en ? `<details class="defn"><summary>Definition (EN) · ${esc(meta.name_en)}</summary><p>${esc(meta.definition || '')}</p><p class="code">Indicator code: ${esc(meta.code)}</p></details>` : ''}
       <div class="bars">${bars || '<div class="nodata">자료가 없습니다.</div>'}</div>
       ${missing.length ? `<div class="nodata">자료 없음: ${missing.map(c => esc(c.Country_Name)).join(', ')}</div>` : ''}
     </div>
