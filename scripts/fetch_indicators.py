@@ -111,6 +111,11 @@ SOURCES = {
                   "Source_URL": "https://www.worldbank.org/en/publication/globalfindex",
                   "License": "CC BY 4.0",
                   "License_URL": "https://data.worldbank.org/summary-terms-of-use"},
+    "ITU_DH": {"Source_Name": "ITU DataHub",
+               "Source_Type": "국제기구 통계",
+               "Source_URL": "https://datahub.itu.int/",
+               "License": "CC BY-NC-SA 3.0 IGO",
+               "License_URL": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"},
     "OXF_GARI": {"Source_Name": "Oxford Insights Government AI Readiness Index",
                  "Source_Type": "연구기관 지수",
                  "Source_URL": "https://oxfordinsights.com/ai-readiness/ai-readiness-index/",
@@ -124,6 +129,9 @@ SOURCES = {
 MANUAL_FILES = [
     {"pattern": "oxford_gari_*.csv", "table": "aidivide", "category": "AI 준비도",
      "show_levels": ["total", "pillar"]},
+    # CSV의 Category 열이 분류를 정한다 (없으면 아래 category 사용)
+    {"pattern": "itu_datahub*.csv", "table": "digitalx", "category": "인프라",
+     "show_levels": ["main"]},
 ]
 
 
@@ -219,11 +227,16 @@ def save(name, rows, extra=None):
 # 두 지표의 차이로 만드는 격차 지표 (연구원 계산)
 GAPS = [
     {"code": "IAS.FINDEX.GAP.GENDER", "name": "금융계좌 보유율 성별 격차 (남성−여성)",
-     "high": "FX.OWN.TOTL.MA.ZS", "low": "FX.OWN.TOTL.FE.ZS"},
+     "high": "FX.OWN.TOTL.MA.ZS", "low": "FX.OWN.TOTL.FE.ZS", "category": "디지털 금융 격차", "source": "WB_FINDEX"},
     {"code": "IAS.FINDEX.GAP.INCOME", "name": "금융계좌 보유율 소득 격차 (상위 60%−하위 40%)",
-     "high": "FX.OWN.TOTL.60.ZS", "low": "FX.OWN.TOTL.40.ZS"},
+     "high": "FX.OWN.TOTL.60.ZS", "low": "FX.OWN.TOTL.40.ZS", "category": "디지털 금융 격차", "source": "WB_FINDEX"},
     {"code": "IAS.FINDEX.GAP.EDU", "name": "금융계좌 보유율 교육 격차 (중등 이상−초등 이하)",
-     "high": "FX.OWN.TOTL.SO.ZS", "low": "FX.OWN.TOTL.PL.ZS"},
+     "high": "FX.OWN.TOTL.SO.ZS", "low": "FX.OWN.TOTL.PL.ZS", "category": "디지털 금융 격차", "source": "WB_FINDEX"},
+    # 망은 깔려 있지만 쓰지 않는 인구 (usage gap)
+    {"code": "IAS.ITU.GAP.USAGE", "name": "4G 커버리지 대비 미이용 격차 (4G 커버리지−인터넷 이용률)",
+     "high": "ITU.COV.4G", "low": "IT.NET.USER.ZS", "category": "접근성 격차", "source": "ITU_DH"},
+    {"code": "IAS.ITU.GAP.MOBILE.GENDER", "name": "휴대전화 보유율 성별 격차 (남성−여성)",
+     "high": "ITU.MOBILE.OWN.MA", "low": "ITU.MOBILE.OWN.FE", "category": "접근성 격차", "source": "ITU_DH"},
 ]
 
 
@@ -239,13 +252,13 @@ def add_gaps(rows):
             lo = idx.get((g["low"], iso, year))
             if lo is None:
                 continue
-            rows.append({"Country_ID": iso, "Year": year, "Indicator_Category": "디지털 금융 격차",
+            rows.append({"Country_ID": iso, "Year": year, "Indicator_Category": g["category"],
                          "Indicator_Code": g["code"], "Indicator_Name": g["name"],
-                         "Value": round(hi - lo, 3), "Unit": "%p (연구원 계산)", "Source_ID": "WB_FINDEX"})
+                         "Value": round(hi - lo, 3), "Unit": "%p (연구원 계산)", "Source_ID": g["source"]})
             added += 1
         if added:
-            shown.append({"code": g["code"], "table": "digitalx", "category": "디지털 금융 격차",
-                          "name": g["name"], "unit": "%p (연구원 계산)", "source": "WB_FINDEX"})
+            shown.append({"code": g["code"], "table": "digitalx", "category": g["category"],
+                          "name": g["name"], "unit": "%p (연구원 계산)", "source": g["source"]})
         print(f"✔ 격차 지표 {g['code']}: {added}건")
     return shown
 
@@ -259,16 +272,17 @@ def load_manual():
             with open(path, encoding="utf-8-sig") as f:
                 for r in csv.DictReader(f):
                     level = r.pop("Level", "")
+                    cat = r.pop("Category", "") or spec["category"]
                     rec = {
                         "Country_ID": r["Country_ID"], "Year": int(r["Year"]),
                         "Indicator_Code": r["Indicator_Code"], "Indicator_Name": r["Indicator_Name"],
                         "Value": float(r["Value"]), "Unit": r["Unit"], "Source_ID": r["Source_ID"],
                     }
-                    rec["Indicator_Category" if spec["table"] == "digitalx" else "AI_Dimension"] = spec["category"]
+                    rec["Indicator_Category" if spec["table"] == "digitalx" else "AI_Dimension"] = cat
                     rows[spec["table"]].append(rec)
                     if level in spec["show_levels"] and not any(i["code"] == rec["Indicator_Code"] for i in shown):
                         shown.append({"code": rec["Indicator_Code"], "table": spec["table"],
-                                      "category": spec["category"], "name": rec["Indicator_Name"],
+                                      "category": cat, "name": rec["Indicator_Name"],
                                       "unit": rec["Unit"], "source": rec["Source_ID"]})
             print(f"✔ 수동 자료 {os.path.basename(path)} 합침")
     return rows, shown
@@ -298,11 +312,11 @@ def main():
         status[ind["code"]] = "정상"
         print(f"  ✔ {len(rows)}건")
 
-    derived_shown = add_gaps(tables["digitalx"])
-
     manual_rows, manual_shown = load_manual()
     for t in tables:
         tables[t].extend(manual_rows[t])
+
+    derived_shown = add_gaps(tables["digitalx"])
 
     # 컬럼 순서를 스키마에 맞게 정리
     order = {
@@ -327,8 +341,14 @@ def main():
 
     # 실제 자료가 있는 지표만 화면 목록에 올린다 (수집 실패·자료 없는 지표는 숨김)
     have = {r["Indicator_Code"] for t in tables.values() for r in t}
-    indicator_meta = manual_shown + [{k: i[k] for k in ("code", "table", "category", "name", "unit", "source")}
-                                     for i in INDICATORS if i["code"] in have] + derived_shown
+    wb_meta = [{k: i[k] for k in ("code", "table", "category", "name", "unit", "source")}
+               for i in INDICATORS if i["code"] in have]
+    # AI 격차는 AI 준비도 지수를 맨 앞에, 디지털 전환은 World Bank 기본 지표 다음에 ITU 지표를 둔다
+    indicator_meta = ([m for m in manual_shown if m["table"] == "aidivide"] +
+                      [m for m in wb_meta if m["table"] == "digitalx"] +
+                      [m for m in manual_shown if m["table"] == "digitalx"] +
+                      derived_shown +
+                      [m for m in wb_meta if m["table"] == "aidivide"])
 
     save("country", countries)
     save("digitalx", tables["digitalx"])
