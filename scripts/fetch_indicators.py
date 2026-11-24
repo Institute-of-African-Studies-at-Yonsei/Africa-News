@@ -116,6 +116,11 @@ SOURCES = {
                "Source_URL": "https://datahub.itu.int/",
                "License": "CC BY-NC-SA 3.0 IGO",
                "License_URL": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"},
+    "ITU_IDI": {"Source_Name": "ITU ICT Development Index (IDI)",
+                "Source_Type": "국제기구 지수",
+                "Source_URL": "https://www.itu.int/itu-d/reports/statistics/idi/",
+                "License": "CC BY-NC-SA 3.0 IGO",
+                "License_URL": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"},
     "OXF_GARI": {"Source_Name": "Oxford Insights Government AI Readiness Index",
                  "Source_Type": "연구기관 지수",
                  "Source_URL": "https://oxfordinsights.com/ai-readiness/ai-readiness-index/",
@@ -130,6 +135,8 @@ MANUAL_FILES = [
     {"pattern": "oxford_gari_*.csv", "table": "aidivide", "category": "AI 준비도",
      "show_levels": ["total", "pillar"]},
     # CSV의 Category 열이 분류를 정한다 (없으면 아래 category 사용)
+    {"pattern": "itu_idi*.csv", "table": "digitalx", "category": "ICT 발전지수",
+     "show_levels": ["main"]},
     {"pattern": "itu_datahub*.csv", "table": "digitalx", "category": "인프라",
      "show_levels": ["main"]},
 ]

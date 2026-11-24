@@ -4,7 +4,8 @@ ITU DataHub 내려받기 CSV → data/manual/itu_datahub.csv 표준 CSV 변환 (
 사용법:
   1. https://datahub.itu.int/query 에서 아래 SERIES의 지표를 고르고,
      국가는 Africa + Arab States(북아프리카 포함)를 선택해 CSV로 내려받는다.
-  2. python scripts/manual/convert_itu_datahub.py 내려받은파일.csv
+     (요금 지표는 별도 Price Basket 자료라 따로 받아도 된다)
+  2. python scripts/manual/convert_itu_datahub.py 파일1.csv [파일2.csv ...]
   3. 생성된 data/manual/itu_datahub.csv 를 저장소에 올린다 (원본 CSV는 올리지 않는다).
      매월 자동 수집(fetch_indicators.py) 때 digitalx_table에 합쳐진다.
 
@@ -35,12 +36,20 @@ SERIES = {
     "i271G": ("ITU.COV.3G", "3G 커버리지 인구 비율", "% of population", "인프라", "main"),
     "i271GA": ("ITU.COV.4G", "4G/LTE 커버리지 인구 비율", "% of population", "인프라", "main"),
     "i271G5_pop": ("ITU.COV.5G", "5G 커버리지 인구 비율", "% of population", "인프라", "main"),
+    # 요금 부담 (Price Basket, 1인당 국민소득 대비 %) — 값이 클수록 비쌈
+    "i271mb_high_2GB_GNI": ("ITU.PRICE.MOBILE", "모바일 데이터·음성 요금 부담 (고사용량: 140분·70건·2GB)",
+                            "% of GNI per capita", "요금 부담", "main"),
+    "i271mb_2GB_GNI": ("ITU.PRICE.MOBILE.DATA", "모바일 데이터 전용 요금 부담 (2GB)",
+                       "% of GNI per capita", "요금 부담", "main"),
+    "i154_FBB5_GNI": ("ITU.PRICE.FIXED", "유선 브로드밴드 요금 부담 (5GB)",
+                      "% of GNI per capita", "요금 부담", "main"),
 }
 
 
-def main(path):
+def main(paths):
     best = {}  # (code, iso, year) -> row ; 세부 구분 없는 값(빈칸) 우선, 다음 'Total'
-    with open(path, encoding="utf-8-sig", newline="") as f:
+    for path in paths:
+      with open(path, encoding="utf-8-sig", newline="") as f:
         for r in csv.DictReader(f):
             spec = SERIES.get(r["SeriesCode"])
             iso = r["AreaCode"]
@@ -77,6 +86,6 @@ def main(path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit("사용법: python scripts/manual/convert_itu_datahub.py <DataHub CSV>")
-    main(sys.argv[1])
+    if len(sys.argv) < 2:
+        sys.exit("사용법: python scripts/manual/convert_itu_datahub.py <DataHub CSV> [CSV ...]")
+    main(sys.argv[1:])
