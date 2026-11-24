@@ -1,7 +1,96 @@
 {
- "updated": "2026-11-23 00:52 UTC",
- "count": 182,
+ "updated": "2026-11-24 00:55 UTC",
+ "count": 194,
  "resources": [
+  {
+   "id": "254a1786668a",
+   "title": "Why African banks and telecoms cannot wait for quantum computers to arrive",
+   "desc": "Quantum computers capable of breaking today’s encryption do not yet exist, but data stolen now could become readable later. For African banks and telecom operators, protecting long-lived secrets means preparing before those machines arrive.",
+   "url": "https://techcabal.com/2026/11/23/why-african-must-prepare-for-quantum/",
+   "date": "2026-11-23",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Connectivity & telecoms",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "banks",
+    "telecoms",
+    "cannot",
+    "wait"
+   ]
+  },
+  {
+   "id": "b9f9ad7df361",
+   "title": "Ericsson sees enterprise customers driving South Africa’s next 5G growth opportunity",
+   "desc": "Ericsson sees mining, ports and utilities as key markets for private 5G networks, as South African mobile operators look beyond consumer data to unlock new enterprise revenue.",
+   "url": "https://techcabal.com/2026/11/23/ericsson-sa-5g-growth-mines-ports/",
+   "date": "2026-11-23",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Connectivity & telecoms",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "ericsson",
+    "sees",
+    "enterprise",
+    "customers"
+   ]
+  },
+  {
+   "id": "7c5879150674",
+   "title": "Mzansi’s power moves",
+   "desc": "The Big Story: Teraco taps wind to power its data centres. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Read online Howzit, Mzansi! 🇿🇦 Welcome to",
+   "url": "https://techcabal.com/2026/11/23/mzansis-power-moves/",
+   "date": "2026-11-23",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Data centres & cloud",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "mzansi",
+    "power",
+    "moves"
+   ]
+  },
+  {
+   "id": "74c6da98b796",
+   "title": "Africa wants AI. Can its startups afford to build it?",
+   "desc": "Nigeria and South Africa are more optimistic about artificial intelligence than the global average of 53%, according to a 2025 Google and Ipsos report. But turning that enthusiasm into a viable business is expensive.",
+   "url": "https://techcabal.com/2026/11/23/high-cost-building-ai-africa/",
+   "date": "2026-11-23",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Startups & investment",
+   "country": "Multiple countries",
+   "authors": "",
+   "keywords": [
+    "wants",
+    "startups",
+    "afford",
+    "build"
+   ]
+  },
+  {
+   "id": "90d99f22a142",
+   "title": "👨🏿‍🚀TechCabal Daily – Dangote’s encore",
+   "desc": "In today's edition: Dangote weighs refinery share sale || Baobab raises $50m || Kenyan banks seek more time || South Africa plans $5.7m AI fund",
+   "url": "https://techcabal.com/2026/11/23/techcabal-daily-dangotes-encore/",
+   "date": "2026-11-23",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Startups & investment",
+   "country": "Multiple countries",
+   "authors": "",
+   "keywords": [
+    "techcabal",
+    "daily",
+    "dangote",
+    "encore"
+   ]
+  },
   {
    "id": "9ce1c22e39e0",
    "title": "Kenya’s internet metering bill raises privacy and affordability concerns",
@@ -72,6 +161,24 @@
     "author",
     "cleared",
     "using"
+   ]
+  },
+  {
+   "id": "c08ab82d3101",
+   "title": "Africa's Biggest AI Bottleneck: Why a Shared, Testable Definition of Good AI Comes Ahead of Power, Data Centres, and Capital",
+   "desc": "Debates over artificial intelligence in Africa routinely name power, data centres, capital, or talent as the primary constraint. Drawing on empirical enterprise survey data, clinical trials, agentic token-economics research, hardware supply data, and global governance precedents from 2025–2026, this",
+   "url": "https://doi.org/10.5281/zenodo.24441642",
+   "date": "2026-11-22",
+   "type": "Academic paper",
+   "source": "Zenodo (CERN European Organization for Nuclear Research)",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Njenga Kariuki",
+   "keywords": [
+    "biggest",
+    "bottleneck",
+    "shared",
+    "testable"
    ]
   },
   {
@@ -169,6 +276,24 @@
    "title": "Electricity and Water Constraints on Sovereignty-Oriented Data Centres in Africa",
    "desc": "African countries are considering local data centres as instruments of digital sovereignty, but these facilities heavily depend on electricity and water resources that remain constrained across sub-Saharan Africa. This paper asks how electricity and water constraints shape the feasible scale, coolin",
    "url": "https://hal.science/hal-05868260",
+   "date": "2026-11-17",
+   "type": "Academic paper",
+   "source": "HAL",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "David Rutambuka, Gabriel Mugabe Nzarama",
+   "keywords": [
+    "electricity",
+    "water",
+    "constraints",
+    "sovereignty"
+   ]
+  },
+  {
+   "id": "c7781d47e5dd",
+   "title": "Electricity and Water Constraints on Sovereignty-Oriented Data Centres in Africa",
+   "desc": "African countries are considering local data centres as instruments of digital sovereignty, but these facilities heavily depend on electricity and water resources that remain constrained across sub-Saharan Africa. This paper asks how electricity and water constraints shape the feasible scale, coolin",
+   "url": "https://hal.science/hal-05868260v1",
    "date": "2026-11-17",
    "type": "Academic paper",
    "source": "HAL",
@@ -306,6 +431,24 @@
     "digital",
     "backbone",
     "subsea"
+   ]
+  },
+  {
+   "id": "28404f8cbef9",
+   "title": "Tanzania’s smallholder farmers struggle to benefit from digital agriculture",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOHloc0ZmcHhJLVk4dHRNWmFhVW1Hc1dWZ2RJTmRwU09WRGN2aUdvUkJ5UC1nZDB0M3doaC12b1MxZDdwSHU4d1hfU2hQd21Ic1dzRS0wSkFKVjIyNXdwVTUxTTJsbmF5enczN0Fzc3RqVnlqQ2JPOFhMaERDWmhGTDh5bENRQ3hDeWFpQXQ2cGZQWFBkUEstZ0hJN2JIem9EeGtmZVJFMmREbWpRNU9xRHFxQkxUcTFBUkHSAb8BQVVfeXFMTnJoVC1pS2dzTG1EUG1XSHRxT0hwNjBub2tQRWp1MUNWSVMtX2c2VmZ6S3BEY3BrczdxclBEMjdfYzlVd1hSdzl3ZnI0dHNhbE1ucDR0OG53azVvWHlIdGFzOXFGSlNLMXFNck5rUkdkd2owalZodkIwTHdBLXFNd3FhdHBkamJJOHdqa2FFMl9VSzI0YTlzdmJSYjZfLXJvcmUyRDNhWi1qT0hsRl9maUswZzhtNUt3bzg5M3E1RXc?oc=5",
+   "date": "2026-11-06",
+   "type": "News",
+   "source": "Al Jazeera",
+   "theme": "AI applications",
+   "country": "Tanzania",
+   "authors": "",
+   "keywords": [
+    "tanzania",
+    "smallholder",
+    "farmers",
+    "struggle"
    ]
   },
   {
@@ -541,6 +684,24 @@
    ]
   },
   {
+   "id": "c49cf554d065",
+   "title": "The Pan-African Trust Framework (PATF): A Federated Approach to Cross-Border Digital Identity Interoperability, Trust Architecture, and Sovereign Governance in Africa",
+   "desc": "Realization of interconnected Africa through rollout of interoperable digital transformation will be fundamentally driven by interoperable Digital Public Infrastructure deployments, expanding mobile connectivity, and booming digital financial ecosystems. However, persistent legal, technical, and ins",
+   "url": "https://doi.org/10.68263/bjar-n778hw3a",
+   "date": "2026-10-10",
+   "type": "Academic paper",
+   "source": "British Journal of Advanced Research",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Emmanuel Mokoro, Peter Kimaile",
+   "keywords": [
+    "trust",
+    "framework",
+    "patf",
+    "federated"
+   ]
+  },
+  {
    "id": "34d34b037bd6",
    "title": "Building Africa's Digital & AI Foundation: Data Infrastructure & Trust",
    "desc": "Building Africa's Digital Foundation: Data, Infrastructure and Trust is the inaugural whitepaper in a thought leadership series exploring the forces shaping Africa's digital and artificial intelligence future. Written from the perspective of a telecommunications and data transformation leader, the p",
@@ -760,6 +921,24 @@
    "title": "The Politics of Tech-adoption and Artificial Intelligence in Africa",
    "desc": "The present Tech-adoption, visible in the proliferation of Artificial Intelligence (AI) or Self Service Technologies (SST) in Africa is political. This is as it involves a Tech-economic interaction that is undergirded by politics. The supply of AI/SST to Africa has opened another vista of Tech-geopo",
    "url": "https://integralresearch.in/index.php/index/article/view/639",
+   "date": "2026-08-30",
+   "type": "Academic paper",
+   "source": "Integral Research",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "Gregory Emeka Chinweuba, Uchenna Azubuike Ezeogu",
+   "keywords": [
+    "politics",
+    "tech",
+    "adoption",
+    "artificial"
+   ]
+  },
+  {
+   "id": "86225013c34a",
+   "title": "The Politics of Tech-adoption and Artificial Intelligence in Africa",
+   "desc": "The present Tech-adoption, visible in the proliferation of Artificial Intelligence (AI) or Self Service Technologies (SST) in Africa is political. This is as it involves a Tech-economic interaction that is undergirded by politics. The supply of AI/SST to Africa has opened another vista of Tech-geopo",
+   "url": "https://integralresearch.in/index.php/1/article/view/639",
    "date": "2026-08-30",
    "type": "Academic paper",
    "source": "Integral Research",
@@ -2189,6 +2368,24 @@
    ]
   },
   {
+   "id": "931adb2ed654",
+   "title": "CULTURAL LAG: ARTIFICIAL INTELLIGENCE, AFRICAN INDIGENOUS KNOWLEDGE SYSTEMS, AND SUSTAINABLE DEVELOPMENT IN THE MODERN DIGITAL WORLD",
+   "desc": "The rapid advancement of Artificial Intelligence (AI) is reshaping societies worldwide, but in Africa its integration often collides with deep-rooted Indigenous Knowledge Systems (IKS). This tension can be understood through the sociological concept of cultural lag, where material culture (technolog",
+   "url": "https://journals.unizik.edu.ng/jhucs/article/view/7232",
+   "date": "2025-12-05",
+   "type": "Academic paper",
+   "source": "CACH Journal of Humanities and Cultural Studies",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "Gideon Sunday Omachonu",
+   "keywords": [
+    "cultural",
+    "artificial",
+    "intelligence",
+    "indigenous"
+   ]
+  },
+  {
    "id": "f0e23d29665f",
    "title": "Data sovereignty in Africa: steering digital transformation between China and the West",
    "desc": "Abstract Digital sovereignty has become a pivotal concern for Africa striving to reduce their reliance on foreign powers for data storage and processing. Central to these efforts is the development of digital infrastructure, including data centres, often established with the support of Chinese telec",
@@ -2759,6 +2956,24 @@
     "prospects",
     "digital",
     "infrastructure"
+   ]
+  },
+  {
+   "id": "86a63b40c4de",
+   "title": "Lugha-Llama: Adapting Large Language Models for African Languages",
+   "desc": "Large language models (LLMs) have achieved impressive results in a wide range of natural language applications. However, they often struggle to recognize low-resource languages, in particular African languages, which are not well represented in large training corpora. In this paper, we consider how ",
+   "url": "https://doi.org/10.48550/arxiv.2504.06536",
+   "date": "2025-04-09",
+   "type": "Academic paper",
+   "source": "arXiv (Cornell University)",
+   "theme": "Skills & research",
+   "country": "Pan-African",
+   "authors": "Happy Buzaaba, Alexander Wettig, David Ifeoluwa Adelani, Christiane Fellbaum",
+   "keywords": [
+    "lugha",
+    "llama",
+    "adapting",
+    "large"
    ]
   },
   {
