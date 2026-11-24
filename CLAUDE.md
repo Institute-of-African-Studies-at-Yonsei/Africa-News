@@ -25,6 +25,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data/` | 지표 DB 데이터 (자동 생성, 직접 수정 금지) | 자동 |
 | `data/manual/` | 직접 내려받아 변환한 지표 CSV (라이선스가 허용하는 것만). 현재 `oxford_gari_2025.csv`, `itu_datahub.csv`, `itu_idi.csv` | 지표 DB 담당 |
 | `scripts/manual/` | 연 1회 수동으로 돌리는 변환 스크립트 (외부 패키지 사용 가능, Actions에서는 실행 안 함) | 지표 DB 담당 |
+| `assets/africa_map.json` | 지표 DB 지도용 국경 데이터 (Natural Earth 1:50m, public domain). `scripts/manual/build_africa_map.js`로 생성. Somaliland는 Somalia에 합쳐 그리고, 서사하라는 회색 배경으로만 표시 | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
 | `.github/workflows/deploy.yml` | 사이트 배포. 파일이 올라오거나 자동 수집이 끝날 때마다 실행 (Settings → Pages → Source는 **GitHub Actions**) | 공유 · 수정 시 팀에 알림 |

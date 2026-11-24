@@ -76,6 +76,15 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .lic ul{margin:0 0 6px 18px}.lic li{margin:2px 0}
 .lic-note{font-size:11px;color:var(--t3);margin-top:6px;line-height:1.6}
 .defn{margin:-4px 0 10px;font-size:12px;color:var(--t2)}.defn summary{cursor:pointer;color:var(--t2)}.defn p{margin-top:6px;line-height:1.6}.defn .code{color:var(--t3);font-size:11px}
+.map{width:100%;height:auto;display:block;max-height:520px}
+.map .cty{stroke:#fff;stroke-width:.6;cursor:pointer;transition:opacity .15s}
+.map .cty:hover{stroke:var(--text);stroke-width:1.2}
+.map .cty.dim{opacity:.25}
+.map .cty.sel{stroke:var(--accent);stroke-width:1.8}
+.legend{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--t2);margin-top:6px;flex-wrap:wrap}
+.legend .grad{width:140px;height:8px;border-radius:4px;background:linear-gradient(90deg,rgb(227,236,245),rgb(31,78,121))}
+.legend .na{width:12px;height:8px;border-radius:2px;background:#ebe9e3;margin-left:10px}
+.mapnote{font-size:10px;color:var(--t3);margin-top:4px}
 .loading{padding:2rem;text-align:center;color:var(--t3)}
 </style>
 </head>
@@ -140,6 +149,7 @@ async function load(){
     const [country, digitalx, aidivide, source] = await Promise.all(['country','digitalx','aidivide','source'].map(get));
     D = {country, digitalx, aidivide, source};
     D.cmap = Object.fromEntries(country.rows.map(c => [c.Country_ID, c]));
+    try { D.map = await fetch('assets/africa_map.json').then(r => r.ok ? r.json() : null); } catch(e) { D.map = null; }
     initControls();
     render();
   }catch(e){
@@ -254,6 +264,7 @@ function render(){
       ${missing.length ? `<div class="nodata">자료 없음: ${missing.map(c => esc(c.Country_Name)).join(', ')}</div>` : ''}
     </div>
     <div>
+      ${mapCard(meta, latest)}
       <div class="card">
         <h2>연도별 추이 비교</h2>
         <div class="sub">최대 5개국 · ${esc(meta.name)} (${esc(meta.unit)})</div>
@@ -274,10 +285,41 @@ function render(){
     </div>
   </div>`;
 
-  document.querySelectorAll('.bar').forEach(b => b.onclick = () => toggleCountry(b.dataset.c));
+  document.querySelectorAll('.bar, .map .cty').forEach(b => b.onclick = () => toggleCountry(b.dataset.c));
   document.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => toggleCountry(b.dataset.rm));
   document.getElementById('addC').onchange = e => e.target.value && toggleCountry(e.target.value);
   drawChart(meta);
+}
+
+// 지도: 선택한 지표의 국가별 최신값을 색 진하기로 표시 (Natural Earth 국경, public domain)
+const MAP_LO = [227,236,245], MAP_HI = [31,78,121];
+function mapColor(t){
+  const c = MAP_LO.map((lo,i) => Math.round(lo + (MAP_HI[i]-lo)*t));
+  return `rgb(${c.join(',')})`;
+}
+function mapCard(meta, latest){
+  if(!D.map) return '';
+  const vals = Object.values(latest).map(r => r.Value);
+  const lo = Math.min(...vals), hi = Math.max(...vals), span = (hi - lo) || 1;
+  const shapes = [], dots = [];
+  for(const [iso, g] of Object.entries(D.map.countries)){
+    const r = latest[iso], c = D.cmap[iso];
+    const fill = r ? mapColor((r.Value - lo) / span) : '#ebe9e3';
+    const dim = S.region !== 'All' && c?.Region !== S.region ? ' dim' : '';
+    const sel = S.countries.includes(iso) ? ' sel' : '';
+    const tip = `${c?.Country_Name || iso} (${c?.Country_Name_EN || ''}): ${r ? fmt(r.Value) + ' ' + meta.unit + ' · ' + r.Year : '자료 없음'}`;
+    shapes.push(`<path class="cty${dim}${sel}" data-c="${iso}" d="${g.d}" fill="${fill}"><title>${esc(tip)}</title></path>`);
+    if(g.small) dots.push(`<circle class="cty${dim}${sel}" data-c="${iso}" cx="${g.cx}" cy="${g.cy}" r="5" fill="${fill}"><title>${esc(tip)}</title></circle>`);
+  }
+  const esh = D.map.extra?.ESH ? `<path d="${D.map.extra.ESH}" fill="#f2f1ec" stroke="#d8d6cf" stroke-width=".5"><title>서사하라 (Western Sahara): 지표 대상 아님</title></path>` : '';
+  return `<div class="card" style="margin-bottom:14px">
+    <h2>지도로 보기</h2>
+    <div class="sub">${esc(meta.name)} · 국가별 최신값 · 국가를 누르면 추이 그래프에 추가됩니다</div>
+    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="${esc(meta.name)} 아프리카 지도">${esh}${shapes.join('')}${dots.join('')}</svg>
+    <div class="legend"><span>${vals.length ? fmt(lo) : ''}</span><span class="grad"></span><span>${vals.length ? fmt(hi) : ''}</span>
+      <span class="na"></span><span>자료 없음</span></div>
+    <div class="mapnote">지도: Natural Earth (public domain). 국경 표시는 연구원의 입장과 무관합니다. 섬나라는 원으로 함께 표시합니다.</div>
+  </div>`;
 }
 
 function toggleCountry(c){
