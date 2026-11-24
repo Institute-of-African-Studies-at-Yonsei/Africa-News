@@ -1,5 +1,7 @@
 ﻿Source_ID,Source_Name,Source_Type,Source_URL,License,License_URL,Collection_Date,Update_Date,Verification_Status,Reliability_Level
-WB_WDI,World Bank World Development Indicators,국제기구 통계,https://databank.worldbank.org/source/world-development-indicators,CC BY 4.0,https://data.worldbank.org/summary-terms-of-use,2026-11-20,2026-11-20,자동 수집,High
-ITU,ITU World Telecommunication/ICT Indicators (via World Bank WDI),국제기구 통계,https://datahub.itu.int/,"CC BY 4.0 (World Bank WDI 제공 조건, 원 출처 ITU)",https://data.worldbank.org/summary-terms-of-use,2026-11-20,2026-11-20,자동 수집,High
-WB_FINDEX,World Bank Global Findex (via World Bank WDI),국제기구 설문 통계,https://www.worldbank.org/en/publication/globalfindex,CC BY 4.0,https://data.worldbank.org/summary-terms-of-use,2026-11-20,2026-11-20,자동 수집,High
-OXF_GARI,Oxford Insights Government AI Readiness Index,연구기관 지수,https://oxfordinsights.com/ai-readiness/ai-readiness-index/,CC BY-SA 4.0,https://creativecommons.org/licenses/by-sa/4.0/,2026-11-20,2026-11-20,자동 수집,High
+WB_WDI,World Bank World Development Indicators,국제기구 통계,https://databank.worldbank.org/source/world-development-indicators,CC BY 4.0,https://data.worldbank.org/summary-terms-of-use,2026-11-24,2026-11-24,자동 수집,High
+ITU,ITU World Telecommunication/ICT Indicators (via World Bank WDI),국제기구 통계,https://datahub.itu.int/,"CC BY 4.0 (World Bank WDI 제공 조건, 원 출처 ITU)",https://data.worldbank.org/summary-terms-of-use,2026-11-24,2026-11-24,자동 수집,High
+WB_FINDEX,World Bank Global Findex (via World Bank WDI),국제기구 설문 통계,https://www.worldbank.org/en/publication/globalfindex,CC BY 4.0,https://data.worldbank.org/summary-terms-of-use,2026-11-24,2026-11-24,자동 수집,High
+ITU_DH,ITU DataHub,국제기구 통계,https://datahub.itu.int/,CC BY-NC-SA 3.0 IGO,https://creativecommons.org/licenses/by-nc-sa/3.0/igo/,2026-11-24,2026-11-24,자동 수집,High
+ITU_IDI,ITU ICT Development Index (IDI),국제기구 지수,https://www.itu.int/itu-d/reports/statistics/idi/,CC BY-NC-SA 3.0 IGO,https://creativecommons.org/licenses/by-nc-sa/3.0/igo/,2026-11-24,2026-11-24,자동 수집,High
+OXF_GARI,Oxford Insights Government AI Readiness Index,연구기관 지수,https://oxfordinsights.com/ai-readiness/ai-readiness-index/,CC BY-SA 4.0,https://creativecommons.org/licenses/by-sa/4.0/,2026-11-24,2026-11-24,자동 수집,High

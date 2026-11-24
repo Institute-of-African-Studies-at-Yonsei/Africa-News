@@ -23,8 +23,11 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data.html` | 지표 DB 페이지 | 지표 DB 담당 |
 | `scripts/fetch_indicators.py` | World Bank 지표 수집 → `data/` | 지표 DB 담당 |
 | `data/` | 지표 DB 데이터 (자동 생성, 직접 수정 금지) | 자동 |
-| `data/manual/` | 직접 내려받아 변환한 지표 CSV (라이선스가 허용하는 것만). 현재 `oxford_gari_2025.csv` | 지표 DB 담당 |
+| `data/manual/` | 직접 내려받아 변환한 지표 CSV (라이선스가 허용하는 것만). 현재 `oxford_gari_2025.csv`, `itu_datahub.csv`, `itu_idi.csv` | 지표 DB 담당 |
 | `scripts/manual/` | 연 1회 수동으로 돌리는 변환 스크립트 (외부 패키지 사용 가능, Actions에서는 실행 안 함) | 지표 DB 담당 |
+| `assets/africa_map.json` | 지표 DB 지도용 국경 데이터 (Natural Earth 1:50m, public domain). `scripts/manual/build_africa_map.js`로 생성. Somaliland는 Somalia에 합쳐 그리고, 서사하라는 회색 배경으로만 표시 | 지표 DB 담당 |
+| `policy.html` | 정책 문서 DB 페이지: 국가별 AI 전략 등 정책 문서 현황 (원문은 링크만) | 지표 DB 담당 |
+| `data/manual/policy_documents.csv` | 정책 문서 목록 (손으로 관리). 형식은 아래 4절 policy_table 참고 | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
 | `.github/workflows/deploy.yml` | 사이트 배포. 파일이 올라오거나 자동 수집이 끝날 때마다 실행 (Settings → Pages → Source는 **GitHub Actions**) | 공유 · 수정 시 팀에 알림 |
@@ -34,7 +37,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 ## 3. 공동 작업 규칙
 
 1. **항상 최신본을 기준으로 수정한다.** 웹에서 파일을 업로드하는 경우, 올리기 직전에 GitHub에서 최신 파일을 다시 받아 그 위에 수정한다. 예전 파일로 덮어쓰면 다른 사람의 수정이 사라진다.
-2. **`index.html`을 고칠 때는 상단 버튼(📊 지표 DB, 🌍 한·아프리카재단, 연세대 아프리카연구원)을 그대로 둔다.** 이 버튼들은 사이트의 다른 페이지로 가는 유일한 길이다. 파일 전체를 새로 만들어 교체하는 경우에도 이 버튼들을 반드시 옮겨 넣는다. 수정 전에는 팀 단톡에 알린다.
+2. **`index.html`을 고칠 때는 상단 버튼(📊 지표 DB, 📜 정책 DB, 🌍 한·아프리카재단, 연세대 아프리카연구원)을 그대로 둔다.** 이 버튼들은 사이트의 다른 페이지로 가는 유일한 길이다. 파일 전체를 새로 만들어 교체하는 경우에도 이 버튼들을 반드시 옮겨 넣는다. 수정 전에는 팀 단톡에 알린다.
 3. **자동 생성 파일(`resources.json`, `data/*.json`, `data/csv/*`)은 손으로 고치지 않는다.** 수집 스크립트나 `manual_resources.json`을 고친다.
 4. **새 워크플로(`.github/workflows/*.yml`)를 만들 때**는 push 직전에 `git pull --rebase`를 넣어, 다른 자동 작업과 동시에 실행돼도 충돌하지 않게 한다. 실행 시각은 기존 작업(매일 00:00 UTC, 매월 1일 01:17 UTC)과 겹치지 않게 정한다.
 5. **수집 스크립트는 Python 표준 라이브러리만 사용한다** (`pip install` 없이 실행되도록). 외부 패키지가 꼭 필요하면 워크플로에 설치 단계를 추가하고 팀에 알린다.
@@ -46,6 +49,16 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 2. `pip install openpyxl` 후 `python scripts/manual/convert_oxford_gari.py <엑셀> <연도>` 실행 → `data/manual/oxford_gari_<연도>.csv` 생성
 3. CSV를 올리고 Actions에서 **Monthly Africa Indicators Update**를 실행하면 지표 DB에 반영된다.
 4. 평가 체계가 바뀐 해에는 이전 연도 CSV를 그대로 두되, 화면 주석에 비교 불가를 적는다 (2025년판부터 6개 Pillar 체계).
+
+### 수동 갱신: ITU DataHub 지표 (연 1회 권장)
+1. https://datahub.itu.int/query 에서 지표를 고르고 국가는 **Africa + Arab States**(북아프리카 포함)를 선택해 CSV로 내려받는다. 대상 지표는 `scripts/manual/convert_itu_datahub.py`의 `SERIES`에 있다. 요금(Price Basket) 지표는 별도 자료라 따로 받는다.
+2. `python scripts/manual/convert_itu_datahub.py <CSV1> [<CSV2> ...]` 실행 → `data/manual/itu_datahub.csv` 생성 (원본 CSV는 올리지 않는다)
+3. CSV를 올리고 Actions에서 **Monthly Africa Indicators Update**를 실행한다.
+
+### 연 1회 수동 갱신: ITU ICT 발전지수(IDI)
+1. 최신판 IDI 데이터셋 엑셀을 내려받는다 (최신 파일에 2023년판부터의 시트가 모두 들어 있다).
+2. `pip install openpyxl` 후 `python scripts/manual/convert_itu_idi.py <엑셀>` 실행 → `data/manual/itu_idi.csv` 생성
+3. Year는 판(edition) 연도다. 각 판의 지표값은 대체로 2년 전 자료다. 2023년판부터 새 방법론이라 그 이전 IDI와는 섞지 않는다.
 
 ## 4. DB 스키마 (연구계획서 그림 6-1 기준)
 
@@ -63,8 +76,20 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 
 `Indicator_Code`가 `IAS.`로 시작하는 지표는 연구원이 계산한 파생 지표다 (예: `IAS.FINDEX.GAP.GENDER` = 남성−여성 금융계좌 보유율, %p). 계산식은 `scripts/fetch_indicators.py`의 `GAPS`에 있다.
 
+### codebook (변수 설명서, 영문) — `data/codebook.json`, `data/csv/codebook.csv`
+`Indicator_Code`, `Table`, `Category_KO`, `Name_KO`, `Name_EN`, `Definition_EN`, `Unit`, `Source_ID`, `Source_Name`, `Original_Source_Note`, `License`, `Years`, `Countries`, `Shown_On_Site`
+- World Bank 지표의 영문 이름·정의는 매월 수집 때 World Bank API에서 자동으로 가져온다.
+- 수동 지표의 영문 이름·정의는 변환 스크립트가 만드는 `data/manual/*_meta.csv`에 있다. **새 지표를 추가할 때는 반드시 영문 이름과 정의를 함께 넣는다** (원 기관의 정의 문구를 우선 사용).
+- 연구원 계산 지표(`IAS.`)의 영문 이름은 `GAPS`의 `name_en`, 정의는 계산식으로 자동 생성된다.
+
 ### aidivide_table (AI 격차 지표) — `data/aidivide.json`
 `Country_ID`, `Year`, `AI_Dimension`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
+
+### policy_table (정책 문서) — `data/manual/policy_documents.csv`
+`Doc_ID`, `Country_ID`, `Doc_Type`(`ai_strategy` / `ai_policy_framework` / 향후 `data_protection_law` 등), `Title`(원어 공식 명칭), `Year`, `Date`(YYYY-MM 또는 YYYY-MM-DD), `Status`(`adopted` / `draft` / `in_development` / `unclear` / `superseded`), `Issuing_Body`, `Official_URL`(정부·기관 공식 원문), `Reference_URL`(OECD.AI 등 트래커), `Verified`(`yes`는 사람이 링크를 직접 열어 확인한 경우만), `Last_Checked`, `Note_KO`
+- 문서 원문은 저장소에 올리지 않고 링크만 둔다. 공식 원문을 못 찾으면 `Official_URL`을 비우고 `Reference_URL`만 넣는다.
+- 새 판이 나오면 이전 판은 지우지 않고 `Status`를 `superseded`로 바꾼다.
+- 출처 간 정보가 엇갈리면 `unclear`로 두고 `Note_KO`에 적는다.
 
 ### source_table (자료 출처) — `data/source.json`
 `Source_ID`, `Source_Name`, `Source_Type`, `Collection_Date`, `Update_Date`, `Verification_Status`, `Reliability_Level`, `Source_URL`, `License`, `License_URL`
@@ -113,10 +138,11 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
   재배포가 허용되지 않거나 조건을 확인할 수 없는 자료는 수치를 게시하지 않고 링크만 건다.
   - World Bank: CC BY 4.0 (World Bank가 보증하는 것처럼 표현 금지)
   - Oxford Insights Government AI Readiness Index: CC BY-SA 4.0 (가공 데이터도 같은 조건으로 공개)
+  - ITU DataHub·IDI: CC BY-NC-SA 3.0 IGO (비상업 목적만, 가공 데이터도 같은 조건). 출처가 상업 제3자인 지표는 제외. IDI 엑셀 자체에는 라이선스 표기가 없으나 DataHub 이용 조건과 IDI 2026 보고서(CC BY-NC-SA 3.0 IGO)를 근거로 적용
   - UN E-Government Development Index(EGDI): UN 저작권(All rights reserved) → 수치 게시 금지, `data.html`의 "외부 지표 바로가기"에 링크만 둔다
 
 ## 7. 사이트 디자인 규칙
 
 - `index.html`, `data.html`의 색상 변수(`--bg`, `--accent` 등)와 글꼴(DM Sans / DM Serif Display)을 그대로 쓴다.
-- 새 페이지를 만들면 상단에 다른 페이지(자료 DB, 지표 DB)로 가는 버튼을 반드시 넣는다.
+- 새 페이지를 만들면 상단에 다른 페이지(자료 DB, 지표 DB, 정책 DB)로 가는 버튼을 반드시 넣는다.
 - 외부 라이브러리는 CDN으로만 불러온다 (현재 Chart.js 4.4.1 사용).

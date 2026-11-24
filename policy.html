@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아프리카 디지털·AI 정책 문서 DB</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f4f0;--surface:#fff;--border:rgba(0,0,0,.07);--border-md:rgba(0,0,0,.13);
+  --text:#181816;--t2:#58574f;--t3:#9c9b93;--accent:#bf3d18;--accent-bg:#fdf0ed;--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem;position:sticky;top:0;z-index:200}
+.hinner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px;gap:12px;flex-wrap:wrap}
+.logo{font-family:'DM Serif Display',serif;font-size:18px;white-space:nowrap}
+.logo em{color:var(--accent);font-style:normal}
+.hnav{display:flex;gap:6px;flex-wrap:wrap}
+.hlink{font-size:12px;font-weight:500;padding:4px 12px;border-radius:999px;border:1px solid rgba(191,61,24,.3);color:var(--accent);text-decoration:none}
+.hlink.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hlink:hover:not(.on){background:var(--accent-bg)}
+.wrap{max-width:1400px;margin:0 auto;padding:1.25rem 1.5rem 3rem}
+.intro h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:26px;line-height:1.2}
+.intro p{color:var(--t2);font-size:13px;margin-top:4px}
+.controls{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:14px 0}
+.ctl{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.lbl{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em}
+.pill{font:inherit;font-size:12px;font-weight:500;padding:3px 11px;border-radius:999px;border:1px solid var(--border-md);background:transparent;color:var(--t2);cursor:pointer}
+.pill.on{background:var(--text);color:#fff;border-color:var(--text)}
+.pill:disabled{opacity:.45;cursor:not-allowed}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:10px 14px}
+.stat .n{font-family:'DM Serif Display',serif;font-size:26px;line-height:1.1}
+.stat .l{font-size:12px;color:var(--t2)}
+.grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px}
+.card h2{font-size:14px;font-weight:500;margin-bottom:2px}
+.card .sub{font-size:12px;color:var(--t3);margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{text-align:left;padding:7px 6px;white-space:normal;border-bottom:1px solid var(--border);vertical-align:top}
+th{white-space:nowrap;font-weight:500;color:var(--t3);font-size:11px;position:sticky;top:54px;background:var(--surface)}
+tr.sel td{background:var(--accent-bg)}
+tr.row{cursor:pointer}
+tr.row:hover td{background:#faf9f6}
+.badge{display:inline-block;font-size:11px;font-weight:500;padding:1px 8px;border-radius:999px;white-space:nowrap}
+.b-adopted{background:#e5f2ea;color:#1a6b40}
+.b-draft{background:#fff3dc;color:#8a5a00}
+.b-in_development{background:#eef2fb;color:#2a4f8c}
+.b-unclear{background:#f4ecf8;color:#6b2f8a}
+.b-superseded{background:#f0efea;color:#77756c}
+.b-none{background:#f5f4f0;color:#9c9b93}
+.chk{font-size:11px;color:var(--t3);white-space:nowrap}
+.chk.ok{color:#1a6b40}
+a{color:var(--accent)}
+.docs{display:flex;flex-direction:column;gap:10px}
+.doc{border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.doc .t{font-weight:500;font-size:13px}
+.doc .m{font-size:12px;color:var(--t2);margin-top:3px}
+.doc .n{font-size:12px;color:var(--t3);margin-top:4px}
+.doc .links{display:flex;gap:10px;margin-top:6px;font-size:12px;flex-wrap:wrap}
+.map{width:100%;height:auto;display:block;max-height:460px}
+.map .cty{stroke:#fff;stroke-width:.6;cursor:pointer}
+.map .cty:hover{stroke:var(--text);stroke-width:1.2}
+.map .cty.dim{opacity:.25}
+.map .cty.sel{stroke:var(--accent);stroke-width:1.8}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:11px;color:var(--t2);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.foot{margin-top:16px;font-size:12px;color:var(--t2);line-height:1.7}
+.dl a{font-size:12px;padding:4px 10px;border:1px solid var(--border-md);border-radius:6px;text-decoration:none;color:var(--text);background:var(--surface);display:inline-block;margin:6px 0}
+.loading{padding:2rem;text-align:center;color:var(--t3)}
+</style>
+</head>
+<body>
+<header>
+  <div class="hinner">
+    <div class="logo">Africa <em>Policy</em> Brief</div>
+    <nav class="hnav">
+      <a class="hlink" href="index.html">📚 자료 DB</a>
+      <a class="hlink" href="data.html">📊 지표 DB</a>
+      <a class="hlink on" href="policy.html">📜 정책 DB</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>아프리카 디지털·AI 정책 문서</h1>
+    <p>아프리카 54개국의 국가 AI 전략 등 디지털·AI 관련 정책 문서를 국가별로 정리했습니다. 문서는 각국 정부의 공식 원문으로 연결하며, 이 사이트에 원문을 게재하지 않습니다.</p>
+  </div>
+
+  <div class="controls">
+    <div class="ctl"><span class="lbl">문서 종류</span>
+      <button class="pill on" data-type="ai">AI 전략·정책</button>
+      <button class="pill" disabled title="준비 중">개인정보보호법 (준비 중)</button>
+    </div>
+    <div class="ctl"><span class="lbl">지역</span><span id="regionPills"></span></div>
+  </div>
+
+  <div id="app" class="loading">자료를 불러오는 중…</div>
+
+  <div class="foot">
+    <div class="dl"><a href="data/manual/policy_documents.csv" download>정책 문서 목록 내려받기 (CSV)</a></div>
+    <b>작성 기준</b> — 국가별 목록은 OECD「AI governance in Africa」(2026년 4월 기준 국가 AI 전략 표), OECD.AI Policy Navigator 등 공개 트래커를 출발점으로 삼고, 각국 정부의 공식 원문을 찾아 연결했습니다.
+    <b>검수 완료</b>는 정부·기관 공식 원문 링크를 확인한 문서이고, <b>확인 필요</b>는 트래커 정보만 있거나 출처 간 정보가 엇갈리는 문서입니다.
+    목록에 없는 나라는 "문서가 없다"는 뜻이 아니라 아직 확인된 문서가 없다는 뜻입니다.
+    각 문서의 저작권은 발행 기관에 있습니다. 지도: Natural Earth (public domain), 국경 표시는 연구원의 입장과 무관합니다.
+  </div>
+</div>
+
+<script>
+const REGION_KO = {North:'북부', West:'서부', Central:'중부', East:'동부', Southern:'남부'};
+const STATUS = {
+  adopted:{ko:'채택', color:'#2e8b57', rank:5},
+  draft:{ko:'초안', color:'#e0a63a', rank:4},
+  in_development:{ko:'수립 중', color:'#7fa3d8', rank:3},
+  unclear:{ko:'확인 필요', color:'#b48ad0', rank:2},
+  superseded:{ko:'이전 판', color:'#c9c6bc', rank:1},
+};
+const TYPE_KO = {ai_strategy:'AI 전략·정책', ai_policy_framework:'AI 정책 프레임워크'};
+const S = {region:'All', country:null};
+let D = {};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// 따옴표·쉼표를 지원하는 CSV 파서
+function parseCSV(text){
+  const rows = []; let row = [], cur = '', q = false;
+  for(let i = 0; i < text.length; i++){
+    const c = text[i];
+    if(q){
+      if(c === '"' && text[i+1] === '"'){ cur += '"'; i++; }
+      else if(c === '"') q = false;
+      else cur += c;
+    } else if(c === '"') q = true;
+    else if(c === ','){ row.push(cur); cur = ''; }
+    else if(c === '\n' || c === '\r'){
+      if(c === '\r' && text[i+1] === '\n') i++;
+      row.push(cur); cur = '';
+      if(row.some(v => v !== '')) rows.push(row);
+      row = [];
+    } else cur += c;
+  }
+  if(cur !== '' || row.length){ row.push(cur); rows.push(row); }
+  const head = rows.shift();
+  return rows.map(r => Object.fromEntries(head.map((h,i) => [h, r[i] ?? ''])));
+}
+
+async function load(){
+  try{
+    const [csv, country, map] = await Promise.all([
+      fetch(`data/manual/policy_documents.csv?t=${Date.now()}`).then(r => { if(!r.ok) throw 'csv'; return r.text(); }),
+      fetch('data/country.json').then(r => r.json()),
+      fetch('assets/africa_map.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    ]);
+    D.docs = parseCSV(csv).filter(d => d.Doc_ID);
+    D.countries = country.rows;
+    D.cmap = Object.fromEntries(country.rows.map(c => [c.Country_ID, c]));
+    D.map = map;
+    initControls(); render();
+  }catch(e){
+    document.getElementById('app').textContent = '자료를 불러오지 못했습니다.';
+  }
+}
+
+function initControls(){
+  const rp = document.getElementById('regionPills');
+  rp.innerHTML = ['All', ...Object.keys(REGION_KO)].map(r =>
+    `<button class="pill${r==='All'?' on':''}" data-region="${r}">${r==='All'?'전체':REGION_KO[r]}</button>`).join(' ');
+  rp.querySelectorAll('button').forEach(b => b.onclick = () => {
+    S.region = b.dataset.region;
+    rp.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+    render();
+  });
+}
+
+const docsOf = iso => D.docs.filter(d => d.Country_ID === iso)
+  .sort((a,b) => (b.Year||0) - (a.Year||0) || STATUS[b.Status]?.rank - STATUS[a.Status]?.rank);
+// 국가별 대표 상태: 이전 판을 제외한 문서 중 가장 진전된 상태
+function headDoc(iso){
+  const ds = docsOf(iso).filter(d => d.Status !== 'superseded');
+  return ds.sort((a,b) => STATUS[b.Status].rank - STATUS[a.Status].rank || (b.Year||0) - (a.Year||0))[0] || null;
+}
+
+function badge(st){ return st ? `<span class="badge b-${st}">${STATUS[st].ko}</span>` : `<span class="badge b-none">확인된 문서 없음</span>`; }
+
+function render(){
+  const list = D.countries.filter(c => S.region === 'All' || c.Region === S.region)
+    .map(c => ({c, h: headDoc(c.Country_ID)}))
+    .sort((a,b) => (STATUS[b.h?.Status]?.rank||0) - (STATUS[a.h?.Status]?.rank||0) || a.c.Country_Name.localeCompare(b.c.Country_Name,'ko'));
+  const cnt = st => list.filter(x => x.h?.Status === st).length;
+  const none = list.filter(x => !x.h).length;
+
+  const rows = list.map(({c,h}) => `<tr class="row${S.country===c.Country_ID?' sel':''}" data-c="${c.Country_ID}">
+      <td>${esc(c.Country_Name)}<div class="chk">${esc(c.Country_Name_EN)}</div></td>
+      <td style="white-space:nowrap">${esc(REGION_KO[c.Region]||'')}</td>
+      <td>${badge(h?.Status)}</td>
+      <td>${h ? esc(h.Title) : ''}</td>
+      <td>${h?.Year ? esc(h.Year) : ''}</td>
+      <td>${h ? (h.Verified==='yes' ? '<span class="chk ok">✔ 검수 완료</span>' : '<span class="chk">확인 필요</span>') : ''}</td></tr>`).join('');
+
+  const conti = D.docs.filter(d => d.Country_ID === 'AFR');
+  document.getElementById('app').className = '';
+  document.getElementById('app').innerHTML = `
+    <div class="stats">
+      <div class="stat"><div class="n">${cnt('adopted')}</div><div class="l">AI 전략·정책 채택</div></div>
+      <div class="stat"><div class="n">${cnt('draft') + cnt('in_development')}</div><div class="l">초안·수립 중</div></div>
+      <div class="stat"><div class="n">${cnt('unclear')}</div><div class="l">확인 필요</div></div>
+      <div class="stat"><div class="n">${none}</div><div class="l">확인된 문서 없음</div></div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h2>국가별 현황 — AI 전략·정책</h2>
+        <div class="sub">나라를 누르면 오른쪽에 문서 목록이 나옵니다 (${S.region==='All'?'전체':REGION_KO[S.region]+'아프리카'} ${list.length}개국)</div>
+        <table><thead><tr><th>국가</th><th>지역</th><th>상태</th><th>최신 문서</th><th>연도</th><th>원문 확인</th></tr></thead><tbody>${rows}</tbody></table>
+      </div>
+      <div>
+        ${mapCard()}
+        <div class="card" style="margin-top:14px">${detail()}</div>
+        ${conti.length ? `<div class="card" style="margin-top:14px"><h2>대륙 차원 (아프리카연합)</h2><div class="sub">AU 차원에서 채택된 문서</div><div class="docs">${conti.map(docCard).join('')}</div></div>` : ''}
+      </div>
+    </div>`;
+  document.querySelectorAll('tr.row, .map .cty').forEach(el => el.onclick = () => { S.country = el.dataset.c; render(); });
+}
+
+function mapCard(){
+  if(!D.map) return '';
+  const shapes = [], dots = [];
+  for(const [iso, g] of Object.entries(D.map.countries)){
+    const h = headDoc(iso), c = D.cmap[iso];
+    const fill = h ? STATUS[h.Status].color : '#ebe9e3';
+    const dim = S.region !== 'All' && c?.Region !== S.region ? ' dim' : '';
+    const sel = S.country === iso ? ' sel' : '';
+    const tip = `${c?.Country_Name||iso}: ${h ? STATUS[h.Status].ko + (h.Year ? ' (' + h.Year + ')' : '') : '확인된 문서 없음'}`;
+    shapes.push(`<path class="cty${dim}${sel}" data-c="${iso}" d="${g.d}" fill="${fill}"><title>${esc(tip)}</title></path>`);
+    if(g.small) dots.push(`<circle class="cty${dim}${sel}" data-c="${iso}" cx="${g.cx}" cy="${g.cy}" r="5" fill="${fill}"><title>${esc(tip)}</title></circle>`);
+  }
+  const esh = D.map.extra?.ESH ? `<path d="${D.map.extra.ESH}" fill="#f2f1ec" stroke="#b9b6aa" stroke-width=".6" stroke-dasharray="2 1.5"><title>서사하라 (Western Sahara): 지위 미정 지역</title></path>` : '';
+  return `<div class="card"><h2>지도로 보기</h2><div class="sub">국가 AI 전략·정책 상태</div>
+    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="국가 AI 전략 현황 지도">${shapes.join('')}${esh}${dots.join('')}</svg>
+    <div class="legend">${['adopted','draft','in_development','unclear'].map(s => `<span><i style="background:${STATUS[s].color}"></i>${STATUS[s].ko}</span>`).join('')}<span><i style="background:#ebe9e3"></i>확인된 문서 없음</span></div></div>`;
+}
+
+function docCard(d){
+  return `<div class="doc">
+    <div class="t">${esc(d.Title)}</div>
+    <div class="m">${badge(d.Status)} ${esc(TYPE_KO[d.Doc_Type]||d.Doc_Type)} · ${esc(d.Date || d.Year || '연도 미상')} · ${esc(d.Issuing_Body)}</div>
+    ${d.Note_KO ? `<div class="n">${esc(d.Note_KO)}</div>` : ''}
+    <div class="links">
+      ${d.Official_URL ? `<a href="${esc(d.Official_URL)}" target="_blank" rel="noopener">공식 원문 ↗</a>` : '<span class="chk">공식 원문 링크 확인 중</span>'}
+      ${d.Reference_URL ? `<a href="${esc(d.Reference_URL)}" target="_blank" rel="noopener">참고 출처 ↗</a>` : ''}
+      <span class="chk${d.Verified==='yes'?' ok':''}">${d.Verified==='yes' ? '✔ 검수 완료' : '확인 필요'} · ${esc(d.Last_Checked)}</span>
+    </div></div>`;
+}
+
+function detail(){
+  if(!S.country) return `<h2>문서 목록</h2><div class="sub">왼쪽 표나 지도에서 나라를 고르세요.</div>`;
+  const c = D.cmap[S.country], ds = docsOf(S.country);
+  return `<h2>${esc(c.Country_Name)} <span class="chk">${esc(c.Country_Name_EN)}</span></h2>
+    <div class="sub">${esc(REGION_KO[c.Region]||'')}아프리카 · 문서 ${ds.length}건</div>
+    ${ds.length ? `<div class="docs">${ds.map(docCard).join('')}</div>` : '<div class="sub">아직 확인된 문서가 없습니다.</div>'}`;
+}
+
+load();
+</script>
+</body>
+</html>

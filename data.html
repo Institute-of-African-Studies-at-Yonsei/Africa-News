@@ -49,6 +49,7 @@ select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--border
 .cname{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .track{display:block;height:12px;background:var(--bg);border-radius:3px;overflow:hidden}
 .fill{display:block;height:100%;background:#2a5b8c;border-radius:3px}
+.fill.neg{background:#b9b6aa}
 .bar.sel .fill{background:var(--accent)}
 .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--t2)}
 .val small{color:var(--t3);font-size:10px;margin-left:2px}
@@ -64,6 +65,7 @@ th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--border)}
 th{font-weight:500;color:var(--t3);font-size:11px}
 td.num{text-align:right;font-variant-numeric:tabular-nums}
 .tag{font-size:10px;padding:1px 6px;border-radius:4px;background:#f0f7ff;color:#1a4a7a;white-space:nowrap}
+.srccell{font-size:11px;color:var(--t3)}.srccell a,.sub a{color:var(--t2)}
 .tag.ai{background:#f0edf8;color:#4a2080}
 
 .foot{margin-top:14px;font-size:12px;color:var(--t2)}
@@ -73,6 +75,16 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .dl a:hover{background:var(--bg)}
 .lic ul{margin:0 0 6px 18px}.lic li{margin:2px 0}
 .lic-note{font-size:11px;color:var(--t3);margin-top:6px;line-height:1.6}
+.defn{margin:-4px 0 10px;font-size:12px;color:var(--t2)}.defn summary{cursor:pointer;color:var(--t2)}.defn p{margin-top:6px;line-height:1.6}.defn .code{color:var(--t3);font-size:11px}
+.map{width:100%;height:auto;display:block;max-height:520px}
+.map .cty{stroke:#fff;stroke-width:.6;cursor:pointer;transition:opacity .15s}
+.map .cty:hover{stroke:var(--text);stroke-width:1.2}
+.map .cty.dim{opacity:.25}
+.map .cty.sel{stroke:var(--accent);stroke-width:1.8}
+.legend{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--t2);margin-top:6px;flex-wrap:wrap}
+.legend .grad{width:140px;height:8px;border-radius:4px;background:linear-gradient(90deg,rgb(227,236,245),rgb(31,78,121))}
+.legend .na{width:12px;height:8px;border-radius:2px;background:#ebe9e3;margin-left:10px}
+.mapnote{font-size:10px;color:var(--t3);margin-top:4px}
 .loading{padding:2rem;text-align:center;color:var(--t3)}
 </style>
 </head>
@@ -83,6 +95,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
     <nav class="hnav">
       <a class="hlink" href="index.html">📚 자료 DB</a>
       <a class="hlink on" href="data.html">📊 지표 DB</a>
+      <a class="hlink" href="policy.html">📜 정책 DB</a>
     </nav>
   </div>
 </header>
@@ -115,6 +128,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
       <a href="data/csv/aidivide.csv" download>AI 격차 지표</a>
       <a href="data/csv/country.csv" download>국가 기본정보</a>
       <a href="data/csv/source.csv" download>자료 출처</a>
+      <a href="data/csv/codebook.csv" download>변수 설명서 (Codebook, EN)</a>
     </div>
     <div id="sourceNote"></div>
   </div>
@@ -136,11 +150,24 @@ async function load(){
     const [country, digitalx, aidivide, source] = await Promise.all(['country','digitalx','aidivide','source'].map(get));
     D = {country, digitalx, aidivide, source};
     D.cmap = Object.fromEntries(country.rows.map(c => [c.Country_ID, c]));
+    try { D.map = await fetch('assets/africa_map.json').then(r => r.ok ? r.json() : null); } catch(e) { D.map = null; }
     initControls();
     render();
   }catch(e){
     document.getElementById('app').innerHTML = '데이터 파일을 찾을 수 없습니다. Actions 탭에서 “Monthly Africa Indicators Update”를 한 번 실행해 주세요.';
   }
+}
+
+const SRC_SHORT = {WB_WDI:'World Bank WDI', ITU:'ITU (World Bank 경유)', WB_FINDEX:'World Bank Global Findex', OXF_GARI:'Oxford Insights', ITU_DH:'ITU DataHub', ITU_IDI:'ITU IDI'};
+// 지표별 출처·라이선스 표시 (연구원 계산 지표는 원자료 출처와 함께 '연구원 계산' 명시)
+function sourceLabel(ind, short){
+  const src = (D.source.rows || []).find(r => r.Source_ID === ind.source) || {};
+  const name = short ? (SRC_SHORT[ind.source] || ind.source) : (src.Source_Name || SRC_SHORT[ind.source] || ind.source);
+  const lic = src.License || 'CC BY 4.0';
+  const licUrl = src.License_URL || 'https://data.worldbank.org/summary-terms-of-use';
+  const derived = ind.code.startsWith('IAS.') ? '연구원 계산 · 원자료: ' : '';
+  return `${derived}<a href="${esc(src.Source_URL || '#')}" target="_blank" rel="noopener">${esc(name)}</a>` +
+    (short ? '' : ` · <a href="${esc(licUrl)}" target="_blank" rel="noopener">${esc(lic)}</a>`);
 }
 
 function indicatorsFor(table){ return D.source.indicators.filter(i => i.table === table); }
@@ -174,7 +201,10 @@ function initControls(){
         `<a href="${esc(lic.License_URL)}" target="_blank" rel="noopener">${esc(lic.License)}</a></li>`;
     }).join('') + `</ul></div>` +
     `<p class="lic-note">이 페이지의 수치는 위 출처의 공개 데이터를 연세대학교 아프리카연구원이 아프리카 54개국 기준으로 추출·정리(국가명 한글화, 지표 분류)한 것입니다. ` +
-    `원 데이터 제공 기관은 이 사이트나 그 이용 방식을 보증하지 않습니다. 각 데이터의 이용 조건은 해당 라이선스를 따르며, Oxford Insights 자료를 가공·재배포할 때는 같은 조건(CC BY-SA 4.0)으로 공개해야 합니다.</p>` +
+    `원 데이터 제공 기관은 이 사이트나 그 이용 방식을 보증하지 않습니다. 각 데이터의 이용 조건은 해당 라이선스를 따르며, Oxford Insights 자료(CC BY-SA 4.0)와 ITU DataHub 자료(CC BY-NC-SA 3.0 IGO, 비상업 목적만)를 가공·재배포할 때는 같은 조건으로 공개해야 합니다.</p>` +
+    `<p class="lic-note">※ 격차 지표에서 회색 막대는 값이 음수(예: 여성 보유율이 남성보다 높음)인 경우입니다.</p>` +
+    `<p class="lic-note">※ ICT 발전지수(IDI)의 연도는 발간 판 기준이며, 각 판의 지표값은 대체로 2년 전 자료입니다(예: 2026년판 = 2024년 자료). 2023년판부터 새 방법론이 적용되어 2023년판 이후끼리만 비교합니다.</p>` +
+    `<p class="lic-note">※ 요금 부담 지표는 값이 클수록 비싸다는 뜻입니다(1인당 국민소득 대비 %).</p>` +
     `<p class="lic-note">※ 정부 AI 준비도 지수는 2025년판부터 평가 체계가 바뀌어 이전 연도와 점수를 직접 비교하지 않습니다.</p>` +
     `<p class="lic-note">※ 국가별로 최신 자료 연도가 다르며, 막대 옆 작은 숫자가 해당 값의 연도입니다. 자료가 없는 국가는 순위에서 제외됩니다.</p>`;
 }
@@ -182,8 +212,17 @@ function initControls(){
 function fillIndicators(){
   const list = indicatorsFor(S.table);
   if(!S.ind || !list.find(i => i.code === S.ind)) S.ind = list[0]?.code;
-  document.getElementById('indSel').innerHTML = list.map(i =>
-    `<option value="${i.code}"${i.code===S.ind?' selected':''}>[${esc(i.category)}] ${esc(i.name)}</option>`).join('');
+  // 분류별로 묶어서 표시 (분류 순서는 지표 목록에 처음 나온 순서)
+  const groups = [];
+  for(const i of list){
+    let g = groups.find(g => g.cat === i.category);
+    if(!g){ g = {cat: i.category, items: []}; groups.push(g); }
+    g.items.push(i);
+  }
+  document.getElementById('indSel').innerHTML = groups.map(g =>
+    `<optgroup label="${esc(g.cat)}">` + g.items.map(i =>
+      `<option value="${i.code}"${i.code===S.ind?' selected':''}>${esc(i.name)}</option>`).join('') +
+    `</optgroup>`).join('');
 }
 
 function rowsFor(code){ return D[S.table].rows.filter(r => r.Indicator_Code === code); }
@@ -203,7 +242,7 @@ function render(){
   let list = Object.values(latest)
     .filter(r => S.region === 'All' || D.cmap[r.Country_ID]?.Region === S.region)
     .sort((a,b) => b.Value - a.Value);
-  const max = Math.max(...list.map(r => r.Value), 0) || 1;
+  const max = Math.max(...list.map(r => Math.abs(r.Value)), 0) || 1;
   const missing = D.country.rows.filter(c => (S.region === 'All' || c.Region === S.region) && !latest[c.Country_ID]);
 
   const bars = list.map((r,i) => {
@@ -211,7 +250,7 @@ function render(){
     const sel = S.countries.includes(r.Country_ID) ? ' sel' : '';
     return `<div class="bar${sel}" data-c="${r.Country_ID}" title="${esc(c.Country_Name_EN||'')}">
       <span class="rank">${i+1}</span><span class="cname">${esc(c.Country_Name)}</span>
-      <span class="track"><span class="fill" style="width:${(r.Value/max*100).toFixed(1)}%"></span></span>
+      <span class="track"><span class="fill${r.Value < 0 ? ' neg' : ''}" style="width:${(Math.abs(r.Value)/max*100).toFixed(1)}%"></span></span>
       <span class="val">${fmt(r.Value)}<small>'${String(r.Year).slice(2)}</small></span></div>`;
   }).join('');
 
@@ -220,11 +259,13 @@ function render(){
   <div class="grid">
     <div class="card">
       <h2>${esc(meta.name)} — 국가별 최신값</h2>
-      <div class="sub">단위: ${esc(meta.unit)} · 국가를 누르면 오른쪽 추이 그래프에 추가됩니다</div>
+      <div class="sub">단위: ${esc(meta.unit)} · 출처: ${sourceLabel(meta)}<br>국가를 누르면 오른쪽 추이 그래프에 추가됩니다</div>
+      ${meta.name_en ? `<details class="defn"><summary>Definition (EN) · ${esc(meta.name_en)}</summary><p>${esc(meta.definition || '')}</p><p class="code">Indicator code: ${esc(meta.code)}</p></details>` : ''}
       <div class="bars">${bars || '<div class="nodata">자료가 없습니다.</div>'}</div>
       ${missing.length ? `<div class="nodata">자료 없음: ${missing.map(c => esc(c.Country_Name)).join(', ')}</div>` : ''}
     </div>
     <div>
+      ${mapCard(meta, latest)}
       <div class="card">
         <h2>연도별 추이 비교</h2>
         <div class="sub">최대 5개국 · ${esc(meta.name)} (${esc(meta.unit)})</div>
@@ -245,10 +286,41 @@ function render(){
     </div>
   </div>`;
 
-  document.querySelectorAll('.bar').forEach(b => b.onclick = () => toggleCountry(b.dataset.c));
+  document.querySelectorAll('.bar, .map .cty').forEach(b => b.onclick = () => toggleCountry(b.dataset.c));
   document.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => toggleCountry(b.dataset.rm));
   document.getElementById('addC').onchange = e => e.target.value && toggleCountry(e.target.value);
   drawChart(meta);
+}
+
+// 지도: 선택한 지표의 국가별 최신값을 색 진하기로 표시 (Natural Earth 국경, public domain)
+const MAP_LO = [227,236,245], MAP_HI = [31,78,121];
+function mapColor(t){
+  const c = MAP_LO.map((lo,i) => Math.round(lo + (MAP_HI[i]-lo)*t));
+  return `rgb(${c.join(',')})`;
+}
+function mapCard(meta, latest){
+  if(!D.map) return '';
+  const vals = Object.values(latest).map(r => r.Value);
+  const lo = Math.min(...vals), hi = Math.max(...vals), span = (hi - lo) || 1;
+  const shapes = [], dots = [];
+  for(const [iso, g] of Object.entries(D.map.countries)){
+    const r = latest[iso], c = D.cmap[iso];
+    const fill = r ? mapColor((r.Value - lo) / span) : '#ebe9e3';
+    const dim = S.region !== 'All' && c?.Region !== S.region ? ' dim' : '';
+    const sel = S.countries.includes(iso) ? ' sel' : '';
+    const tip = `${c?.Country_Name || iso} (${c?.Country_Name_EN || ''}): ${r ? fmt(r.Value) + ' ' + meta.unit + ' · ' + r.Year : '자료 없음'}`;
+    shapes.push(`<path class="cty${dim}${sel}" data-c="${iso}" d="${g.d}" fill="${fill}"><title>${esc(tip)}</title></path>`);
+    if(g.small) dots.push(`<circle class="cty${dim}${sel}" data-c="${iso}" cx="${g.cx}" cy="${g.cy}" r="5" fill="${fill}"><title>${esc(tip)}</title></circle>`);
+  }
+  const esh = D.map.extra?.ESH ? `<path d="${D.map.extra.ESH}" fill="#f2f1ec" stroke="#b9b6aa" stroke-width=".6" stroke-dasharray="2 1.5"><title>서사하라 (Western Sahara): 지위 미정 지역, 지표 대상 아님</title></path>` : '';
+  return `<div class="card" style="margin-bottom:14px">
+    <h2>지도로 보기</h2>
+    <div class="sub">${esc(meta.name)} · 국가별 최신값 · 국가를 누르면 추이 그래프에 추가됩니다</div>
+    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="${esc(meta.name)} 아프리카 지도">${shapes.join('')}${esh}${dots.join('')}</svg>
+    <div class="legend"><span>${vals.length ? fmt(lo) : ''}</span><span class="grad"></span><span>${vals.length ? fmt(hi) : ''}</span>
+      <span class="na"></span><span>자료 없음</span></div>
+    <div class="mapnote">지도: Natural Earth (public domain). 국경 표시는 연구원의 입장과 무관합니다. 섬나라는 원으로 함께 표시합니다.</div>
+  </div>`;
 }
 
 function toggleCountry(c){
@@ -268,9 +340,9 @@ function profileTable(c){
       <td>${esc(i.name)}</td>
       <td class="num">${last ? fmt(last.Value) : '—'}</td>
       <td class="num">${last ? last.Year : ''}</td>
-      <td class="num">${rank ? `${rank}/${vals.length}` : ''}</td></tr>`;
+      <td class="num">${rank ? `${rank}/${vals.length}` : ''}</td><td class="srccell">${sourceLabel(i, true)}</td></tr>`;
   }).join('');
-  return `<table><thead><tr><th>분야</th><th>지표</th><th style="text-align:right">값</th><th style="text-align:right">연도</th><th style="text-align:right">순위</th></tr></thead><tbody>${rows}</tbody></table>`;
+  return `<table><thead><tr><th>분야</th><th>지표</th><th style="text-align:right">값</th><th style="text-align:right">연도</th><th style="text-align:right">순위</th><th>출처</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 function latestByCountryAll(ind){
