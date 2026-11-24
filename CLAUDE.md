@@ -26,6 +26,8 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data/manual/` | 직접 내려받아 변환한 지표 CSV (라이선스가 허용하는 것만). 현재 `oxford_gari_2025.csv`, `itu_datahub.csv`, `itu_idi.csv` | 지표 DB 담당 |
 | `scripts/manual/` | 연 1회 수동으로 돌리는 변환 스크립트 (외부 패키지 사용 가능, Actions에서는 실행 안 함) | 지표 DB 담당 |
 | `assets/africa_map.json` | 지표 DB 지도용 국경 데이터 (Natural Earth 1:50m, public domain). `scripts/manual/build_africa_map.js`로 생성. Somaliland는 Somalia에 합쳐 그리고, 서사하라는 회색 배경으로만 표시 | 지표 DB 담당 |
+| `policy.html` | 정책 문서 DB 페이지: 국가별 AI 전략 등 정책 문서 현황 (원문은 링크만) | 지표 DB 담당 |
+| `data/manual/policy_documents.csv` | 정책 문서 목록 (손으로 관리). 형식은 아래 4절 policy_table 참고 | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
 | `.github/workflows/deploy.yml` | 사이트 배포. 파일이 올라오거나 자동 수집이 끝날 때마다 실행 (Settings → Pages → Source는 **GitHub Actions**) | 공유 · 수정 시 팀에 알림 |
@@ -35,7 +37,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 ## 3. 공동 작업 규칙
 
 1. **항상 최신본을 기준으로 수정한다.** 웹에서 파일을 업로드하는 경우, 올리기 직전에 GitHub에서 최신 파일을 다시 받아 그 위에 수정한다. 예전 파일로 덮어쓰면 다른 사람의 수정이 사라진다.
-2. **`index.html`을 고칠 때는 상단 버튼(📊 지표 DB, 🌍 한·아프리카재단, 연세대 아프리카연구원)을 그대로 둔다.** 이 버튼들은 사이트의 다른 페이지로 가는 유일한 길이다. 파일 전체를 새로 만들어 교체하는 경우에도 이 버튼들을 반드시 옮겨 넣는다. 수정 전에는 팀 단톡에 알린다.
+2. **`index.html`을 고칠 때는 상단 버튼(📊 지표 DB, 📜 정책 DB, 🌍 한·아프리카재단, 연세대 아프리카연구원)을 그대로 둔다.** 이 버튼들은 사이트의 다른 페이지로 가는 유일한 길이다. 파일 전체를 새로 만들어 교체하는 경우에도 이 버튼들을 반드시 옮겨 넣는다. 수정 전에는 팀 단톡에 알린다.
 3. **자동 생성 파일(`resources.json`, `data/*.json`, `data/csv/*`)은 손으로 고치지 않는다.** 수집 스크립트나 `manual_resources.json`을 고친다.
 4. **새 워크플로(`.github/workflows/*.yml`)를 만들 때**는 push 직전에 `git pull --rebase`를 넣어, 다른 자동 작업과 동시에 실행돼도 충돌하지 않게 한다. 실행 시각은 기존 작업(매일 00:00 UTC, 매월 1일 01:17 UTC)과 겹치지 않게 정한다.
 5. **수집 스크립트는 Python 표준 라이브러리만 사용한다** (`pip install` 없이 실행되도록). 외부 패키지가 꼭 필요하면 워크플로에 설치 단계를 추가하고 팀에 알린다.
@@ -82,6 +84,12 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 
 ### aidivide_table (AI 격차 지표) — `data/aidivide.json`
 `Country_ID`, `Year`, `AI_Dimension`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
+
+### policy_table (정책 문서) — `data/manual/policy_documents.csv`
+`Doc_ID`, `Country_ID`, `Doc_Type`(`ai_strategy` / `ai_policy_framework` / 향후 `data_protection_law` 등), `Title`(원어 공식 명칭), `Year`, `Date`(YYYY-MM 또는 YYYY-MM-DD), `Status`(`adopted` / `draft` / `in_development` / `unclear` / `superseded`), `Issuing_Body`, `Official_URL`(정부·기관 공식 원문), `Reference_URL`(OECD.AI 등 트래커), `Verified`(`yes`는 사람이 링크를 직접 열어 확인한 경우만), `Last_Checked`, `Note_KO`
+- 문서 원문은 저장소에 올리지 않고 링크만 둔다. 공식 원문을 못 찾으면 `Official_URL`을 비우고 `Reference_URL`만 넣는다.
+- 새 판이 나오면 이전 판은 지우지 않고 `Status`를 `superseded`로 바꾼다.
+- 출처 간 정보가 엇갈리면 `unclear`로 두고 `Note_KO`에 적는다.
 
 ### source_table (자료 출처) — `data/source.json`
 `Source_ID`, `Source_Name`, `Source_Type`, `Collection_Date`, `Update_Date`, `Verification_Status`, `Reliability_Level`, `Source_URL`, `License`, `License_URL`
@@ -136,5 +144,5 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 ## 7. 사이트 디자인 규칙
 
 - `index.html`, `data.html`의 색상 변수(`--bg`, `--accent` 등)와 글꼴(DM Sans / DM Serif Display)을 그대로 쓴다.
-- 새 페이지를 만들면 상단에 다른 페이지(자료 DB, 지표 DB)로 가는 버튼을 반드시 넣는다.
+- 새 페이지를 만들면 상단에 다른 페이지(자료 DB, 지표 DB, 정책 DB)로 가는 버튼을 반드시 넣는다.
 - 외부 라이브러리는 CDN으로만 불러온다 (현재 Chart.js 4.4.1 사용).
