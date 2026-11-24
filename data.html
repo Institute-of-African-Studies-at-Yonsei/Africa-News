@@ -311,11 +311,11 @@ function mapCard(meta, latest){
     shapes.push(`<path class="cty${dim}${sel}" data-c="${iso}" d="${g.d}" fill="${fill}"><title>${esc(tip)}</title></path>`);
     if(g.small) dots.push(`<circle class="cty${dim}${sel}" data-c="${iso}" cx="${g.cx}" cy="${g.cy}" r="5" fill="${fill}"><title>${esc(tip)}</title></circle>`);
   }
-  const esh = D.map.extra?.ESH ? `<path d="${D.map.extra.ESH}" fill="#f2f1ec" stroke="#d8d6cf" stroke-width=".5"><title>서사하라 (Western Sahara): 지표 대상 아님</title></path>` : '';
+  const esh = D.map.extra?.ESH ? `<path d="${D.map.extra.ESH}" fill="#f2f1ec" stroke="#b9b6aa" stroke-width=".6" stroke-dasharray="2 1.5"><title>서사하라 (Western Sahara): 지위 미정 지역, 지표 대상 아님</title></path>` : '';
   return `<div class="card" style="margin-bottom:14px">
     <h2>지도로 보기</h2>
     <div class="sub">${esc(meta.name)} · 국가별 최신값 · 국가를 누르면 추이 그래프에 추가됩니다</div>
-    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="${esc(meta.name)} 아프리카 지도">${esh}${shapes.join('')}${dots.join('')}</svg>
+    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="${esc(meta.name)} 아프리카 지도">${shapes.join('')}${esh}${dots.join('')}</svg>
     <div class="legend"><span>${vals.length ? fmt(lo) : ''}</span><span class="grad"></span><span>${vals.length ? fmt(hi) : ''}</span>
       <span class="na"></span><span>자료 없음</span></div>
     <div class="mapnote">지도: Natural Earth (public domain). 국경 표시는 연구원의 입장과 무관합니다. 섬나라는 원으로 함께 표시합니다.</div>
