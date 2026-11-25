@@ -1,7 +1,43 @@
 {
- "updated": "2026-11-24 00:55 UTC",
- "count": 194,
+ "updated": "2026-11-25 00:58 UTC",
+ "count": 196,
  "resources": [
+  {
+   "id": "082f57eb5e68",
+   "title": "In the DRC, Wave’s next pricing test is the franc",
+   "desc": "Wave is the first mobile money provider to win a licence in the DRC in 11 years. Its free-withdrawal model could put pressure on Airtel Money and M-PESA just as the country prepares to ban cash dollar payments for goods and services. With digital dollar payments still allowed, can Wave make the Cong",
+   "url": "https://techcabal.com/2026/11/24/francophone-weekly-by-techcabal-049/",
+   "date": "2026-11-24",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Digital public infrastructure",
+   "country": "DRC",
+   "authors": "",
+   "keywords": [
+    "wave",
+    "next",
+    "pricing",
+    "test"
+   ]
+  },
+  {
+   "id": "5dd9adcc1a5b",
+   "title": "👨🏿‍🚀TechCabal Daily – Hello from the Absa side",
+   "desc": "In today's edition: Inside TC Mzansi || Shoprite's $207 million telecoms bet || Absa teams up with Vodacom || Africa's cheap phones get pricier",
+   "url": "https://techcabal.com/2026/11/24/%f0%9f%91%a8%f0%9f%8f%bf%f0%9f%9a%80techcabal-daily-hello-from-the-absa-side/",
+   "date": "2026-11-24",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Connectivity & telecoms",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "techcabal",
+    "daily",
+    "hello",
+    "absa"
+   ]
+  },
   {
    "id": "254a1786668a",
    "title": "Why African banks and telecoms cannot wait for quantum computers to arrive",
