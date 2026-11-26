@@ -21,6 +21,21 @@ OUTLETS = {"BBC": "bbc.com", "The Guardian": "theguardian.com", "Al Jazeera": "a
 NEWS_QUERIES = ['Africa "artificial intelligence"', 'Africa "data centre" OR "data center"',
                 'Africa broadband OR "submarine cable" OR "fibre"', 'Africa "digital infrastructure"']
 
+# Country-focused searches: a practical starter set of countries with substantial
+# digital infrastructure, AI, and research activity across the continent. These
+# are a coverage focus, not a strict publication-volume ranking.
+COUNTRY_FOCUS = ("South Africa", "Nigeria", "Kenya", "Egypt", "Ghana",
+                 "Ethiopia", "Rwanda", "Uganda", "Tanzania", "Morocco")
+COUNTRY_NEWS_QUERY_GROUPS = (
+    '("artificial intelligence" OR "AI governance" OR "AI policy" OR "AI adoption" OR "machine learning")',
+    '("digital infrastructure" OR "digital public infrastructure" OR "digital connectivity" OR '
+    '"broadband infrastructure" OR "internet access" OR "data infrastructure" OR "cloud computing" OR '
+    '"technology cooperation" OR "digital learning" OR "digital skills" OR "digital inclusion")',
+)
+# OpenAlex uses a free-text search rather than Google-style Boolean query syntax.
+# Pair focused topic searches with a country, then verify the country is mentioned.
+COUNTRY_PAPER_QUERY_GROUPS = ("artificial intelligence", "digital infrastructure")
+
 # Specialist outlets with their own RSS feeds (already tech-focused).
 DIRECT_FEEDS = [("TechCabal", "https://techcabal.com/feed/", "News"),
                 ("Rest of World", "https://restofworld.org/feed/", "News"),
@@ -58,9 +73,9 @@ COUNTRIES = {
     "Somalia": r"somalia", "Mali": r"\bmali\b", "Libya": r"libya", "Djibouti": r"djibouti",
 }
 AFRICA_RE = re.compile(r"africa|" + "|".join(COUNTRIES.values()) + r"|sahel|sahara", re.I)
-RELEVANT_RE = re.compile(r"\bAI\b|artificial intelligence|machine learning|generative|\bLLMs?\b|data cent|cloud|hyperscal|"
+RELEVANT_RE = re.compile(r"\bAI\b|artificial intelligence|AI governance|AI policy|AI adoption|machine learning|generative|\bLLMs?\b|data cent|cloud|hyperscal|"
     r"broadband|fib(er|re)|submarine|subsea|\b[45]G\b|spectrum|telecom|satellite|starlink|internet|connectivity|"
-    r"digital|semiconductor|\bGPUs?\b|compute|fintech|mobile money|cyber", re.I)
+    r"digital|technology cooperation|semiconductor|\bGPUs?\b|compute|fintech|mobile money|cyber|digital learning|digital skills|digital inclusion", re.I)
 STOP = set("africa african the and for with from that this into after over amid says said have been its was are has new will than more".split())
 # ──────────────────────────────────────────────────────────
 
@@ -118,13 +133,18 @@ def rss_items(content):
 def collect_news():
     out, cutoff = [], NOW - timedelta(days=NEWS_LOOKBACK_DAYS)
     for outlet, domain in OUTLETS.items():
-        for q in NEWS_QUERIES:
+        queries = [(q, None) for q in NEWS_QUERIES]
+        queries.extend((f"{group} AND ({country})", country)
+                       for country in COUNTRY_FOCUS for group in COUNTRY_NEWS_QUERY_GROUPS)
+        for q, country in queries:
             qs = urllib.parse.urlencode({"q": f"{q} site:{domain} when:{NEWS_LOOKBACK_DAYS}d", "hl": "en", "gl": "US", "ceid": "US:en"})
             data = get(f"https://news.google.com/rss/search?{qs}")
             for title, desc, link, pub, _ in rss_items(data or b""):
                 title = re.sub(r"\s+-\s+[^-]+$", "", title)  # drop " - Reuters" suffix
                 d = parse_date(pub)
-                if d and d >= cutoff and link and AFRICA_RE.search(title) and RELEVANT_RE.search(title):
+                geography_matches = (AFRICA_RE.search(title) if country is None
+                                     else re.search(COUNTRIES[country], title, re.I))
+                if d and d >= cutoff and link and geography_matches and RELEVANT_RE.search(title):
                     out.append(make(title, "", link, d, "News", outlet))
     for name, url, rtype in DIRECT_FEEDS:
         for title, desc, link, pub, _ in rss_items(get(url) or b""):
@@ -139,17 +159,23 @@ def abstract_of(inv):
 
 def collect_papers():
     out, since = [], (NOW - timedelta(days=PAPER_LOOKBACK_DAYS)).strftime("%Y-%m-%d")
-    for q in PAPER_QUERIES:
+    queries = [(q, None) for q in PAPER_QUERIES]
+    queries.extend((f"{topic} {country}", country)
+                   for country in COUNTRY_FOCUS for topic in COUNTRY_PAPER_QUERY_GROUPS)
+    for q, country in queries:
         params = {"search": q, "filter": f"from_publication_date:{since},type:article|preprint|book-chapter",
                   "sort": "relevance_score:desc", "per-page": 25}
         if CONTACT_EMAIL: params["mailto"] = CONTACT_EMAIL
         data = get("https://api.openalex.org/works?" + urllib.parse.urlencode(params))
         for w in (json.loads(data).get("results", []) if data else []):
             title, abs_ = clean(w.get("title")), clean(abstract_of(w.get("abstract_inverted_index")))
+            text = f"{title} {abs_}"
             loc = w.get("primary_location") or {}
             url = w.get("doi") or loc.get("landing_page_url") or w.get("id")
             d = parse_date(w.get("publication_date"))
-            if not (title and url and d and AFRICA_RE.search(f"{title} {abs_}") and RELEVANT_RE.search(f"{title} {abs_}")): continue
+            geography_matches = (AFRICA_RE.search(text) if country is None
+                                 else re.search(COUNTRIES[country], text, re.I))
+            if not (title and url and d and geography_matches and RELEVANT_RE.search(text)): continue
             authors = ", ".join(a["author"]["display_name"] for a in w.get("authorships", [])[:4])
             if len(w.get("authorships", [])) > 4: authors += " et al."
             out.append(make(title, abs_, url, d, "Academic paper", (loc.get("source") or {}).get("display_name") or "OpenAlex", authors))
