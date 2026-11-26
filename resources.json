@@ -1,7 +1,133 @@
 {
- "updated": "2026-11-25 00:58 UTC",
- "count": 196,
+ "updated": "2026-11-26 00:58 UTC",
+ "count": 204,
  "resources": [
+  {
+   "id": "b737e51b732f",
+   "title": "Amini wants to turn Africa’s paper archives into data for AI",
+   "desc": "Amini, a startup building sovereign AI infrastructure, has released Soma-1X Lite, an open-weight AI model designed to convert paper-based records into machine-readable data.",
+   "url": "https://techcabal.com/2026/11/25/amini-africa-paper-archives-data-ai/",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Startups & investment",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "amini",
+    "wants",
+    "turn",
+    "paper"
+   ]
+  },
+  {
+   "id": "40b0becff36e",
+   "title": "Wave’s 25 million-user blueprint: How low fees disrupted Francophone West Africa’s mobile money ‘cartels’",
+   "desc": "Wave's Public Policy Lead tells TechCabal how the company forced down prices across the WAEMU region and details the structural and regulatory hurdles that still prevent informal businesses and women from participating fully in the digital economy.",
+   "url": "https://techcabal.com/2026/11/25/wave-in-waemu-region/",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "AI policy & governance",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "wave",
+    "million",
+    "user",
+    "blueprint"
+   ]
+  },
+  {
+   "id": "86e3cfddd21b",
+   "title": "Nigerian cybersecurity startup Aeon extends pre-seed round to $2 million",
+   "desc": "Aeon has extended its pre-seed round to $2 million to expand its engineering team and accelerate product development.",
+   "url": "https://techcabal.com/2026/11/25/aeon-extends-pre-seed-round-to-2-million/",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Startups & investment",
+   "country": "Nigeria",
+   "authors": "",
+   "keywords": [
+    "nigerian",
+    "cybersecurity",
+    "startup",
+    "aeon"
+   ]
+  },
+  {
+   "id": "350e5e284b91",
+   "title": "Four South African students want to make bursary money easier to access and spend",
+   "desc": "Four university students who experienced the frustrations of accessing bursary money firsthand are building CampusFit, a fintech platform designed to help South African students access, manage and track their allowances.",
+   "url": "https://techcabal.com/2026/11/25/sa-students-fintech-bursary-pay-problems/",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Digital public infrastructure",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "four",
+    "south",
+    "students",
+    "want"
+   ]
+  },
+  {
+   "id": "3b4ee4f0792a",
+   "title": "MTN’s proposed Telkom takeover comes with a competition cost",
+   "desc": "MTN’s renewed acquisition talks with Telkom could reshape South Africa’s telecommunications industry, promising greater network investment while raising concerns about competition, wholesale infrastructure access and consumer choice.",
+   "url": "https://techcabal.com/2026/11/25/mtn-telkom-deal-sa-telecoms-market/",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Connectivity & telecoms",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "proposed",
+    "telkom",
+    "takeover",
+    "comes"
+   ]
+  },
+  {
+   "id": "dcfcb93efca6",
+   "title": "👨🏿‍🚀TechCabal Daily – Cell C picks a Melon",
+   "desc": "In today's edition: Cell C buys Melon Mobile || Vodafone books $3.3 billion Safaricom gain || MultiChoice wants pirate sites blocked || Botswana plans satellite-to-phone service",
+   "url": "https://techcabal.com/2026/11/25/%f0%9f%91%a8%f0%9f%8f%bf%f0%9f%9a%80techcabal-daily-cell-c-picks-a-melon/",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "Connectivity & telecoms",
+   "country": "Botswana",
+   "authors": "",
+   "keywords": [
+    "techcabal",
+    "daily",
+    "cell",
+    "picks"
+   ]
+  },
+  {
+   "id": "04faff4baea0",
+   "title": "How foreign AI romance apps are reshaping youth intimacy in Africa",
+   "desc": "With no local safeguards in place, addictive chatbots are testing communal values and hooking children on synthetic love.",
+   "url": "https://restofworld.org/2026/ai-companion-apps-africa-character-ai/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+   "date": "2026-11-25",
+   "type": "News",
+   "source": "Rest of World",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "foreign",
+    "romance",
+    "apps",
+    "reshaping"
+   ]
+  },
   {
    "id": "082f57eb5e68",
    "title": "In the DRC, Wave’s next pricing test is the franc",
@@ -215,6 +341,24 @@
     "bottleneck",
     "shared",
     "testable"
+   ]
+  },
+  {
+   "id": "cd72c4344dac",
+   "title": "Remittances as a Driver of Entrepreneurial Development in Africa: Does Digital Technology Penetration Matter?",
+   "desc": "This study examines the relationship between remittances and entrepreneurial development in 29 African countries from 2006 to 2023, focusing on the moderating role of digital technology. The study employs the System GMM, with Driscoll-Kraay fixed-effects estimation for robustness. The results reveal",
+   "url": "https://doi.org/10.1142/s1793993326500274",
+   "date": "2026-11-21",
+   "type": "Academic paper",
+   "source": "Journal of International Commerce Economics and Policy",
+   "theme": "Connectivity & telecoms",
+   "country": "Pan-African",
+   "authors": "Oliver Ejike Ogbonna, Mulatu Fekadu Zerihun",
+   "keywords": [
+    "remittances",
+    "driver",
+    "entrepreneurial",
+    "development"
    ]
   },
   {
