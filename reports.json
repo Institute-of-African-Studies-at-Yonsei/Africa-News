@@ -1,0 +1,86 @@
+{
+  "updated": "2026-11-26",
+  "resources": [
+    {
+      "title": "World Development Indicators (WDI)",
+      "url": "https://databank.worldbank.org/source/world-development-indicators",
+      "type": "Report",
+      "source": "World Bank",
+      "year": "Ongoing",
+      "country": "Pan-African",
+      "description": "World Bank country-level development indicator database used in the indicator database. Updated periodically; the landing page provides current data and downloads."
+    },
+    {
+      "title": "ICT Development Index (IDI)",
+      "url": "https://www.itu.int/itu-d/reports/statistics/idi/",
+      "type": "Report",
+      "source": "International Telecommunication Union (ITU)",
+      "year": "Ongoing",
+      "country": "Pan-African",
+      "description": "ITU index and related publications measuring universal and meaningful connectivity. Check the source page for edition and data-reference years."
+    },
+    {
+      "title": "ITU DataHub",
+      "url": "https://datahub.itu.int/",
+      "type": "Report",
+      "source": "International Telecommunication Union (ITU)",
+      "year": "Ongoing",
+      "country": "Pan-African",
+      "description": "ITU ICT statistics and country data used for connectivity indicators. The database is updated over time."
+    },
+    {
+      "title": "GSMA Mobile Connectivity Index",
+      "url": "https://www.mobileconnectivityindex.com/",
+      "type": "Report",
+      "source": "GSMA",
+      "year": "Ongoing",
+      "country": "Pan-African",
+      "description": "Country-level mobile connectivity index and supporting data. Check the site for the latest available edition and data year."
+    },
+    {
+      "title": "Digital Africa Index",
+      "url": "https://digital-africa-index.org/",
+      "type": "Report",
+      "source": "Digital Africa Index",
+      "year": "Ongoing",
+      "country": "Pan-African",
+      "description": "Digital Africa Index source and country information. Edition or data years should be verified on the source site."
+    },
+    {
+      "title": "United Nations E-Government Development Index (EGDI)",
+      "url": "https://publicadministration.un.org/egovkb/en-us/About/Overview/E-Government-Development-Index",
+      "type": "Report",
+      "source": "United Nations",
+      "year": "2024",
+      "country": "Pan-African",
+      "description": "UN index and publication resources assessing e-government development across countries. See the official page for methodology and report editions."
+    },
+    {
+      "title": "The Global Findex Database 2025",
+      "url": "https://hdl.handle.net/10986/43438",
+      "type": "Report",
+      "source": "World Bank",
+      "year": "2025",
+      "country": "Pan-African",
+      "description": "World Bank Global Findex publication and database on financial inclusion and digital financial services."
+    },
+    {
+      "title": "Government AI Readiness Index",
+      "url": "https://oxfordinsights.com/ai-readiness/ai-readiness-index/",
+      "type": "Report",
+      "source": "Oxford Insights",
+      "year": "2025",
+      "country": "Pan-African",
+      "description": "Oxford Insights index assessing governments' readiness to implement AI in public services. Includes the 2025 edition used in the indicator database."
+    },
+    {
+      "title": "Afrobarometer Data and Publications",
+      "url": "https://www.afrobarometer.org/data/",
+      "type": "Report",
+      "source": "Afrobarometer",
+      "year": "Ongoing",
+      "country": "Pan-African",
+      "description": "Afrobarometer survey data and publications. Browse the site for country-level datasets, rounds, and publication dates."
+    }
+  ]
+}
