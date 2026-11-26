@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "Indicator and report source catalog",
+    "url": "https://institute-of-african-studies-at-yonsei.github.io/Africa-News/reports.html",
+    "type": "Report",
+    "source": "Yonsei University Institute of African Studies",
+    "date": "2026-11-26",
+    "desc": "Browse official source pages and reports used in the policy and indicator databases. Filter by country coverage, publication year, and publisher.",
+    "theme": "Digital public infrastructure",
+    "country": "Pan-African"
+  }
+]

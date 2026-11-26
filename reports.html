@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports &amp; Indicator Sources | AI &amp; Digital Infrastructure in Africa</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f4f0;--surface:#fff;--border:rgba(0,0,0,.1);--text:#181816;--muted:#66645d;--accent:#0f6e5a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 'DM Sans',system-ui,sans-serif}header{background:var(--surface);border-bottom:1px solid var(--border)}.wrap{max-width:1100px;margin:auto;padding:20px}.top{max-width:1100px;margin:auto;padding:12px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.top a{color:var(--accent);text-decoration:none;font-size:13px}.top .brand{font-family:'DM Serif Display',serif;color:var(--text);font-size:18px;margin-right:auto}.intro{margin:22px 0}.intro h1{font:400 30px 'DM Serif Display',serif;margin:0}.intro p{color:var(--muted);max-width:780px}.filters{display:flex;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;margin:16px 0}.filters label{font-size:12px;color:var(--muted);display:grid;gap:4px}.filters select{font:inherit;padding:7px 10px;min-width:190px;border:1px solid var(--border);border-radius:6px;background:white;color:var(--text)}#count{font-size:12px;color:var(--muted);margin:12px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px}.card h2{font-size:16px;margin:0 0 8px}.card p{font-size:13px;color:var(--muted);margin:0 0 12px}.meta{font-size:12px;color:var(--muted);margin-bottom:10px}.card a{color:var(--accent);font-weight:600;text-decoration:none}.card a:hover{text-decoration:underline}.note{font-size:12px;color:var(--muted);margin:16px 0}.empty{padding:30px;text-align:center;color:var(--muted);background:var(--surface);border-radius:8px}@media(max-width:600px){.wrap{padding:14px}.filters label,.filters select{width:100%}}
+</style>
+</head>
+<body>
+<header><nav class="top"><a class="brand" href="index.html">AI &amp; Digital Infrastructure in Africa</a><a href="index.html">Resource DB</a><a href="data.html">Indicator DB</a><a href="policy.html">Policy DB</a></nav></header>
+<main class="wrap">
+<section class="intro"><h1>Reports &amp; indicator sources</h1><p>Official report, index, and dataset links used by the policy and indicator databases. Most entries cover multiple African countries; country-level data can be explored at the source. “Ongoing” means the source is updated periodically or does not have a single fixed edition year.</p></section>
+<section class="filters" aria-label="Filter report resources">
+<label>Country coverage<select id="country"><option value="">All country coverage</option></select></label>
+<label>Publication year<select id="year"><option value="">All years</option></select></label>
+<label>Publication source<select id="source"><option value="">All sources</option></select></label>
+</section>
+<div id="count" aria-live="polite">Loading sources…</div><section id="list" class="grid"></section>
+<p class="note">Country filtering describes the coverage recorded for each resource, not a guarantee that every source provides data for every African country. Always check the publisher’s edition, methodology, data-reference year, and terms of use.</p>
+</main>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let ITEMS=[];
+function fill(id,values,allLabel){const el=document.getElementById(id);el.innerHTML=`<option value="">${allLabel}</option>`+values.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}
+function render(){const country=document.getElementById('country').value,year=document.getElementById('year').value,source=document.getElementById('source').value;const rows=ITEMS.filter(x=>(!country||x.country===country)&&(!year||x.year===year)&&(!source||x.source===source)).sort((a,b)=>a.title.localeCompare(b.title));document.getElementById('count').textContent=`${rows.length} resource${rows.length===1?'':'s'}`;document.getElementById('list').innerHTML=rows.length?rows.map(x=>`<article class="card"><h2>${esc(x.title)}</h2><p>${esc(x.description)}</p><div class="meta">${esc(x.country)} · ${esc(x.year)} · ${esc(x.source)}</div><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Open publisher source ↗</a></article>`).join(''):'<div class="empty">No resources match these filters.</div>'}
+fetch('reports.json').then(r=>{if(!r.ok)throw Error('Could not load reports');return r.json()}).then(data=>{ITEMS=data.resources||[];fill('country',[...new Set(ITEMS.map(x=>x.country))].sort(),'All country coverage');fill('year',[...new Set(ITEMS.map(x=>x.year))].sort((a,b)=>a==='Ongoing'?1:b==='Ongoing'?-1:b.localeCompare(a)),'All years');fill('source',[...new Set(ITEMS.map(x=>x.source))].sort(),'All sources');document.querySelectorAll('.filters select').forEach(el=>el.addEventListener('change',render));render()}).catch(()=>{document.getElementById('count').textContent='Could not load report sources.'});
+</script>
+</body>
+</html>
