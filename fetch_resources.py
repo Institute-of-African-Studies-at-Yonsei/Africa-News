@@ -48,6 +48,19 @@ PAPER_QUERIES = ["artificial intelligence Africa", "AI governance Africa", "data
                  "digital infrastructure Africa", "broadband connectivity Africa", "cloud computing Africa",
                  "machine learning African languages", "digital public infrastructure Africa"]
 
+# Strict OpenAlex primary-field allowlist. OpenAlex does not have a field literally
+# named "Digital technology", so Computer Science is its closest broad field proxy.
+# Public policy/administration and political science may appear as fields or
+# subfields; Social Sciences is included as requested. Missing/unmatched metadata
+# fails closed so papers from unrelated or unclassified fields are excluded.
+ALLOWED_PRIMARY_FIELDS = {
+    "computer science",
+    "social sciences",
+    "political science and international relations",
+    "political science",
+    "public administration",
+}
+
 # Theme = first rule that matches. Order matters. Add/rename freely; the website updates itself.
 THEME_RULES = [
     ("AI policy & governance", r"regulat|policy|strateg|governance|ethic|law\b|legislat|framework|AU |african union|data protection|privacy"),
@@ -89,6 +102,12 @@ def get(url, timeout=20):
 
 def clean(t):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", t or ""))).strip()
+
+def primary_topic_in_scope(work):
+    """Keep papers only when OpenAlex's primary topic is in an allowed field."""
+    primary_topic = work.get("primary_topic") or {}
+    field = (primary_topic.get("field") or {}).get("display_name", "")
+    return field.strip().casefold() in ALLOWED_PRIMARY_FIELDS
 
 def parse_date(s):
     if not s: return None
@@ -175,7 +194,8 @@ def collect_papers():
             d = parse_date(w.get("publication_date"))
             geography_matches = (AFRICA_RE.search(text) if country is None
                                  else re.search(COUNTRIES[country], text, re.I))
-            if not (title and url and d and geography_matches and RELEVANT_RE.search(text)): continue
+            if not (title and url and d and geography_matches and RELEVANT_RE.search(text)
+                    and primary_topic_in_scope(w)): continue
             authors = ", ".join(a["author"]["display_name"] for a in w.get("authorships", [])[:4])
             if len(w.get("authorships", [])) > 4: authors += " et al."
             out.append(make(title, abs_, url, d, "Academic paper", (loc.get("source") or {}).get("display_name") or "OpenAlex", authors))
