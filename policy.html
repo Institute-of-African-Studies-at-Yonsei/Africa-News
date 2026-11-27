@@ -53,6 +53,7 @@ tr.row:hover td{background:#faf9f6}
 .b-none{background:#f5f4f0;color:#9c9b93}
 .chk{font-size:11px;color:var(--t3);white-space:nowrap}
 .chk.ok{color:#1a6b40}
+.chk.nf{color:#8a5a00}
 a{color:var(--accent)}
 .docs{display:flex;flex-direction:column;gap:10px}
 .doc{border:1px solid var(--border);border-radius:8px;padding:10px 12px}
@@ -103,7 +104,7 @@ a{color:var(--accent)}
   <div class="foot">
     <div class="dl"><a href="data/manual/policy_documents.csv" download>정책 문서 목록 내려받기 (CSV)</a></div>
     <b>작성 기준</b> — 국가 AI 전략은 OECD「AI governance in Africa」(2026년 4월 기준 국가 AI 전략 표) 등 공개 자료를, 국가 디지털 전략은 각국 정부 발표와 국제기구 자료를 출발점으로 삼고, 각국 정부의 공식 원문을 찾아 연결했습니다.
-    <b>검수 완료</b>는 정부·기관 공식 원문 링크를 확인한 문서이고, <b>확인 필요</b>는 트래커 정보만 있거나 출처 간 정보가 엇갈리는 문서입니다.
+    <b>검수 완료</b>는 원문 링크를 직접 열어 확인한 문서, <b>원문 찾지 못함</b>은 찾아봤으나 공개된 원문을 찾지 못한 문서, <b>검수 전</b>은 아직 원문 링크를 확인하지 않은 문서입니다. 상태가 <b>불명확</b>인 문서는 출처 간 정보가 엇갈리거나 채택 여부를 확인할 수 없는 문서입니다.
     목록에 없는 나라는 "문서가 없다"는 뜻이 아니라 아직 확인된 문서가 없다는 뜻입니다.
     각 문서의 저작권은 발행 기관에 있습니다. 지도: Natural Earth (public domain), 국경 표시는 연구원의 입장과 무관합니다.
   </div>
@@ -115,7 +116,7 @@ const STATUS = {
   adopted:{ko:'채택', color:'#2e8b57', rank:5},
   draft:{ko:'초안', color:'#e0a63a', rank:4},
   in_development:{ko:'수립 중', color:'#7fa3d8', rank:3},
-  unclear:{ko:'확인 필요', color:'#b48ad0', rank:2},
+  unclear:{ko:'불명확', color:'#b48ad0', rank:2},
   superseded:{ko:'이전 판', color:'#c9c6bc', rank:1},
 };
 const TYPE_KO = {digital_strategy:'디지털 전략', ai_strategy:'AI 전략·정책', ai_policy_framework:'AI 정책 프레임워크', ai_guidelines:'AI 윤리·이용 지침'};
@@ -128,6 +129,9 @@ const S = {group:'digital', region:'All', country:null};
 // 아프리카연합(AU) 문서는 Country_ID 'AFR'로 넣고, 표에서 나라와 같은 한 줄로 보여 준다 (지도·집계에는 넣지 않음)
 const AU = {Country_ID:'AFR', Country_Name:'아프리카연합 (AU)', Country_Name_EN:'African Union', Region:null};
 let D = {};
+// 원문 검수 상태: yes = 사람이 링크를 열어 확인, not_found = 찾아봤으나 원문을 찾지 못함, 그 외 = 아직 검수 전
+const VERIFY = {yes:{ko:'✔ 검수 완료', cls:' ok'}, not_found:{ko:'원문 찾지 못함', cls:' nf'}};
+const verifyTag = v => { const x = VERIFY[v] || {ko:'검수 전', cls:''}; return `<span class="chk${x.cls}">${x.ko}</span>`; };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 // 따옴표·쉼표를 지원하는 CSV 파서
@@ -214,7 +218,7 @@ function render(){
       <td>${badge(h?.Status)}</td>
       <td>${h ? esc(h.Title) : ''}</td>
       <td>${h?.Year ? esc(h.Year) : ''}</td>
-      <td>${h ? (h.Verified==='yes' ? '<span class="chk ok">✔ 검수 완료</span>' : '<span class="chk">확인 필요</span>') : ''}</td></tr>`).join('');
+      <td>${h ? verifyTag(h.Verified) : ''}</td></tr>`).join('');
 
   const G = GROUPS[S.group].ko;
   document.getElementById('app').className = '';
@@ -222,7 +226,7 @@ function render(){
     <div class="stats">
       <div class="stat"><div class="n">${cnt('adopted')}</div><div class="l">${G} 채택</div></div>
       <div class="stat"><div class="n">${cnt('draft') + cnt('in_development')}</div><div class="l">초안·수립 중</div></div>
-      <div class="stat"><div class="n">${cnt('unclear')}</div><div class="l">확인 필요</div></div>
+      <div class="stat"><div class="n">${cnt('unclear')}</div><div class="l">불명확</div></div>
       <div class="stat"><div class="n">${none}</div><div class="l">확인된 문서 없음</div></div>
     </div>
     <div class="grid">
@@ -272,9 +276,9 @@ function docCard(d){
     <div class="m">${badge(d.Status)} ${esc(TYPE_KO[d.Doc_Type]||d.Doc_Type)} · ${esc(d.Date || d.Year || '연도 미상')} · ${esc(d.Issuing_Body)}</div>
     ${d.Note_KO ? `<div class="n">${esc(d.Note_KO)}</div>` : ''}
     <div class="links">
-      ${d.Official_URL ? `<a href="${esc(d.Official_URL)}" target="_blank" rel="noopener">공식 원문${/\.pdf(\?|$)|\/download\b/i.test(d.Official_URL) ? ' (PDF 다운로드)' : ''} ↗</a>` : '<span class="chk">공식 원문 링크 확인 중</span>'}
+      ${d.Official_URL ? `<a href="${esc(d.Official_URL)}" target="_blank" rel="noopener">공식 원문${/\.pdf(\?|$)|\/download\b/i.test(d.Official_URL) ? ' (PDF 다운로드)' : ''} ↗</a>` : (d.Verified==='not_found' ? '' : '<span class="chk">공식 원문 링크 확인 중</span>')}
       ${refLinks(d.Reference_URL)}
-      <span class="chk${d.Verified==='yes'?' ok':''}">${d.Verified==='yes' ? '✔ 검수 완료' : '확인 필요'} · ${esc(d.Last_Checked)}</span>
+      ${verifyTag(d.Verified)}<span class="chk">${esc(d.Last_Checked)}</span>
     </div></div>`;
 }
 
