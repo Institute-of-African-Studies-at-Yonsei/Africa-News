@@ -241,6 +241,15 @@ function mapCard(){
     <div class="legend">${['adopted','draft','in_development','unclear'].map(s => `<span><i style="background:${STATUS[s].color}"></i>${STATUS[s].ko}</span>`).join('')}<span><i style="background:#ebe9e3"></i>확인된 문서 없음</span></div></div>`;
 }
 
+// 참고 출처는 여러 개일 수 있다 (CSV에서 ' | '로 구분). 링크 이름은 사이트 주소로 표시
+function refLinks(v){
+  const urls = String(v||'').split('|').map(u => u.trim()).filter(Boolean);
+  return urls.map(u => {
+    let host = ''; try{ host = new URL(u).hostname.replace(/^www\./,''); }catch(e){}
+    return `<a href="${esc(u)}" target="_blank" rel="noopener">참고 출처${urls.length > 1 && host ? ' (' + esc(host) + ')' : ''} ↗</a>`;
+  }).join('');
+}
+
 function docCard(d){
   return `<div class="doc">
     <div class="t">${esc(d.Title)}</div>
@@ -248,7 +257,7 @@ function docCard(d){
     ${d.Note_KO ? `<div class="n">${esc(d.Note_KO)}</div>` : ''}
     <div class="links">
       ${d.Official_URL ? `<a href="${esc(d.Official_URL)}" target="_blank" rel="noopener">공식 원문 ↗</a>` : '<span class="chk">공식 원문 링크 확인 중</span>'}
-      ${d.Reference_URL ? `<a href="${esc(d.Reference_URL)}" target="_blank" rel="noopener">참고 출처 ↗</a>` : ''}
+      ${refLinks(d.Reference_URL)}
       <span class="chk${d.Verified==='yes'?' ok':''}">${d.Verified==='yes' ? '✔ 검수 완료' : '확인 필요'} · ${esc(d.Last_Checked)}</span>
     </div></div>`;
 }
