@@ -26,7 +26,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 | `data/manual/` | 직접 내려받아 변환한 지표 CSV (라이선스가 허용하는 것만). 현재 `oxford_gari_2025.csv`, `itu_datahub.csv`, `itu_idi.csv` | 지표 DB 담당 |
 | `scripts/manual/` | 연 1회 수동으로 돌리는 변환 스크립트 (외부 패키지 사용 가능, Actions에서는 실행 안 함) | 지표 DB 담당 |
 | `assets/africa_map.json` | 지표 DB 지도용 국경 데이터 (Natural Earth 1:50m, public domain). `scripts/manual/build_africa_map.js`로 생성. Somaliland는 Somalia에 합쳐 그리고, 서사하라는 회색 배경으로만 표시 | 지표 DB 담당 |
-| `policy.html` | 정책 문서 DB 페이지: 국가별 AI 전략 등 정책 문서 현황 (원문은 링크만) | 지표 DB 담당 |
+| `policy.html` | 정책 문서 DB 페이지: 국가별 디지털 전략·AI 전략 등 정책 문서 현황 (원문은 링크만) | 지표 DB 담당 |
 | `data/manual/policy_documents.csv` | 정책 문서 목록 (손으로 관리). 형식은 아래 4절 policy_table 참고 | 지표 DB 담당 |
 | `.github/workflows/update.yml` | 매일 09:00 KST 자료 DB 수집 (`fetch_resources.py`) | 자료 DB 담당 |
 | `.github/workflows/indicators.yml` | 매월 1일 지표 수집 | 지표 DB 담당 |
@@ -86,7 +86,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 `Country_ID`, `Year`, `AI_Dimension`, `Indicator_Code`, `Indicator_Name`, `Value`, `Unit`, `Source_ID`
 
 ### policy_table (정책 문서) — `data/manual/policy_documents.csv`
-`Doc_ID`, `Country_ID`, `Doc_Type`(`ai_strategy` / `ai_policy_framework` / `ai_guidelines`(윤리·이용 지침, 국가별 현황 집계에는 미포함) / 향후 `data_protection_law` 등), `Title`(원어 공식 명칭), `Year`, `Date`(YYYY-MM 또는 YYYY-MM-DD), `Status`(`adopted` / `draft` / `in_development` / `unclear` / `superseded`), `Issuing_Body`, `Official_URL`(정부·기관 공식 원문), `Reference_URL`(OECD 보고서·민간 게시본 등. 여러 개면 ` | `로 구분. oecd.ai 페이지는 브라우저에서 빈 화면으로 뜨는 경우가 많아 쓰지 않고, 공식 원문이 있으면 비워 둔다), `Verified`(`yes`는 사람이 링크를 직접 열어 확인한 경우만), `Last_Checked`, `Note_KO`
+`Doc_ID`, `Country_ID`, `Doc_Type`(`digital_strategy`(국가 최상위 디지털 전략·디지털경제 마스터플랜. 분야별 전략은 넣지 않음) / `ai_strategy` / `ai_policy_framework` / `ai_guidelines`(윤리·이용 지침, 국가별 현황 집계에는 미포함) / 향후 `data_protection_law` 등), `Title`(원어 공식 명칭), `Year`, `Date`(YYYY-MM 또는 YYYY-MM-DD), `Status`(`adopted` / `draft` / `in_development` / `unclear` / `superseded`), `Issuing_Body`, `Official_URL`(정부·기관 공식 원문), `Reference_URL`(OECD 보고서·민간 게시본 등. 여러 개면 ` | `로 구분. oecd.ai 페이지는 브라우저에서 빈 화면으로 뜨는 경우가 많아 쓰지 않고, 공식 원문이 있으면 비워 둔다), `Verified`(`yes`는 사람이 링크를 직접 열어 확인한 경우만), `Last_Checked`, `Note_KO`
 - 문서 원문은 저장소에 올리지 않고 링크만 둔다. 공식 원문을 못 찾으면 `Official_URL`을 비우고 `Reference_URL`만 넣는다.
 - 새 판이 나오면 이전 판은 지우지 않고 `Status`를 `superseded`로 바꾼다.
 - 출처 간 정보가 엇갈리면 `unclear`로 두고 `Note_KO`에 적는다.
