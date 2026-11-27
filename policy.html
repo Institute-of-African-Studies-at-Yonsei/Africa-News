@@ -256,7 +256,7 @@ function docCard(d){
     <div class="m">${badge(d.Status)} ${esc(TYPE_KO[d.Doc_Type]||d.Doc_Type)} · ${esc(d.Date || d.Year || '연도 미상')} · ${esc(d.Issuing_Body)}</div>
     ${d.Note_KO ? `<div class="n">${esc(d.Note_KO)}</div>` : ''}
     <div class="links">
-      ${d.Official_URL ? `<a href="${esc(d.Official_URL)}" target="_blank" rel="noopener">공식 원문 ↗</a>` : '<span class="chk">공식 원문 링크 확인 중</span>'}
+      ${d.Official_URL ? `<a href="${esc(d.Official_URL)}" target="_blank" rel="noopener">공식 원문${/\.pdf(\?|$)|\/download\b/i.test(d.Official_URL) ? ' (PDF 다운로드)' : ''} ↗</a>` : '<span class="chk">공식 원문 링크 확인 중</span>'}
       ${refLinks(d.Reference_URL)}
       <span class="chk${d.Verified==='yes'?' ok':''}">${d.Verified==='yes' ? '✔ 검수 완료' : '확인 필요'} · ${esc(d.Last_Checked)}</span>
     </div></div>`;
