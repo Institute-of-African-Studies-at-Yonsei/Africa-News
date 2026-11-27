@@ -1,7 +1,43 @@
 {
- "updated": "2026-11-26 07:13 UTC",
- "count": 472,
+ "updated": "2026-11-27 01:01 UTC",
+ "count": 480,
  "resources": [
+  {
+   "id": "1fdd5dafd7fe",
+   "title": "Telecom Egypt CEO highlights social impact of digital infrastructure through healthcare initiatives",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOOWZGaUVsQ05ZUklGcFBvWUJ1ZXVsM2t6QjZKS3EwMEo1dWxrVk5jcWRWRlVCM3o4cTk2S29JMFhtYUFnQU5wejlONnZIeHhLYUtNRE04T2VMRFZZT3BhcEFpMTBmSkYxbjlVclVVUnNYQ0VDZHBsRE5wbTJJMko5emotMk8tSmtORDh2UzFMNnNwRjhWNGRzMDdLMXZkSkhtZl9lWHhMZ0txNk9JQzlsMHEtYlRNN3IxZjZqN1RZMHp0eWpWRE91OFFaWDd1QWphODZ3MA?oc=5",
+   "date": "2026-11-26",
+   "type": "News",
+   "source": "The Guardian",
+   "theme": "Connectivity & telecoms",
+   "country": "Egypt",
+   "authors": "",
+   "keywords": [
+    "telecom",
+    "egypt",
+    "highlights",
+    "social"
+   ]
+  },
+  {
+   "id": "988194837b9b",
+   "title": "Nigeria: ISWAP turns to armed drones and global financing networks",
+   "desc": "Armed drones, satellite communications and international financing network, Islamic State militants in Nigeria are stepping up their technological capabilities to sustain their insurgency.",
+   "url": "http://www.africanews.com/2026/11/26/nigeria-iswap-turns-to-armed-drones-and-global-financing-networks/",
+   "date": "2026-11-26",
+   "type": "News",
+   "source": "Africanews",
+   "theme": "Connectivity & telecoms",
+   "country": "Nigeria",
+   "authors": "",
+   "keywords": [
+    "nigeria",
+    "iswap",
+    "turns",
+    "armed"
+   ]
+  },
   {
    "id": "b737e51b732f",
    "title": "Amini wants to turn Africa’s paper archives into data for AI",
@@ -2356,6 +2392,24 @@
    ]
   },
   {
+   "id": "3296ab88f449",
+   "title": "Chapter 34: The Impact of Artificial Intelligence on Tax Law: South Africa",
+   "desc": "",
+   "url": "https://doi.org/10.59403/1gs8pg9034",
+   "date": "2026-07-09",
+   "type": "Academic paper",
+   "source": "WU Institute for Austrian and International Tax Law, tax law and policy series.",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Shaun Parsons, Tracy Johnson",
+   "keywords": [
+    "chapter",
+    "impact",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
    "id": "6c7d7ad91da3",
    "title": "Artificial Intelligence and Public Relations Practice in Tanzania: Emerging Opportunities, Ethical Issues and Professional Challenges",
    "desc": "Artificial intelligence (AI) is reshaping the practice of public relations (PR) globally, transforming how organisations monitor their environments, craft messages, engage publics and evaluate communication outcomes. While a growing body of scholarship has examined the implications of AI for communi",
@@ -2770,6 +2824,24 @@
    ]
   },
   {
+   "id": "61564296eb8d",
+   "title": "Adoption and Utilization of E-Learning Platform Facilities in Higher Education: A Study of the Institut Catholique de Kabgayi (ICK), Rwanda",
+   "desc": "E-learning has become an integral part of higher education worldwide, offering new opportunities for flexible, accessible, and student-centered learning. In Sub-Saharan Africa, however, the pace of adoption has been uneven, often constrained by infrastructural and pedagogical challenges. This study ",
+   "url": "https://doi.org/10.66053/voice.v4i2.635",
+   "date": "2026-06-05",
+   "type": "Academic paper",
+   "source": "Journal of Vocational Informatics and Computer Education",
+   "theme": "AI policy & governance",
+   "country": "Rwanda",
+   "authors": "Jean Paul NDAYIZIGIYE",
+   "keywords": [
+    "adoption",
+    "utilization",
+    "learning",
+    "platform"
+   ]
+  },
+  {
    "id": "4e2f03ef9459",
    "title": "Digital sovereignty in the Commonwealth: evaluating South Africa’s cybersecurity and data infrastructure",
    "desc": "As the Commonwealth promotes equitable development and cooperation, the digital era presents new challenges for sovereignty and security. South Africa, one of Africa’s most connected economies, remains increasingly dependent on foreign technology providers for cloud services, data hosting and cybers",
@@ -2839,6 +2911,24 @@
     "discipline",
     "transformative",
     "artificial"
+   ]
+  },
+  {
+   "id": "484d8d6c7fc4",
+   "title": "Perceptions of Adult Learners Regarding the Use of Digital Technology in Accessing Education in Tanzania",
+   "desc": "This study examined adult learners’ perceptions of the use of digital technology in accessing education in Tanzania. Guided by the Digital Divide Theory, the study explored how digital technologies facilitate or constrain participation in adult learning. Using a qualitative case study design, data w",
+   "url": "https://doi.org/10.53449/6qbqs105",
+   "date": "2026-05-31",
+   "type": "Academic paper",
+   "source": "Interdisciplinary Journal of Education",
+   "theme": "AI policy & governance",
+   "country": "Tanzania",
+   "authors": "Philipo Charles, Abdallah Jacob Seni, Mariam John Nyang’anyi",
+   "keywords": [
+    "perceptions",
+    "adult",
+    "learners",
+    "regarding"
    ]
   },
   {
@@ -5218,6 +5308,24 @@
     "afrobarometer",
     "data",
     "publications"
+   ]
+  },
+  {
+   "id": "b7f43d11626d",
+   "title": "Administrative Reach and State Capacity: Interoperability Failures in Nigeria's Digital Identification Infrastructure",
+   "desc": "",
+   "url": "https://doi.org/10.2139/ssrn.6464344",
+   "date": "2026-01-01",
+   "type": "Academic paper",
+   "source": "SSRN Electronic Journal",
+   "theme": "Digital public infrastructure",
+   "country": "Nigeria",
+   "authors": "Daramola Joseph Omoyele",
+   "keywords": [
+    "administrative",
+    "reach",
+    "state",
+    "capacity"
    ]
   },
   {
@@ -8021,6 +8129,42 @@
     "government",
     "readiness",
     "index"
+   ]
+  },
+  {
+   "id": "b605ca850061",
+   "title": "Requirements of developing commercial technical education in Egypt in light of digital transformation",
+   "desc": "Digital transformation affects life, work and jobs at present and in the future. It imposes on educational institutions the necessity of introducing solutions to address its challenges. Commercial technical education is responsible for preparing its students to understand and deal with these transfo",
+   "url": "https://doi.org/10.21608/ijrer.2025.328066.1008",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "International Journal of Recent Education Research.",
+   "theme": "AI policy & governance",
+   "country": "Egypt",
+   "authors": "Hanan Rabie, Mohamed Rafat Abdelfatah, Elsayed Ahmed Abdelghaffar, Gamil Elsayed Ahmed",
+   "keywords": [
+    "requirements",
+    "developing",
+    "commercial",
+    "technical"
+   ]
+  },
+  {
+   "id": "f6023a19ee05",
+   "title": "Maintaining Education During Emergencies and Crises in Uganda",
+   "desc": "Access to quality education in emergencies remains a challenge for learners in Uganda, particularly those affected by displacement. Despite growing efforts by the Ministry of Education and Sports (MoES), as well as support from international development partners, many children and youth in refugee s",
+   "url": "http://hdl.handle.net/10938/35086",
+   "date": "2025-01-01",
+   "type": "Academic paper",
+   "source": "AUB ScholarWorks (American University of Beirut)",
+   "theme": "AI policy & governance",
+   "country": "Uganda",
+   "authors": "Ruth Andinda",
+   "keywords": [
+    "maintaining",
+    "education",
+    "during",
+    "emergencies"
    ]
   },
   {
