@@ -87,12 +87,12 @@ a{color:var(--accent)}
 <div class="wrap">
   <div class="intro">
     <h1>아프리카 디지털·AI 정책 문서</h1>
-    <p>아프리카 54개국의 국가 AI 전략 등 디지털·AI 관련 정책 문서를 국가별로 정리했습니다. 문서는 각국 정부의 공식 원문으로 연결하며, 이 사이트에 원문을 게재하지 않습니다.</p>
+    <p>아프리카 54개국의 국가 디지털 전략과 AI 전략 등 디지털·AI 관련 정책 문서를 국가별로 정리했습니다. 문서는 각국 정부의 공식 원문으로 연결하며, 이 사이트에 원문을 게재하지 않습니다.</p>
   </div>
 
   <div class="controls">
     <div class="ctl"><span class="lbl">문서 종류</span>
-      <button class="pill on" data-type="ai">AI 전략·정책</button>
+      <span id="typePills"></span>
       <button class="pill" disabled title="준비 중">개인정보보호법 (준비 중)</button>
     </div>
     <div class="ctl"><span class="lbl">지역</span><span id="regionPills"></span></div>
@@ -102,7 +102,7 @@ a{color:var(--accent)}
 
   <div class="foot">
     <div class="dl"><a href="data/manual/policy_documents.csv" download>정책 문서 목록 내려받기 (CSV)</a></div>
-    <b>작성 기준</b> — 국가별 목록은 OECD「AI governance in Africa」(2026년 4월 기준 국가 AI 전략 표), OECD.AI Policy Navigator 등 공개 트래커를 출발점으로 삼고, 각국 정부의 공식 원문을 찾아 연결했습니다.
+    <b>작성 기준</b> — 국가 AI 전략은 OECD「AI governance in Africa」(2026년 4월 기준 국가 AI 전략 표) 등 공개 자료를, 국가 디지털 전략은 각국 정부 발표와 국제기구 자료를 출발점으로 삼고, 각국 정부의 공식 원문을 찾아 연결했습니다.
     <b>검수 완료</b>는 정부·기관 공식 원문 링크를 확인한 문서이고, <b>확인 필요</b>는 트래커 정보만 있거나 출처 간 정보가 엇갈리는 문서입니다.
     목록에 없는 나라는 "문서가 없다"는 뜻이 아니라 아직 확인된 문서가 없다는 뜻입니다.
     각 문서의 저작권은 발행 기관에 있습니다. 지도: Natural Earth (public domain), 국경 표시는 연구원의 입장과 무관합니다.
@@ -118,10 +118,13 @@ const STATUS = {
   unclear:{ko:'확인 필요', color:'#b48ad0', rank:2},
   superseded:{ko:'이전 판', color:'#c9c6bc', rank:1},
 };
-const TYPE_KO = {ai_strategy:'AI 전략·정책', ai_policy_framework:'AI 정책 프레임워크', ai_guidelines:'AI 윤리·이용 지침'};
-// 국가별 현황(표·지도)에 쓰는 문서 종류. 지침 등은 나라를 누르면 목록에만 나온다
-const HEAD_TYPES = ['ai_strategy','ai_policy_framework'];
-const S = {region:'All', country:null};
+const TYPE_KO = {digital_strategy:'디지털 전략', ai_strategy:'AI 전략·정책', ai_policy_framework:'AI 정책 프레임워크', ai_guidelines:'AI 윤리·이용 지침'};
+// 문서 종류 묶음. head는 국가별 현황(표·지도·집계)에 쓰는 종류, all은 나라 상세 목록에 함께 보여 줄 종류
+const GROUPS = {
+  digital:{ko:'디지털 전략', head:['digital_strategy'], all:['digital_strategy']},
+  ai:{ko:'AI 전략·정책', head:['ai_strategy','ai_policy_framework'], all:['ai_strategy','ai_policy_framework','ai_guidelines']},
+};
+const S = {group:'digital', region:'All', country:null};
 let D = {};
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -166,6 +169,14 @@ async function load(){
 }
 
 function initControls(){
+  const tp = document.getElementById('typePills');
+  tp.innerHTML = Object.entries(GROUPS).map(([k,g]) =>
+    `<button class="pill${k===S.group?' on':''}" data-g="${k}">${g.ko}</button>`).join(' ');
+  tp.querySelectorAll('button').forEach(b => b.onclick = () => {
+    S.group = b.dataset.g;
+    tp.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+    render();
+  });
   const rp = document.getElementById('regionPills');
   rp.innerHTML = ['All', ...Object.keys(REGION_KO)].map(r =>
     `<button class="pill${r==='All'?' on':''}" data-region="${r}">${r==='All'?'전체':REGION_KO[r]}</button>`).join(' ');
@@ -180,7 +191,7 @@ const docsOf = iso => D.docs.filter(d => d.Country_ID === iso)
   .sort((a,b) => (b.Year||0) - (a.Year||0) || STATUS[b.Status]?.rank - STATUS[a.Status]?.rank);
 // 국가별 대표 상태: 이전 판을 제외한 문서 중 가장 진전된 상태
 function headDoc(iso){
-  const ds = docsOf(iso).filter(d => d.Status !== 'superseded' && HEAD_TYPES.includes(d.Doc_Type));
+  const ds = docsOf(iso).filter(d => d.Status !== 'superseded' && GROUPS[S.group].head.includes(d.Doc_Type));
   return ds.sort((a,b) => STATUS[b.Status].rank - STATUS[a.Status].rank || (b.Year||0) - (a.Year||0))[0] || null;
 }
 
@@ -201,18 +212,19 @@ function render(){
       <td>${h?.Year ? esc(h.Year) : ''}</td>
       <td>${h ? (h.Verified==='yes' ? '<span class="chk ok">✔ 검수 완료</span>' : '<span class="chk">확인 필요</span>') : ''}</td></tr>`).join('');
 
-  const conti = D.docs.filter(d => d.Country_ID === 'AFR');
+  const G = GROUPS[S.group].ko;
+  const conti = D.docs.filter(d => d.Country_ID === 'AFR' && GROUPS[S.group].all.includes(d.Doc_Type));
   document.getElementById('app').className = '';
   document.getElementById('app').innerHTML = `
     <div class="stats">
-      <div class="stat"><div class="n">${cnt('adopted')}</div><div class="l">AI 전략·정책 채택</div></div>
+      <div class="stat"><div class="n">${cnt('adopted')}</div><div class="l">${G} 채택</div></div>
       <div class="stat"><div class="n">${cnt('draft') + cnt('in_development')}</div><div class="l">초안·수립 중</div></div>
       <div class="stat"><div class="n">${cnt('unclear')}</div><div class="l">확인 필요</div></div>
       <div class="stat"><div class="n">${none}</div><div class="l">확인된 문서 없음</div></div>
     </div>
     <div class="grid">
       <div class="card">
-        <h2>국가별 현황 — AI 전략·정책</h2>
+        <h2>국가별 현황 — ${G}</h2>
         <div class="sub">나라를 누르면 오른쪽에 문서 목록이 나옵니다 (${S.region==='All'?'전체':REGION_KO[S.region]+'아프리카'} ${list.length}개국)</div>
         <table><thead><tr><th>국가</th><th>지역</th><th>상태</th><th>최신 문서</th><th>연도</th><th>원문 확인</th></tr></thead><tbody>${rows}</tbody></table>
       </div>
@@ -238,8 +250,8 @@ function mapCard(){
     if(g.small) dots.push(`<circle class="cty${dim}${sel}" data-c="${iso}" cx="${g.cx}" cy="${g.cy}" r="5" fill="${fill}"><title>${esc(tip)}</title></circle>`);
   }
   const esh = D.map.extra?.ESH ? `<path d="${D.map.extra.ESH}" fill="#f2f1ec" stroke="#b9b6aa" stroke-width=".6" stroke-dasharray="2 1.5"><title>서사하라 (Western Sahara): 지위 미정 지역</title></path>` : '';
-  return `<div class="card"><h2>지도로 보기</h2><div class="sub">국가 AI 전략·정책 상태</div>
-    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="국가 AI 전략 현황 지도">${shapes.join('')}${esh}${dots.join('')}</svg>
+  return `<div class="card"><h2>지도로 보기</h2><div class="sub">국가 ${GROUPS[S.group].ko} 상태</div>
+    <svg class="map" viewBox="${D.map.viewBox}" role="img" aria-label="국가 ${GROUPS[S.group].ko} 현황 지도">${shapes.join('')}${esh}${dots.join('')}</svg>
     <div class="legend">${['adopted','draft','in_development','unclear'].map(s => `<span><i style="background:${STATUS[s].color}"></i>${STATUS[s].ko}</span>`).join('')}<span><i style="background:#ebe9e3"></i>확인된 문서 없음</span></div></div>`;
 }
 
@@ -269,7 +281,16 @@ function detail(){
   const c = D.cmap[S.country], ds = docsOf(S.country);
   return `<h2>${esc(c.Country_Name)} <span class="chk">${esc(c.Country_Name_EN)}</span></h2>
     <div class="sub">${esc(REGION_KO[c.Region]||'')}아프리카 · 문서 ${ds.length}건</div>
-    ${ds.length ? `<div class="docs">${ds.map(docCard).join('')}</div>` : '<div class="sub">아직 확인된 문서가 없습니다.</div>'}`;
+    ${ds.length ? sections(ds) : '<div class="sub">아직 확인된 문서가 없습니다.</div>'}`;
+}
+
+// 나라 상세: 고른 문서 종류를 먼저, 나머지 종류를 뒤에 묶어 보여 준다
+function sections(ds){
+  const order = [S.group, ...Object.keys(GROUPS).filter(k => k !== S.group)];
+  return order.map(k => {
+    const xs = ds.filter(d => GROUPS[k].all.includes(d.Doc_Type));
+    return xs.length ? `<div class="lbl" style="margin:10px 0 6px">${GROUPS[k].ko}</div><div class="docs">${xs.map(docCard).join('')}</div>` : '';
+  }).join('');
 }
 
 load();
