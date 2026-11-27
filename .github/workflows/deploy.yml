@@ -21,11 +21,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  # 1단계: 사이트 파일을 묶어 올린다
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -42,6 +40,14 @@ jobs:
           name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: .
 
+  # 2단계: 올린 묶음을 Pages에 배포한다 (단계를 나눠야 업로드 직후 "아티팩트 없음" 오류가 덜 난다)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
