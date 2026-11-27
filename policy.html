@@ -118,7 +118,9 @@ const STATUS = {
   unclear:{ko:'확인 필요', color:'#b48ad0', rank:2},
   superseded:{ko:'이전 판', color:'#c9c6bc', rank:1},
 };
-const TYPE_KO = {ai_strategy:'AI 전략·정책', ai_policy_framework:'AI 정책 프레임워크'};
+const TYPE_KO = {ai_strategy:'AI 전략·정책', ai_policy_framework:'AI 정책 프레임워크', ai_guidelines:'AI 윤리·이용 지침'};
+// 국가별 현황(표·지도)에 쓰는 문서 종류. 지침 등은 나라를 누르면 목록에만 나온다
+const HEAD_TYPES = ['ai_strategy','ai_policy_framework'];
 const S = {region:'All', country:null};
 let D = {};
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -178,7 +180,7 @@ const docsOf = iso => D.docs.filter(d => d.Country_ID === iso)
   .sort((a,b) => (b.Year||0) - (a.Year||0) || STATUS[b.Status]?.rank - STATUS[a.Status]?.rank);
 // 국가별 대표 상태: 이전 판을 제외한 문서 중 가장 진전된 상태
 function headDoc(iso){
-  const ds = docsOf(iso).filter(d => d.Status !== 'superseded');
+  const ds = docsOf(iso).filter(d => d.Status !== 'superseded' && HEAD_TYPES.includes(d.Doc_Type));
   return ds.sort((a,b) => STATUS[b.Status].rank - STATUS[a.Status].rank || (b.Year||0) - (a.Year||0))[0] || null;
 }
 
