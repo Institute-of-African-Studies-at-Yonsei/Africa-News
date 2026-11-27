@@ -88,7 +88,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 ### policy_table (정책 문서) — `data/manual/policy_documents.csv`
 `Doc_ID`, `Country_ID`, `Doc_Type`(`digital_strategy`(국가 최상위 디지털 전략·디지털경제 마스터플랜. 분야별 전략은 넣지 않음) / `ai_strategy` / `ai_policy_framework` / `ai_guidelines`(윤리·이용 지침, 국가별 현황 집계에는 미포함) / 향후 `data_protection_law` 등), `Title`(원어 공식 명칭), `Year`, `Date`(YYYY-MM 또는 YYYY-MM-DD), `Status`(`adopted` / `draft` / `in_development` / `unclear` / `superseded`), `Issuing_Body`, `Official_URL`(정부·기관 공식 원문), `Reference_URL`(OECD 보고서·민간 게시본 등. 여러 개면 ` | `로 구분. oecd.ai 페이지는 브라우저에서 빈 화면으로 뜨는 경우가 많아 쓰지 않고, 공식 원문이 있으면 비워 둔다), `Verified`(`yes`는 사람이 링크를 직접 열어 확인한 경우만), `Last_Checked`, `Note_KO`
 - 문서 원문은 저장소에 올리지 않고 링크만 둔다. 공식 원문을 못 찾으면 `Official_URL`을 비우고 `Reference_URL`만 넣는다.
-- 새 판이 나오면 이전 판은 지우지 않고 `Status`를 `superseded`로 바꾼다.
+- 새 판이 나오면 이전 판은 지우지 않고 `Status`를 `superseded`로 바꾼다. 후속 문서가 없어도 목표 기간이 끝난 문서(예: 2021-2025 전략은 2026년부터)는 `superseded`로 바꾼다.
 - 출처 간 정보가 엇갈리면 `unclear`로 두고 `Note_KO`에 적는다.
 - `Note_KO`에는 확인된 사실만 쓴다. 기사·보고서에서 나온 내용은 그 링크를 `Reference_URL`에 넣고 "OO 보도"처럼 출처를 밝히며, 추측("~로 보임")은 쓰지 않는다.
 
