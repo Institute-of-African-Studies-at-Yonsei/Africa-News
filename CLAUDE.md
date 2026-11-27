@@ -90,6 +90,7 @@ AI를 저장소에 직접 연결하지 않고 쓰는 경우에도, 이 문서 �
 - 문서 원문은 저장소에 올리지 않고 링크만 둔다. 공식 원문을 못 찾으면 `Official_URL`을 비우고 `Reference_URL`만 넣는다.
 - 새 판이 나오면 이전 판은 지우지 않고 `Status`를 `superseded`로 바꾼다.
 - 출처 간 정보가 엇갈리면 `unclear`로 두고 `Note_KO`에 적는다.
+- `Note_KO`에는 확인된 사실만 쓴다. 기사·보고서에서 나온 내용은 그 링크를 `Reference_URL`에 넣고 "OO 보도"처럼 출처를 밝히며, 추측("~로 보임")은 쓰지 않는다.
 
 ### source_table (자료 출처) — `data/source.json`
 `Source_ID`, `Source_Name`, `Source_Type`, `Collection_Date`, `Update_Date`, `Verification_Status`, `Reliability_Level`, `Source_URL`, `License`, `License_URL`
