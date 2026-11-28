@@ -1,7 +1,114 @@
 {
- "updated": "2026-11-27 01:01 UTC",
- "count": 480,
+ "updated": "2026-11-28 00:57 UTC",
+ "count": 490,
  "resources": [
+  {
+   "id": "95c677632ec3",
+   "title": "Satellite imagery shows how fast Lagos and Alexandria are sinking",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5NSjJGV0J4dF9SQTFZR3hfSG5ZdmlRd3BQZHBna0pVV0hqSFdfZlVEWDZobDhvTk9HZGtUbmFUdEpCdjRWWURQcWpja1FxUjY3QkVGVlRyRGFoUFE?oc=5",
+   "date": "2026-11-27",
+   "type": "News",
+   "source": "BBC",
+   "theme": "Connectivity & telecoms",
+   "country": "Nigeria",
+   "authors": "",
+   "keywords": [
+    "satellite",
+    "imagery",
+    "shows",
+    "fast"
+   ]
+  },
+  {
+   "id": "b915bd47badb",
+   "title": "Egyptian officials post AI recreation of deadly tanker crash",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBMMTdMZUt1dFAtamliajJDVDhLaDJuNWc4RWpHSEtCcjdvMnNWZThERWt6V1dtUjdvSXZoSHVabHp1bk1xRTRlb3RtT1BKWkstWjZEaGk0bUw?oc=5",
+   "date": "2026-11-27",
+   "type": "News",
+   "source": "BBC",
+   "theme": "AI applications",
+   "country": "Egypt",
+   "authors": "",
+   "keywords": [
+    "egyptian",
+    "officials",
+    "post",
+    "recreation"
+   ]
+  },
+  {
+   "id": "7dc778b37cc5",
+   "title": "AI debt boom could push up funding costs for South Africa",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQal9uMDRBY3ZFcXJaZVBnQzFCOWUyMDltdXZoQ0YzWWJNZ2N6Z3F5YXdsY25fV2RGeVBzdWFMQWlpc2J1ZFhOaXVBZVpzNnhoTUtESEduaTV6b1RaQ1pQMHJZZHFnNmZ3ZkZuRndwVENucEU4cGRLb3hPRkhOYzJ0bjRMV2VVdzJxZEd1V2NSMUQwa1k0RTN3VGxweHdqVTNlSXpZR2hjOUZMc0dPbnJ2MWEwT09zdHFrWmhlVkFsUQ?oc=5",
+   "date": "2026-11-27",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "Startups & investment",
+   "country": "South Africa",
+   "authors": "",
+   "keywords": [
+    "debt",
+    "boom",
+    "could",
+    "push"
+   ]
+  },
+  {
+   "id": "fc14702c10a6",
+   "title": "View / Cost is key in Africa’s AI rollout",
+   "desc": "",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQeHYyT1NlTmRxaDZ2NE9VeU5RZDBrcmRiRDJGYnByY25oWVB2YkktZWJQVGhqYnZIYURNbmJ6SnJHRGxCa0RiRVF5Y0dPVXJId0d6akczaEJuQ3MyajVXNHFGQld6RnlEVHVBQURvejlBWHlpLWVFbldMRHEwQWhhZnNB?oc=5",
+   "date": "2026-11-27",
+   "type": "News",
+   "source": "Semafor",
+   "theme": "AI applications",
+   "country": "Pan-African",
+   "authors": "",
+   "keywords": [
+    "view",
+    "cost",
+    "rollout"
+   ]
+  },
+  {
+   "id": "46958c8967cf",
+   "title": "After two decades in global finance, Tamer Bahgat is betting on social commerce in Nigeria",
+   "desc": "How Tamer Bahgat built we.yan, a digital ecosystem that brings communication, commerce, and financial services onto a single platform.",
+   "url": "https://techcabal.com/2026/11/27/how-tamer-bahgat-founded-we-yan/",
+   "date": "2026-11-27",
+   "type": "News",
+   "source": "TechCabal",
+   "theme": "General",
+   "country": "Nigeria",
+   "authors": "",
+   "keywords": [
+    "decades",
+    "global",
+    "finance",
+    "tamer"
+   ]
+  },
+  {
+   "id": "54fed5ccef6a",
+   "title": "PUBLIC SECTOR READINESS FOR PERMISSIONED BLOCKCHAIN FINANCIAL REPORTING IN GHANA: BUILDING STRONG INSTITUTIONS AND RESILIENT DIGITAL INFRASTRUCTURE",
+   "desc": "Periodic, batch-based public financial reporting in developing countries weakens accountability, yet little is known about whether public institutions are ready to adopt permissioned blockchain for real-time reporting. This study examines how technological, human capital, regulatory and legal, organ",
+   "url": "https://doi.org/10.46281/ijafr.v17i2.3033",
+   "date": "2026-11-27",
+   "type": "Academic paper",
+   "source": "International Journal of Accounting & Finance Review",
+   "theme": "AI policy & governance",
+   "country": "Ghana",
+   "authors": "Andrews Salakpi, Théophile Bindeouè Nassè, Clement Nangpiire",
+   "keywords": [
+    "public",
+    "sector",
+    "readiness",
+    "permissioned"
+   ]
+  },
   {
    "id": "1fdd5dafd7fe",
    "title": "Telecom Egypt CEO highlights social impact of digital infrastructure through healthcare initiatives",
@@ -1978,6 +2085,24 @@
    ]
   },
   {
+   "id": "ae094c9de2de",
+   "title": "Electronic Resources Sharing and Academic Collaborations in Private Universities: A Comparative Study of Ghana, South Africa, and Egypt",
+   "desc": "This study evaluates and compares the extent to which electronic resource sharing enhances academic collaboration in private universities across Ghana, South Africa, and Egypt, with a focus on ICT capacity, governance frameworks, and collaborative practices. A quantitative cross-sectional survey was",
+   "url": "https://doi.org/10.21203/rs.3.rs-10217525/v1",
+   "date": "2026-08-10",
+   "type": "Academic paper",
+   "source": "Research Square",
+   "theme": "AI policy & governance",
+   "country": "Multiple countries",
+   "authors": "De-Graft Johnson Dei, Karim Awudu, Linda Anane-Donkor, Theresa Adusei Peasah Aidoo",
+   "keywords": [
+    "electronic",
+    "resources",
+    "sharing",
+    "academic"
+   ]
+  },
+  {
    "id": "d8464c638011",
    "title": "Evaluating Digital Infrastructure for Innovation in Ghana's Technical University Libraries",
    "desc": "Purpose: The advent of modern technology has opened up new avenues in which libraries could be utilised. It has expanded and shifted the idea of accessing library resources from physical buildings to remote access via information and communication technology (ICT). In light of this, an assessment of",
@@ -2443,6 +2568,24 @@
     "assessment",
     "ethiopian",
     "higher"
+   ]
+  },
+  {
+   "id": "e7a91f56fa1a",
+   "title": "Policy Enactment and Institutional Readiness for Artificial Intelligence in Ethiopian Higher Education: A Multilevel Analysis of Challenges and Capacity Gaps",
+   "desc": "Ethiopia has emerged as a continental leader in artificial intelligence (AI) policy, establishing the Ethiopian Artificial Intelligence Institute (2020), approving a National AI Policy (2024), and committing US$324 million to the world's second AI-dedicated university (scheduled for 2027). However, ",
+   "url": "https://doi.org/10.5281/zenodo.21215562",
+   "date": "2026-07-06",
+   "type": "Academic paper",
+   "source": "Matondang Journal",
+   "theme": "AI policy & governance",
+   "country": "Ethiopia",
+   "authors": "Belay Sitotaw Goshu",
+   "keywords": [
+    "policy",
+    "enactment",
+    "institutional",
+    "readiness"
    ]
   },
   {
@@ -3238,6 +3381,24 @@
    ]
   },
   {
+   "id": "2aa05dbdb325",
+   "title": "A Critical Analysis of Artificial Intelligence and Service Delivery in South Africa: Exploring Opportunities and Obstacles",
+   "desc": "The ever-growing use of artificial intelligence (AI) technologies has enormously transformed global public services. Even though these cutting-edge technologies have been applauded for their improved operational efficiency, streamlined processes, and enhanced productivity, they have been prone to is",
+   "url": "https://doi.org/10.51244/ijrsi.2026.1304000041",
+   "date": "2026-04-27",
+   "type": "Academic paper",
+   "source": "International journal of research and scientific innovation",
+   "theme": "AI policy & governance",
+   "country": "South Africa",
+   "authors": "Wiston Mbhazima Baloyi",
+   "keywords": [
+    "critical",
+    "analysis",
+    "artificial",
+    "intelligence"
+   ]
+  },
+  {
    "id": "8e2fa1fe6c9b",
    "title": "The role of artificial intelligence in promoting sustainable development: the views of university students in Ghana",
    "desc": "Purpose This study aims to investigate the role of artificial intelligence (AI) in fostering sustainable development in Ghana by assessing its applications in various industries and evaluating its influence on academic and economic development based on the views of selected university students in Gh",
@@ -3881,6 +4042,24 @@
     "intelligence",
     "administration",
     "nigeria"
+   ]
+  },
+  {
+   "id": "3ad45f276798",
+   "title": "Generative AI as a partner for teachers in building personalised learning paths for students with ease in Tanzania",
+   "desc": "This study examines how generative artificial intelligence (AI) can assist secondary school teachers in Tanzania to create personalised learning paths more efficiently and effectively. Many educators face overcrowded classrooms and limited resources, making it challenging to meet the diverse needs o",
+   "url": "https://doi.org/10.25304/rlt.v34.3594",
+   "date": "2026-02-10",
+   "type": "Academic paper",
+   "source": "Research in Learning Technology",
+   "theme": "AI policy & governance",
+   "country": "Tanzania",
+   "authors": "Juliana Kamaghe",
+   "keywords": [
+    "generative",
+    "partner",
+    "teachers",
+    "building"
    ]
   },
   {
